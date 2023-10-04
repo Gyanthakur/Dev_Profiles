@@ -39,10 +39,7 @@ A place to list and shocase your developer skills and profile
 
 6. Wait for Merge
 
-##  Need Help?
-Join our discord server for any kind of help. <br>
 
-<a href="https://discord.com/invite/AeAjegXn6D"><img src="https://invidget.switchblade.xyz/AeAjegXn6D" alt="Discord Server"></a>
 
 ## Thank You
 Thank you to every contributor of this repository <br>
