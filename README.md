@@ -25,6 +25,7 @@ A place to list and shocase your developer skills and profile
                 <a href="[YOUR LINKEDIN URL]" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
+    </div>
 ```
 > Note: Do not add your profile in top.
 3. Change/Replace the placeholders with your image and profiles urls
