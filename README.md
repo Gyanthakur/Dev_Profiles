@@ -3,10 +3,13 @@ A place to list and shocase your developer skills and profile
 
 
 ## Contribute
+1. Give Star on the repo
 
-1. Fork this Repository
+2. Follow Account
 
-2. add following code to HTML `index.html` just before `<!--Profiles-->` comment
+3. Fork this Repository
+
+4. add following code to HTML `index.html` just before `<!--Profiles-->` comment
 
 ```html
         <div class="profile">
