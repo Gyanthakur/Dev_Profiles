@@ -5,41 +5,16 @@ A place to list and shocase your developer skills and profile
 ## Contribute
 1. Give Star on the repo
 
+
+2. Follow the Account
 2. Follow Account
+
 
 3. Fork this Repository
 
-4. add following code to HTML `index.html` just before `<!--Profiles-->` comment
+4. add following code to HTML `project.html` just before Last `div` `<!--Project-->` comment
    
-# 5.and keep in mind don't add in top and bottom your profile, add in between  
-
-```html
-        <div class="profile">
-            <div class="pfp"><img src="[YOUR IMAGE URL]" alt="User Image"></div>
-            <h3 class="name">Your Name</h3>
-            <div class="skills">
-                <span class="skill">[SKILL-1]</span>
-                <span class="skill">[SKILL-2]</span>
-                <span class="skill">[SKILL-3]</span>
-                <span class="skill">[SKILL-3]</span>
-                <span class="skill">[SKILL-3]</span>
-            </div>
-            <div class="social">
-                <a href="[YOUR GITHUB URL]" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="[YOUR LINKEDIN URL]" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-    </div>
-```
-> Note: Do not add your profile in top.
-3. Change/Replace the placeholders with your image and profiles urls
-    - [IMAGE-URL] with your image URL
-    - [YOUR_NAME] with your name
-    - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
-    - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
-
-# and made changes in `project.html` as follows OR go to `project.md` and watch how to add
+# 5.and keep in mind don't add in top and bottom your Project, add in between  or last
 
 ```html
         <div class="profile">
@@ -73,6 +48,12 @@ A place to list and shocase your developer skills and profile
 ```
 
 
+> Note: Do not add your profile and project in top.
+3. Change/Replace the placeholders with your image and profiles urls
+    - [IMAGE-URL] with your image URL
+    - [YOUR_NAME] with your name
+    - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
+    - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
 
 4. Commit your changes.
 
