@@ -39,6 +39,41 @@ A place to list and shocase your developer skills and profile
     - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
     - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
 
+# and made changes in `project.html` as follows OR go to `project.md` and watch how to add
+
+```html
+        <div class="profile">
+            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
+            <h3 class="name">Gyan Pratap Singh</h3>
+            <div class="project">
+                <a href="[Your Github URL]" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="[Your Github Repository URL]" target="_blank"><i class="fa-solid fa-money-bill-transfer"></i></a>
+                <a href="[Project Deploy URL(If applicable)]" target="_blank"><i class="fa-brands fa-octopus-deploy"></i></a>
+            </div>
+            <div class="projectNam">
+                <span >Your Project Title</span>
+                <!-- Do not change Repo URl and Dploy Link given under two line  -->
+                <span >Repo Url</span>
+                <span >Deploy Link</span>
+            </div>
+            <div class="skills">
+                <span class="skill">Skill-1</span>
+                <span class="skill">Skill-2</span>
+                <span class="skill">Skill-3</span>
+                <span class="skill">Skill-4</span>
+
+            </div>
+            <div class="social">
+                <a href="[YOUR GITHUB URL]" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="[YOUR LINKEDIN URL]" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+```
+
+
+
 4. Commit your changes.
 
 5. Create a Pull Request

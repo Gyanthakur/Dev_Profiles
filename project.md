@@ -12,7 +12,7 @@ A place to list and shocase your developer skills and profile
 
 3. Fork this Repository
 
-4. add following code to HTML `project.html` just before Last `div` `<!--Profiles-->` comment
+4. add following code to HTML `project.html` just before Last `div` `<!--Project-->` comment
    
 # 5.and keep in mind don't add in top and bottom your Project, add in between  or last
 
