@@ -10,6 +10,8 @@ A place to list and shocase your developer skills and profile
 3. Fork this Repository
 
 4. add following code to HTML `index.html` just before `<!--Profiles-->` comment
+   
+# 5.and keep in mind don't add in top and bottom your profile, add in between  
 
 ```html
         <div class="profile">
