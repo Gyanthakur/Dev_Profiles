@@ -9,11 +9,12 @@ A place to list and shocase your developer skills and profile
 
 3. Fork this Repository
 
-4. add following code to HTML `index.html` just before `<!--Profiles-->` comment
+4. add following code to HTML `project.html` just before Last `div` `<!--Profiles-->` comment
    
-# 5.and keep in mind don't add in top and bottom your profile, add in between  
+# 5.and keep in mind don't add in top and bottom your Project, add in between  or last
 
-```        <div class="profile">
+```html
+        <div class="profile">
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
             <h3 class="name">Gyan Pratap Singh</h3>
             <div class="project">
@@ -40,7 +41,8 @@ A place to list and shocase your developer skills and profile
                 <a href="[YOUR LINKEDIN URL]" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
-        </div>```
+        </div>
+```
 
 
 > Note: Do not add your profile and project in top.
