@@ -104,11 +104,43 @@ h1 {
 	display: inline-block;
 }
 
+.project {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 10px;
+	/* border-radius: 5px; */
+	font-size: 35px;
+}
+.project a{
+	color: #1a21f1;
+	margin: 0 10px;
+	font-size: 24px;
+	text-decoration: none;
+	transition: color 0.3s, font-size 0.3s;
+}
+
+.project a:hover{
+	color: #000000;
+	font-size: 28px;
+}
+.projectNam{
+	margin: 13px;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 0 5px 10px 0;
+	font-size: 16px;
+	
+
+}
 .social {
 	margin-top: 13px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	
 }
 
 .social a {
