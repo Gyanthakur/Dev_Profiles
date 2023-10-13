@@ -5,7 +5,10 @@ A place to list and shocase your developer skills and profile
 ## Contribute
 1. Give Star on the repo
 
+
 2. Follow the Account
+2. Follow Account
+
 
 3. Fork this Repository
 
