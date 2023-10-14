@@ -39,7 +39,7 @@ A place to list and shocase your developer skills and profile
     - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
     - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
 
-# and made changes in `project.html` as follows 
+# and your project in `project.html` as follows 
 
 ```html
         <div class="profile">
