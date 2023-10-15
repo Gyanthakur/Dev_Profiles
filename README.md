@@ -19,7 +19,8 @@ A place to list and shocase your developer skills and profile
 
 ```html
         <div class="profile">
-            <div class="pfp"><img src="[YOUR IMAGE URL]" alt="User Image"></div>
+            <!-- change './default.png' to your profile image url -->
+            <div class="pfp"><img src="./default.png" alt="User Image"></div>
             <h3 class="name">Your Name</h3>
             <div class="skills">
                 <span class="skill">[SKILL-1]</span>
