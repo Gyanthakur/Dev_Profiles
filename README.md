@@ -15,7 +15,7 @@ A place to list and shocase your developer skills and profile
  <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">
 
    
-# 5.and keep in mind don't add in top and bottom your profile, add in between  
+## 5.and keep in mind don't add in top and bottom your profile, add in between  
 
 ```html
         <div class="profile">
@@ -43,7 +43,7 @@ A place to list and shocase your developer skills and profile
     - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
     - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
 
-# and your project in `project.html` as follows 
+### and your project in `project.html` as follows and keep in mind don't add in top and bottom your project, add in between  another project  
 
 ```html
         <div class="profile">
