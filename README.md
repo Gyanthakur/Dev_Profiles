@@ -9,7 +9,7 @@ A place to list and shocase your developer skills and profile
 
 3. Fork this Repository
 
-4. add following code to HTML `index.html` just before `<!--Profiles-->` comment
+4. add following code to HTML `index.html` between another `<!--Profiles-->` comment
 
 5. before adding profile or project, update or sync your branch by clicking `Sync fork`button
  <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">
