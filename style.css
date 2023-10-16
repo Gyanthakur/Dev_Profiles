@@ -206,6 +206,9 @@ button {
 .add{
 	background-color: #21263d;
 }
+.add:hover{
+	background:#3e4978;
+}
 .search {
 	max-width: 1200px;
 	margin: 1rem auto;
