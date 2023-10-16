@@ -18,6 +18,7 @@
 	--color-profile-border: var(--color-green);
 }
 
+
 ::-webkit-scrollbar {
 	width: .4rem;
 }
@@ -104,6 +105,7 @@ h1 {
 	border-radius: 50%;
 	margin-bottom: 10px;
 	outline: .5rem solid var(--color-body-bg);
+	background: white;
 }
 
 .name {
@@ -118,17 +120,20 @@ h1 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	row-gap: 7px;
+	gap: 5px;
+	letter-spacing: 1px;
+	font-family: "Poppins", sans-serif;
 }
 
 .skill {
-	background-color: #007277;
-	padding: 5px 10px;
-	letter-spacing: 0.1em;
-	border-radius: 5px;
-	margin: 0 5px 10px 0;
-	font-size: 14px;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 4px 6px;
+	border-radius: 2px;
+	font-size: 12px;
 	display: inline-block;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: bold;
+	cursor: default;
 }
 
 .project {
