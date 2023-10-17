@@ -1,5 +1,13 @@
 const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
+const date = document.getElementById('dates')
+
+let currentDate  = new Date()
+let currentYear  = currentDate.getFullYear()
+date.innerHTML = currentYear
+
+
+
 
 searchInput.addEventListener('input', filterProfiles);
 
