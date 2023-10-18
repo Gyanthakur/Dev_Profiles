@@ -234,3 +234,30 @@ button {
 	outline: none;
 	box-shadow: .2rem .4rem 2rem #2f405497;
 }
+
+.dark-btn {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	text-align: right;
+	padding-right: 30px;
+	background-color: #011627;
+	font-size: 30px;
+	transition: all .3s;
+}
+
+.dark-btn:hover {
+	color: #00dbde;
+}
+
+.light-background {
+	background-color: #fff;
+}
+
+.icon-color {
+	color: #000;
+}
+
+.text-color {
+	color: #000;
+}
