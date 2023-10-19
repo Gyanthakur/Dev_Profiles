@@ -12,7 +12,7 @@
 
 :root {
 	--color-green: #68EBB8;
-
+	--color-white: #eee;
 	--color-body-bg: #011627;
 	--color-profile-card-bg: #2F4054;
 	--color-profile-border: var(--color-green);
@@ -147,8 +147,15 @@ h1 {
 }
 
 .project a:hover{
-	color: #000000;
+	color: #333;
 	font-size: 28px;
+}
+
+.light-icon{
+
+}
+.dark-icon{
+	color: #222;
 }
 .projectNam{
 	margin: 13px;
@@ -236,9 +243,10 @@ button {
 }
 
 .dark-btn {
-	position: sticky;
-	top: 0;
-	width: 100%;
+	position: sticky; 
+	top: 20px; 
+	left: 90%;
+	width: 100px;
 	text-align: right;
 	padding-right: 30px;
 	background-color: #011627;

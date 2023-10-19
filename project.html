@@ -9,18 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
     <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
+    
 </head>
 <body>
-
+    <button class="dark-btn"><i class="uil uil-moon"></i></button>
     <h1>Dev Projects</h1>
 
         <a href="index.html"><button class="add">Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i> </button></a>
 
 
         <button class="add"
-        onclick='window.open("https://github.com/Gyanthakur/DevProfile","_blank")'">Add your Project &nbsp; <i class="
+        onclick='window.open("https://github.com/Gyanthakur/DevProfile","_blank")'>Add your Project &nbsp; <i class="
         fa-sharp fa-solid fa-user-plus"></i> </button>
         <div class="line"><br></div>
 
@@ -83,7 +85,7 @@
             <div class="social">
                 <a href="https://github.com/anurag-327" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://twitter.com/itsAnurag_sri" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/anuragsr327/" target="_blank"><iclass="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/anuragsr327/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -212,7 +214,23 @@
         <!-- project  -->
     </div>
 
-       
+    <script type="text/javascript">
+        const darkMode = document.querySelector(".dark-btn");
+        const icons = document.querySelector("i");
+        
+        darkMode.addEventListener("click", () => {
+            icons.classList.toggle("dark");
+            document.body.classList.toggle("light-background");
+            darkMode.classList.toggle("light-background");
+            darkMode.classList.toggle("icon-color")
+            document.querySelector("h1").classList.toggle("text-color");
+            document.querySelectorAll("h3").forEach((item) => {
+                item.classList.toggle("text-color");
+            });
+            document.querySelector("footer").classList.toggle("text-color");
+        });
+
+    </script>
 
 
 </body>
