@@ -47,12 +47,6 @@ body {
 	overflow-x: hidden;
 }
 
-h1 {
-	padding: 20px;
-	font-size: 36px;
-	font-family: "PT Serif", serif;
-}
-
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -136,7 +130,6 @@ h1 {
 	display: flex;
 	justify-content: space-between;
 	padding: 5px 10px;
-	/* border-radius: 5px; */
 	font-size: 35px;
 }
 
@@ -152,8 +145,6 @@ h1 {
 	color: #333;
 	font-size: 28px;
 }
-
-.light-icon {}
 
 .dark-icon {
 	color: #222;
@@ -214,6 +205,7 @@ button {
 
 .add {
 	background-color: #21263d;
+	margin: 5px;
 }
 
 .search {
@@ -245,13 +237,28 @@ button {
 	box-shadow: .2rem .4rem 2rem #2f405497;
 }
 
+h1 {
+	padding: 20px;
+}
+
+header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+.title {
+	flex-grow: 1;
+	text-align: center;
+	font-size: 36px;
+	font-family: "PT Serif", serif;
+}
+
 .dark-btn {
-	position: sticky;
-	top: 20px;
-	left: 90%;
-	width: 100px;
-	text-align: right;
-	padding-right: 30px;
+	padding: 10px 20px;
+	cursor: pointer;
 	background-color: #011627;
 	font-size: 30px;
 	transition: all .3s;
