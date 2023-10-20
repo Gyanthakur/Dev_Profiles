@@ -4,6 +4,7 @@
 	0% {
 		transform: scaleX(1);
 	}
+
 	100% {
 		transform: scaleX(5);
 	}
@@ -67,15 +68,21 @@ h1 {
 	position: relative;
 	border: .2em solid var(--color-profile-card-bg);
 	border-radius: 10px;
-	padding: 40px;
+	padding: 3rem;
 	margin: 20px;
 	width: calc(33.33% - 40px);
 	text-align: center;
 	transition: background-color 0.3s ease, transform 1s ease, border-color 1s ease;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 2rem;
+	transition: all linear 0.3s;
 }
 
-.profile > * {
+.profile>* {
 	position: relative;
 	z-index: 10;
 }
@@ -87,38 +94,46 @@ h1 {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 75%;
-	background-image: linear-gradient(80deg, #00dbde 0%, #fc00ff 100%);
+	bottom: 66%;
+	background-color: #007277;
 	transform: scaleX(2);
 	animation: breatheX 4s ease-in-out infinite alternate-reverse;
 }
 
 .profile:hover {
 	transform: translateY(-2%) scale(1.02);
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	border: .2em solid var(--color-green);
 }
 
 
 .pfp img {
-	width: 100px;
-	height: 100px;
+	width: 5rem;
 	border-radius: 50%;
-	margin-bottom: 10px;
-	outline: .5rem solid var(--color-body-bg);
+	/* margin-bottom: 10px; */
+	outline: .2rem solid var(--color-profile-card-bg);
+}
+
+.profileInfo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
 }
 
 .name {
 	font-family: "Poppins", sans-serif;
-	font-size: 20px;
+	font-size: 2.5vh;
 	margin-bottom: 10px;
 }
 
 .skills {
 	margin-bottom: 10px;
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	row-gap: 7px;
+	/* row-gap: 7px; */
 }
 
 .skill {
@@ -138,26 +153,28 @@ h1 {
 	/* border-radius: 5px; */
 	font-size: 35px;
 }
-.project a{
-	color: #1a21f1;
+
+.project a {
+	color: var(--color-green);
 	margin: 0 10px;
 	font-size: 24px;
 	text-decoration: none;
 	transition: color 0.3s, font-size 0.3s;
 }
 
-.project a:hover{
-	color: #333;
+.project a:hover {
+	color: #5c6770;
 	font-size: 28px;
 }
 
-.light-icon{
+/* .light-icon{
 
-}
-.dark-icon{
+} */
+.dark-icon {
 	color: #222;
 }
-.projectNam{
+
+.projectNam {
 	margin: 13px;
 	display: flex;
 	align-items: baseline;
@@ -166,15 +183,17 @@ h1 {
 	border-radius: 5px;
 	margin: 0 5px 10px 0;
 	font-size: 16px;
-	
+
 
 }
+
 .social {
+	min-height: 5rem;
 	margin-top: 13px;
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
-	
+	align-items: flex-end;
+
 }
 
 .social a {
@@ -210,13 +229,15 @@ button {
 	font-size: 1.1em;
 	border-radius: 5%;
 }
-.add{
+
+.add {
 	background-color: #21263d;
 }
+
 .search {
 	max-width: 1200px;
 	margin: 1rem auto;
-	padding: 0 9% ;
+	padding: 0 9%;
 	text-align: center;
 }
 
@@ -243,8 +264,8 @@ button {
 }
 
 .dark-btn {
-	position: sticky; 
-	top: 20px; 
+	position: sticky;
+	top: 20px;
 	left: 90%;
 	width: 100px;
 	text-align: right;
