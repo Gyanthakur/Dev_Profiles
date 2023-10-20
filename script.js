@@ -32,7 +32,7 @@ darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");
     darkMode.classList.toggle("light-background");
     darkMode.classList.toggle("icon-color")
-    document.querySelector("h1").classList.toggle("text-color");
+    document.querySelector(".title").classList.toggle("text-color");
     document.querySelectorAll("h3").forEach((item) => {
         item.classList.toggle("text-color");
     });
