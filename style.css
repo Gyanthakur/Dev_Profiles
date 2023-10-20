@@ -4,6 +4,7 @@
 	0% {
 		transform: scaleX(1);
 	}
+
 	100% {
 		transform: scaleX(5);
 	}
@@ -75,7 +76,7 @@ h1 {
 	overflow: hidden;
 }
 
-.profile > * {
+.profile>* {
 	position: relative;
 	z-index: 10;
 }
@@ -138,7 +139,8 @@ h1 {
 	/* border-radius: 5px; */
 	font-size: 35px;
 }
-.project a{
+
+.project a {
 	color: #1a21f1;
 	margin: 0 10px;
 	font-size: 24px;
@@ -146,18 +148,18 @@ h1 {
 	transition: color 0.3s, font-size 0.3s;
 }
 
-.project a:hover{
+.project a:hover {
 	color: #333;
 	font-size: 28px;
 }
 
-.light-icon{
+.light-icon {}
 
-}
-.dark-icon{
+.dark-icon {
 	color: #222;
 }
-.projectNam{
+
+.projectNam {
 	margin: 13px;
 	display: flex;
 	align-items: baseline;
@@ -166,15 +168,14 @@ h1 {
 	border-radius: 5px;
 	margin: 0 5px 10px 0;
 	font-size: 16px;
-	
 
 }
+
 .social {
 	margin-top: 13px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	
 }
 
 .social a {
@@ -210,13 +211,15 @@ button {
 	font-size: 1.1em;
 	border-radius: 5%;
 }
-.add{
+
+.add {
 	background-color: #21263d;
 }
+
 .search {
 	max-width: 1200px;
 	margin: 1rem auto;
-	padding: 0 9% ;
+	padding: 0 9%;
 	text-align: center;
 }
 
@@ -243,8 +246,8 @@ button {
 }
 
 .dark-btn {
-	position: sticky; 
-	top: 20px; 
+	position: sticky;
+	top: 20px;
 	left: 90%;
 	width: 100px;
 	text-align: right;
@@ -268,4 +271,9 @@ button {
 
 .text-color {
 	color: #000;
+}
+
+footer {
+	padding: 20px;
+	margin-bottom: 5px;
 }
