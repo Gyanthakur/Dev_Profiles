@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <button class="dark-btn"><i class="uil uil-moon"></i></button>
+    <button class="dark-btn"><img id="icon" src="Moon.png" alt="Dark"></img></button>
     <h1>Dev Projects</h1>
 
     <a href="index.html"><button class="add">Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i> </button></a>
@@ -273,11 +273,15 @@
 
     <script type="text/javascript">
         const darkMode = document.querySelector(".dark-btn");
-        const icons = document.querySelector("i");
+        var icon=document.getElementById("icon");
 
         darkMode.addEventListener("click", () => {
-            icons.classList.toggle("dark");
             document.body.classList.toggle("light-background");
+            if(document.body.classList.contains("light-background")){
+        icon.src="Sun.png";
+    }else{
+        icon.src="Moon.png";
+    }
             darkMode.classList.toggle("light-background");
             darkMode.classList.toggle("icon-color")
             document.querySelector("h1").classList.toggle("text-color");
