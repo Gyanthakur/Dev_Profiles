@@ -70,7 +70,7 @@ body {
   overflow: hidden;
 }
 
-.profile > * {
+.profile>* {
   position: relative;
   z-index: 10;
 }
@@ -264,10 +264,12 @@ header {
   font-size: 30px;
   transition: all 0.3s;
 }
+
 .dark-btn img {
   width: 50px;
   height: 70px;
 }
+
 .dark-btn #icon:hover {
   color: #00dbde;
 }
@@ -285,11 +287,39 @@ header {
   top: 6px;
   right: 12px;
 }
+
 .text-color {
   color: #000;
 }
 
 footer {
-  padding: 20px;
-  margin-bottom: 5px;
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+hr{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.social_links ul li {
+  list-style: none;
+  padding: 0 0.5em;
+}
+
+.social_links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social_links ul li a img{
+  filter: opacity(0.5);
+  transition: all 0.5s ease;
+}
+
+.social_links ul li a img:hover{
+  filter: opacity(1);
 }
