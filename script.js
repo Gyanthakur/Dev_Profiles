@@ -27,12 +27,20 @@ function filterProfiles() {
 }
 
 const darkMode = document.querySelector(".dark-btn");
+var icon=document.getElementById("icon");
+
 
 darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");
+    if(document.body.classList.contains("light-background")){
+        icon.src="Sun.png";
+    }else{
+        icon.src="Moon.png";
+    }
+    darkMode.classList.toggle("icon-position")
     darkMode.classList.toggle("light-background");
     darkMode.classList.toggle("icon-color")
-    document.querySelector("h1").classList.toggle("text-color");
+    document.querySelector(".title").classList.toggle("text-color");
     document.querySelectorAll("h3").forEach((item) => {
         item.classList.toggle("text-color");
     });
