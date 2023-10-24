@@ -46,6 +46,9 @@ body {
   overflow-x: hidden;
 }
 
+body .title{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
