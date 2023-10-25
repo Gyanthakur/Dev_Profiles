@@ -13,9 +13,9 @@
 :root {
   --color-green: #68ebb8;
   --color-white: #eee;
-  --color-body-bg: #011627;
+  --color-body-bg: #121212;
   --color-profile-card-bg: #2f4054;
-  --color-profile-border: var(--color-green);
+  --color-profile-border: #e35205;
 }
 
 ::-webkit-scrollbar {
@@ -45,6 +45,9 @@ body {
   overflow-x: hidden;
 }
 
+body .title{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +61,7 @@ body {
   --backdrop-bg-color: var(--color-profile-card-bg);
 
   position: relative;
-  border: 0.2em solid var(--color-profile-card-bg);
+  border: 0.2em solid var(--color-profile-border);
   border-radius: 10px;
   padding: 40px;
   margin: 20px;
@@ -69,7 +72,7 @@ body {
   overflow: hidden;
 }
 
-.profile > * {
+.profile>* {
   position: relative;
   z-index: 10;
 }
@@ -82,9 +85,9 @@ body {
   left: 0;
   right: 0;
   bottom: 75%;
-  background-image: linear-gradient(80deg, #00dbde 0%, #fc00ff 100%);
+  background-image: linear-gradient(to right, #e35205, #ff6462, #ff87a5, #ffaed7, #f5d4f5, #f8dbf8, #fce1fc, #ffe8ff, #ffd2ee, #ffc0b9, #ffbf6e, #ffd200);
   transform: scaleX(2);
-  animation: breatheX 4s ease-in-out infinite alternate-reverse;
+  animation: breatheX 1s ease-in-out infinite alternate-reverse;
 }
 
 .profile:hover {
@@ -115,8 +118,8 @@ body {
 }
 
 .skill {
-  background-color: #007277;
-  padding: 5px 10px;
+  background-color: var(--color-profile-border);
+  padding: 7px;
   letter-spacing: 0.1em;
   border-radius: 5px;
   margin: 0 5px 10px 0;
@@ -167,7 +170,7 @@ body {
 }
 
 .social a {
-  color: #5c6770;
+  color: #ffffff;
   margin: 0 10px;
   font-size: 24px;
   text-decoration: none;
@@ -201,7 +204,9 @@ button {
 }
 
 .add {
-  background-color: #21263d;
+  background-color: white;
+  color: var(--color-body-bg);
+  font-weight: 600;
   margin: 5px;
 }
 
@@ -251,6 +256,8 @@ header {
   text-align: center;
   font-size: 36px;
   font-family: "PT Serif", serif;
+  color: var(--color-profile-border);
+  margin-top: 15px;
 }
 
 .dark-btn {
@@ -259,14 +266,16 @@ header {
   top: 10px;
   padding: 5px 10px;
   cursor: pointer;
-  background-color: #011627;
+  background-color: var(--backdrop-bg-color);
   font-size: 30px;
   transition: all 0.3s;
 }
+
 .dark-btn img {
   width: 50px;
   height: 70px;
 }
+
 .dark-btn #icon:hover {
   color: #00dbde;
 }
@@ -284,6 +293,7 @@ header {
   top: 6px;
   right: 12px;
 }
+
 .text-color {
   color: #000;
 }
