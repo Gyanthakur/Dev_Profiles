@@ -68,7 +68,7 @@ body .title{
   width: calc(33.33% - 40px);
   text-align: center;
   transition: background-color 0.3s ease, transform 1s ease,
-    border-color 1s ease;
+  border-color 1s ease;
   overflow: hidden;
 }
 
@@ -350,7 +350,7 @@ footer {
 .footer {
   position: relative;
   width: 100%;
-  background: linear-gradient(80deg, #00dbde 0%, #fc00ff 100%);
+  background-image: linear-gradient(to right, #e35205, #ff6462, #ff87a5, #ffbf6e, #ffd200);
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
