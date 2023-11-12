@@ -91,4 +91,4 @@ A place to list and shocase your developer skills and profile
 
 ## Thank You
 Thank you to every contributor of this repository <br>
-Show some love by giving a ⭐ to this repository!
+Show some love by giving a star ⭐ to this repository!
