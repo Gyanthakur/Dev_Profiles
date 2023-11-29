@@ -2,8 +2,8 @@ const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
 const date = document.getElementById('dates')
 
-let currentDate  = new Date()
-let currentYear  = currentDate.getFullYear()
+let currentDate = new Date()
+let currentYear = currentDate.getFullYear()
 date.innerHTML = currentYear
 
 
@@ -27,22 +27,28 @@ function filterProfiles() {
 }
 
 const darkMode = document.querySelector(".dark-btn");
-var icon=document.getElementById("icon");
-
+var icon = document.getElementById("icon");
 
 darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");
-    if(document.body.classList.contains("light-background")){
-        icon.src="Sun.png";
-    }else{
-        icon.src="Moon.png";
+
+    if (document.body.classList.contains("light-background")) {
+        icon.src = "Sun.png";
+    } else {
+        icon.src = "Moon.png";
     }
+
     darkMode.classList.toggle("icon-position")
     darkMode.classList.toggle("light-background");
     darkMode.classList.toggle("icon-color")
+
     document.querySelector(".title").classList.toggle("text-color");
-    document.querySelectorAll("h3").forEach((item) => {
+
+    // Toggle class for H1 tag
+    document.querySelectorAll("h1.name").forEach((item) => {
         item.classList.toggle("text-color");
     });
+
     document.querySelector("footer").classList.toggle("text-color");
 });
+
