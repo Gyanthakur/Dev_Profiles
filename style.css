@@ -45,9 +45,10 @@ body {
   overflow-x: hidden;
 }
 
-body .title{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body .title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +69,7 @@ body .title{
   width: calc(33.33% - 40px);
   text-align: center;
   transition: background-color 0.3s ease, transform 1s ease,
-  border-color 1s ease;
+    border-color 1s ease;
   overflow: hidden;
 }
 
@@ -88,22 +89,22 @@ body .title{
   background-image: linear-gradient(to right, #e35205, #ff6462, #ff87a5, #ffaed7, #f5d4f5, #f8dbf8, #fce1fc, #ffe8ff, #ffd2ee, #ffc0b9, #ffbf6e, #ffd200);
   transform: scaleX(2);
   animation: breatheX 1s ease-in-out infinite alternate-reverse;
- z-index: 10;
+  z-index: 10;
 }
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
 }
 
-.profile .lines{
- position: absolute;
- inset: 0;
- background: #000;
- overflow: hidden;
- 
+.profile .lines {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+
 }
 
-.profile .lines::before{
+.profile .lines::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -113,26 +114,27 @@ body .title{
   height: 120px;
   background: linear-gradient(transparent, var(--color-profile-border), var(--color-profile-border), var(--color-profile-border), transparent);
   animation: animate 4s linear infinite;
-   
+
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
-  100%{
+
+  100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-.profile .lines::after{
+.profile .lines::after {
   content: '';
   position: absolute;
-  inset:3px;
+  inset: 3px;
   background: var(--color-body-bg);
 }
 
-.profile .pfp{
+.profile .pfp {
   z-index: 13;
 }
 
@@ -143,7 +145,7 @@ body .title{
   border-radius: 50%;
   margin-bottom: 10px;
   outline: 0.5rem solid var(--color-body-bg);
-} 
+}
 
 .name {
   font-family: "Poppins", sans-serif;
@@ -232,6 +234,13 @@ body .title{
 
   .profile {
     width: 100%;
+  }
+
+  .dark-btn img {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
   }
 }
 
@@ -382,6 +391,7 @@ footer {
   display: inline-block;
   transition: 0.5s;
 }
+
 .social-icon__link:hover {
   transform: translateY(-10px);
 }

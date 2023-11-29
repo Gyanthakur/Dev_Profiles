@@ -18,7 +18,7 @@
 
 <body>
     <button class="dark-btn"><img id="icon" src="Moon.png" alt="Dark"></img></button>
-    <h1>Dev Projects</h1>
+    <p class="title">Dev Profiles</p>
 
     <a href="index.html"><button class="add">Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i> </button></a>
 
@@ -46,7 +46,7 @@
                 <a href="https://gyanthakur.github.io/TextUtils/" target="_blank"><i
                         class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectNam">
+            <div class="ProjectName">
                 <span>Text_UTILS Editor</span>
                 <span>Repo Url</span>
                 <span>Deploy Link</span>
@@ -77,7 +77,7 @@
                         class="fa-solid fa-money-bill-transfer"></i></a>
                 <a href="https://quick-sign.vercel.app/" target="_blank"><i class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectNam">
+            <div class="ProjectName">
                 <span>Quicker Sign</span>
                 <span>Repo URL</span>
                 <span>Deploy Link</span>
@@ -108,7 +108,7 @@
                 <a href="https://kingcoolvikas.github.io/TNB-Tech-Resume-Builder" target="_blank"><i
                         class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectName">
+            <div class="ProjectName">
                 <span>Resume Generator</span>
                 <!-- Do not change Repo URl and Dploy Link given under two line  -->
                 <span>Repo Url</span>
@@ -142,7 +142,7 @@
                 <a href="https://shopping-cart-orpin-three.vercel.app/" target="_blank"><i
                         class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectNam">
+            <div class="ProjectName">
                 <span>Shopping Cart</span>
                 <!-- Do not change Repo URl and Dploy Link given under two line  -->
                 <span>Repo Url</span>
@@ -175,7 +175,7 @@
                 <a href="https://sai-kumar0.github.io/Food-Court-P1/" target="_blank"><i
                         class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectNam">
+            <div class="ProjectName">
                 <span>Food Court</span>
                 <!-- Do not change Repo URl and Dploy Link given under two line  -->
                 <span>Repo Url</span>
@@ -197,7 +197,7 @@
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
-       
+
         <!-- ============== -->
 
 
@@ -211,7 +211,7 @@
                 <a href="[Project Deploy URL(If applicable)]" target="_blank"><i
                         class="fa-brands fa-octopus-deploy"></i></a>
             </div>
-            <div class="projectNam">
+            <div class="ProjectName">
                 <span>My Portfolio</span>
                 <!-- Do not change Repo URl and Dploy Link given under two line  -->
                 <span>Repo Url</span>
@@ -238,52 +238,71 @@
 
     <script type="text/javascript">
         const darkMode = document.querySelector(".dark-btn");
-        var icon=document.getElementById("icon");
+        var icon = document.getElementById("icon");
 
         darkMode.addEventListener("click", () => {
             document.body.classList.toggle("light-background");
-            if(document.body.classList.contains("light-background")){
-        icon.src="Sun.png";
-    }else{
-        icon.src="Moon.png";
-    }
+
+            if (document.body.classList.contains("light-background")) {
+                icon.src = "Sun.png";
+            } else {
+                icon.src = "Moon.png";
+            }
+
             darkMode.classList.toggle("light-background");
-            darkMode.classList.toggle("icon-color")
-            document.querySelector("h1").classList.toggle("text-color");
+            darkMode.classList.toggle("icon-color");
+
+            // Toggle class for .ProjectName div
+            document.querySelector(".ProjectName").classList.toggle("text-color");
+
+            // Toggle class for all spans inside .ProjectName
+            document.querySelectorAll(".ProjectName span").forEach((item) => {
+                item.classList.toggle("text-color");
+            });
+
             document.querySelectorAll("h3").forEach((item) => {
                 item.classList.toggle("text-color");
             });
+
+            document.querySelector(".title").classList.toggle("text-color");
+
             document.querySelector("footer").classList.toggle("text-color");
         });
 
+
     </script>
 
-<footer class="footer">
-    <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href=" https://twitter.com/gps_96169">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href=" https://www.instagram.com/gp.singh.ro.ckstar4438/">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a></li>
-    </ul>
-    <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-      <li class="menu__item"><a class="menu__link" href="https://github.com/Gyanthakur/Dev_Profiles/blob/main/README.md">About</a></li>
-      <li class="menu__item"><a class="menu__link" href="project.html">Project Section</a></li>
-      <li class="menu__item"><a class="menu__link" href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">Contact</a></li>
-    </ul>
-    <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
-  </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="script.js"></script>
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href=" https://twitter.com/gps_96169">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href=" https://www.instagram.com/gp.singh.ro.ckstar4438/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link"
+                    href="https://github.com/Gyanthakur/Dev_Profiles/blob/main/README.md">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="project.html">Project Section</a></li>
+            <li class="menu__item"><a class="menu__link"
+                    href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">Contact</a></li>
+        </ul>
+        <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
