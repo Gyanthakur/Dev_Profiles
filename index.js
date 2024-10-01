@@ -8,7 +8,7 @@ async function run() {
     const issueMessage = core.getInput('issue-message');
     const prMessage = core.getInput('pr-message');
     const footer = core.getInput('footer') || '';
-    const assignUser = core.getInput('assign-user');  // New input for assigning user
+    const assignUser = core.getInput('assign-user');  // This gets the user to assign (can be specific or author)
 
     const octokit = github.getOctokit(githubToken);
     const context = github.context;

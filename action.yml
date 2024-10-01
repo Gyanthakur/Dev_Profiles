@@ -1,6 +1,6 @@
 # File location: action.yml
 name: 'Greeting and Auto-Assign Action'
-description: 'This action greets users and assigns a team member when an issue or pull request is opened.'
+description: 'This action greets users and assigns a user or author to issues or pull requests.'
 author: 'Gyan Pratap Singh'
 
 inputs:
@@ -17,7 +17,7 @@ inputs:
     description: 'Optional footer to include in the greeting.'
     required: false
   assign-user:
-    description: 'The GitHub username to assign to the issue or pull request.'
+    description: 'The GitHub username to assign (can be a specific user or the author).'
     required: true
 
 runs:
@@ -27,3 +27,35 @@ runs:
 branding:
   icon: 'wave'
   color: 'green'
+
+
+
+# # File location: action.yml
+# name: 'Greeting and Auto-Assign Action'
+# description: 'This action greets users and assigns a team member when an issue or pull request is opened.'
+# author: 'Gyan Pratap Singh'
+
+# inputs:
+#   github-token:
+#     description: 'GitHub token for authentication.'
+#     required: true
+#   issue-message:
+#     description: 'The message to post when an issue is opened.'
+#     required: true
+#   pr-message:
+#     description: 'The message to post when a pull request is opened.'
+#     required: true
+#   footer:
+#     description: 'Optional footer to include in the greeting.'
+#     required: false
+#   assign-user:
+#     description: 'The GitHub username to assign to the issue or pull request.'
+#     required: true
+
+# runs:
+#   using: 'node16'
+#   main: 'index.js'  # Points to the main script for logic
+
+# branding:
+#   icon: 'wave'
+#   color: 'green'

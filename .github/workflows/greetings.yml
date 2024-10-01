@@ -1,13 +1,11 @@
 # File location: .github/workflows/greetings.yml
-name: Greetings Workflow with Auto-Assign
+name: Greetings Workflow with Assign User
 
-on:  # Trigger events
-  push:
-    branches: [main] 
+on:
   issues:
-    types: [opened]  # Trigger on issue opened
+    types: [opened]  # Trigger when a new issue is opened
   pull_request_target:
-    types: [opened]  # Trigger on pull request opened
+    types: [opened]  # Trigger when a new pull request is opened
 
 jobs:
   greet-and-assign:
@@ -15,13 +13,44 @@ jobs:
 
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v3  # Checks out the repository
+        uses: actions/checkout@v3  # Checkout the repository
 
       - name: Run greeting and assign action
-        uses: ./  # This points to the root directory where action.yml resides
+        uses: ./  # This points to the custom action defined in action.yml at the root
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub authentication
-          issue-message: 'Welcome, @{{ github.actor }}! Thanks for opening this issue!'
-          pr-message: 'Great job, @{{ github.actor }}! Thanks for the pull request!'
-          footer: 'The maintainers will review your request soon. Stay tuned!'
-          assign-user: 'username-to-assign'  # You can replace this with any username or GitHub handle
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub authentication token
+          issue-message: 'Welcome, @{{ github.actor }}! Thanks for opening this issue!'  # Issue greeting message
+          pr-message: 'Great job, @{{ github.actor }}! Thanks for the pull request!'  # PR greeting message
+          footer: 'The maintainers will review your request soon. Stay tuned!'  # Footer message
+          assign-user: 'specific-username'  # Replace with the GitHub username you want to assign
+
+
+
+
+# # File location: .github/workflows/greetings.yml
+# name: Greetings Workflow with Auto-Assign
+
+# on:  # Trigger events
+#   push:
+#     branches: [main] 
+#   issues:
+#     types: [opened]  # Trigger on issue opened
+#   pull_request_target:
+#     types: [opened]  # Trigger on pull request opened
+
+# jobs:
+#   greet-and-assign:
+#     runs-on: ubuntu-latest  # The environment
+
+#     steps:
+#       - name: Checkout repository content
+#         uses: actions/checkout@v3  # Checks out the repository
+
+#       - name: Run greeting and assign action
+#         uses: ./  # This points to the root directory where action.yml resides
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub authentication
+#           issue-message: 'Welcome, @{{ github.actor }}! Thanks for opening this issue!'
+#           pr-message: 'Great job, @{{ github.actor }}! Thanks for the pull request!'
+#           footer: 'The maintainers will review your request soon. Stay tuned!'
+#           assign-user: 'username-to-assign'  # You can replace this with any username or GitHub handle
