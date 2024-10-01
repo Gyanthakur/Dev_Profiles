@@ -1,21 +1,27 @@
-name: Greetings  # Required root key
+# File location: .github/workflows/greetings.yml
+name: Greetings Workflow with Auto-Assign
 
-on:  # Required root key
+on:  # Trigger events
   push:
-    branches: [main]
+    branches: [main] 
   issues:
-    types: [opened]
+    types: [opened]  # Trigger on issue opened
   pull_request_target:
-    types: [opened]
+    types: [opened]  # Trigger on pull request opened
 
-jobs:  # Required root key
-  welcome:
-    runs-on: ubuntu-latest
+jobs:
+  greet-and-assign:
+    runs-on: ubuntu-latest  # The environment
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: EddieHubCommunity/gh-action-community@main
+      - name: Checkout repository content
+        uses: actions/checkout@v3  # Checks out the repository
+
+      - name: Run greeting and assign action
+        uses: ./  # This points to the root directory where action.yml resides
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Welcome, @{{ github.actor }}! Thanks for raising the issue!'
-          pr-message: 'Great job, @{{ github.actor }}! Thanks for creating the pull request!'
-          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions. Make sure to star this awesome repository.'
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # GitHub authentication
+          issue-message: 'Welcome, @{{ github.actor }}! Thanks for opening this issue!'
+          pr-message: 'Great job, @{{ github.actor }}! Thanks for the pull request!'
+          footer: 'The maintainers will review your request soon. Stay tuned!'
+          assign-user: 'username-to-assign'  # You can replace this with any username or GitHub handle
