@@ -1,24 +1,21 @@
-name: Greetings
+name: Greetings  # Required root key
 
-on: 
-  push: 
-    branches: [main] 
-  issues: 
-    types: [opened] 
-  pull_request_target: 
+on:  # Required root key
+  push:
+    branches: [main]
+  issues:
+    types: [opened]
+  pull_request_target:
     types: [opened]
 
-permissions:
-  contents: write
-
-jobs: 
-  welcome: 
-    runs-on: ubuntu-latest 
-    steps: 
-      - uses: actions/checkout@v3 
-      - uses: EddieHubCommunity/gh-action-community@main 
-        with: 
-          github-token: ${{ secrets.GITHUB_TOKEN }} 
+jobs:  # Required root key
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: EddieHubCommunity/gh-action-community@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: 'Welcome, @{{ github.actor }}! Thanks for raising the issue!'
-          pr-message: 'Great job, @{{ github.actor }}! Thanks for creating the pull request!' 
+          pr-message: 'Great job, @{{ github.actor }}! Thanks for creating the pull request!'
           footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions. Make sure to star this awesome repository.'
