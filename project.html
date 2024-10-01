@@ -13,12 +13,11 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
     <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
-
 </head>
 
 <body>
     <button class="dark-btn"><img id="icon" src="Moon.png" alt="Dark"></img></button>
-    <h1>Dev Projects</h1>
+    <p class="title" style="margin-bottom: 10px;">Dev Projects</p>
 
     <a href="index.html"><button class="add">Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i> </button></a>
 
@@ -36,6 +35,7 @@
         <!--Projects-->
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/145559687?v=4" alt="User Image"></div>
             <h3 class="name">Tanvi</h3>
             <div class="project">
@@ -59,6 +59,7 @@
         </div>
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
             <h3 class="name">Gyan Pratap Singh</h3>
             <div class="project">
@@ -91,6 +92,7 @@
         </div>
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://github.com/anurag-327.png" alt="User Image"></div>
             <h3 class="name">Anurag Srivastav</h3>
             <div class="project">
@@ -121,6 +123,7 @@
 
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/64124782?v=4" alt="User Image"></div>
             <h3 class="name">Vikas Anand</h3>
             <div class="project">
@@ -155,6 +158,7 @@
 
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/91364014?v=4" alt="User Image"></div>
             <h3 class="name">Ankit Jha</h3>
             <div class="project">
@@ -188,6 +192,7 @@
         </div>
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/100522447?v=4" alt="User Image"></div>
             <h3 class="name">Fariha Naqvi</h3>
             <div class="project">
@@ -217,6 +222,7 @@
         </div>
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/129689787?v=4" alt="User Image"></div>
             <h3 class="name">Sai kumar</h3>
             <div class="project">
@@ -253,6 +259,7 @@
 
 
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/119102832?v=4" alt="Ashish"></div>
             <h3 class="name">Ashish</h3>
             <div class="project">
@@ -300,11 +307,8 @@
     }
             darkMode.classList.toggle("light-background");
             darkMode.classList.toggle("icon-color")
+            document.querySelector(".title").classList.toggle("text-color");
             document.querySelector("h1").classList.toggle("text-color");
-            document.querySelectorAll("h3").forEach((item) => {
-                item.classList.toggle("text-color");
-            });
-            document.querySelector("footer").classList.toggle("text-color");
         });
 
     </script>
