@@ -1,0 +1,34 @@
+name: Node.js CI Workflow
+
+on:
+  push:
+    branches: [main] # Runs the workflow on pushes to the main branch
+  pull_request:
+    branches: [main] # Runs the workflow on pull requests to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.x' # Use Node.js version 20.x
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run your script
+      - name: Run Node.js script
+        run: node ./index.js
+
+      # Optional: Step 5 - Run tests (if you have a test script)
+      - name: Run tests
+        run: npm test
