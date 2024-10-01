@@ -44,6 +44,9 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+body, .title, h3, footer, .dark-btn {
+  transition: background-color 500ms ease, color 500ms ease;
+}
 
 body .title{
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -70,6 +73,7 @@ body .title{
   transition: background-color 0.3s ease, transform 1s ease,
   border-color 1s ease;
   overflow: hidden;
+  background-color: var(--color-body-bg);
 }
 
 .profile>* {
@@ -113,7 +117,6 @@ body .title{
   height: 120px;
   background: linear-gradient(transparent, var(--color-profile-border), var(--color-profile-border), var(--color-profile-border), transparent);
   animation: animate 4s linear infinite;
-   
 }
 
 @keyframes animate {
@@ -309,14 +312,15 @@ header {
   top: 10px;
   padding: 5px 10px;
   cursor: pointer;
-  background-color: var(--backdrop-bg-color);
+  background-color: transparent;
+  transition: all 500ms;
   font-size: 30px;
   transition: all 0.3s;
 }
 
 .dark-btn img {
   width: 50px;
-  height: 70px;
+  height: auto;
 }
 
 .dark-btn #icon:hover {
