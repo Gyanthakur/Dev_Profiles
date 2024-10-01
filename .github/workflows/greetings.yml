@@ -1,22 +1,24 @@
 name: Greetings
 
 on: 
-  fork: 
   push: 
     branches: [main] 
   issues: 
     types: [opened] 
   pull_request_target: 
-    types: [opened] 
+    types: [opened]
+
+permissions:
+  contents: write
 
 jobs: 
   welcome: 
     runs-on: ubuntu-latest 
     steps: 
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v3 
       - uses: EddieHubCommunity/gh-action-community@main 
         with: 
           github-token: ${{ secrets.GITHUB_TOKEN }} 
-          issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
-          pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!' 
+          issue-message: 'Welcome, @{{ github.actor }}! Thanks for raising the issue!'
+          pr-message: 'Great job, @{{ github.actor }}! Thanks for creating the pull request!' 
           footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions. Make sure to star this awesome repository.'
