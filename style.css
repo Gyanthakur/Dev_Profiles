@@ -66,6 +66,7 @@ body .title{
   position: relative;
   /* border: 0.2em solid var(--color-profile-border);
   border-radius: 10px; */
+  border-radius: 10px;
   padding: 40px;
   margin: 20px;
   width: calc(33.33% - 40px);
