@@ -68,8 +68,8 @@ body .title{
   padding: 40px;
   margin: 20px;
   width: calc(33.33% - 40px);
-  border-radius: 2vw;
   text-align: center;
+  border-radius: 2vw;
   transition: background-color 0.3s ease, transform 1s ease,
   border-color 1s ease;
   overflow: hidden;
