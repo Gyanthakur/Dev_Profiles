@@ -1,7 +1,8 @@
 name: 'Greetings'
 on:
   push:
-    branches: [main]
+    branches:
+      - '**'  # or you can specify specific branches like 'gyan', 'Gyanthakur-patch-1', etc.
   issues:
     types: [opened]
   pull_request:
