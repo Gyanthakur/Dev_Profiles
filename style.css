@@ -403,12 +403,12 @@ footer {
   font-weight: 300;
 }
 
-.copyright{
+.copyright_{
   background-color: #000;
   width: 100%;
   transition: 0.5s;
 }
 
-.copyright:hover {
-  transform: translateY(-10px);
+.copyright_:hover {
+  transform: translateY(-9px);
 }
