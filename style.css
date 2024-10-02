@@ -217,7 +217,7 @@ body .title{
 }
 
 .social a {
-  color: #ffffff;
+  color: #fff;
   margin: 0 10px;
   font-size: 24px;
   text-decoration: none;
@@ -389,15 +389,26 @@ footer {
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
+  color: #0f0f0f;
 }
 
 .menu__link {
   font-size: 1.2rem;
   color: #fff;
-  margin: 0 10px;
+  margin: 0px;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
   opacity: 0.75;
   font-weight: 300;
+}
+
+.copyright_{
+  background-color: #000;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.copyright_:hover {
+  transform: translateY(-9px);
 }
