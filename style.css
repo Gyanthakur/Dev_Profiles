@@ -62,13 +62,13 @@ body .title{
 
 .profile {
   --backdrop-bg-color: var(--color-profile-card-bg);
-
   position: relative;
   /* border: 0.2em solid var(--color-profile-border);
   border-radius: 10px; */
   padding: 40px;
   margin: 20px;
   width: calc(33.33% - 40px);
+  border-radius: 2vw;
   text-align: center;
   transition: background-color 0.3s ease, transform 1s ease,
   border-color 1s ease;
