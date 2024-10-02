@@ -22,4 +22,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
           pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!'
-          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account** for updates'
+          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account**'
