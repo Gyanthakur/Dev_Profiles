@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
 const date = document.getElementById('dates')
@@ -13,15 +14,14 @@ searchInput.addEventListener('input', filterProfiles);
 
 function filterProfiles() {
     const query = searchInput.value.toLowerCase();
-
     profiles.forEach((profile) => {
-        const name = profile.querySelector('.name').textContent.toLowerCase();
-        const skills = profile.querySelector('.skills').textContent.toLowerCase();
-
-        if (name.includes(query) || skills.includes(query)) {
-            profile.style.display = 'block'; // Show matching profiles
+        const name = profile.querySelector('.name').textContent.toLowerCase(); 
+        const skills = Array.from(profile.querySelectorAll('.skills .skill')) 
+            .map(skill => skill.textContent.toLowerCase()); 
+        if (name.includes(query) || skills.some(skill => skill.includes(query))) {
+            profile.style.display = 'block';
         } else {
-            profile.style.display = 'none'; // Hide non-matching profiles
+            profile.style.display = 'none'; 
         }
     });
 }
@@ -47,4 +47,5 @@ darkMode.addEventListener("click", () => {
     buttons.forEach(button => {
     button.classList.toggle('bg-color');
     });
+});
 });
