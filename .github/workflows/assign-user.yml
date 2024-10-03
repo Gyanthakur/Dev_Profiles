@@ -1,6 +1,8 @@
 name: 'Author Assign'
 
 on:
+push:
+    branches: ['**']  # Matches all branches
   pull_request:
     branches: ['**'] # Trigger on pull requests for all branches
     types: [opened, reopened]
