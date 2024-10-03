@@ -360,7 +360,15 @@
             darkMode.classList.toggle("light-background");
             darkMode.classList.toggle("icon-color")
             document.querySelector(".title").classList.toggle("text-color");
-            document.querySelector("h1").classList.toggle("text-color");
+            // the below selctor of h1 logs null 
+            //  document.querySelector("h1").classList.toggle("text-color");
+
+            const projectButtons = document.querySelectorAll('.add')
+    
+            projectButtons
+            .forEach((btn) => {
+                btn.classList.toggle("projects-bg-color")
+            })
         });
 
     </script>
