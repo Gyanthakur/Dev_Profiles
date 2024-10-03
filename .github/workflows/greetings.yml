@@ -1,8 +1,39 @@
+# name: 'Greetings'
+# on:
+#   push:
+#     branches:
+#       - '**'  # or you can specify specific branches like 'gyan', 'Gyanthakur-patch-1', etc.
+#   issues:
+#     types: [opened]
+#   pull_request:
+#     types: [opened]
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# jobs:
+#   welcome:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
+#           pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!'
+#           footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account**'
+
+
+
 name: 'Greetings'
 on:
+  # Trigger on pushes to any branch
   push:
     branches:
-      - '**'  # or you can specify specific branches like 'gyan', 'Gyanthakur-patch-1', etc.
+      - '**'  # This will match all branches
+
+  # Trigger on new issues and pull requests
   issues:
     types: [opened]
   pull_request:
@@ -16,10 +47,13 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+      # Checkout the latest version of the repository
+      - uses: actions/checkout@v3
+
+      # Use the community welcome action for greetings
+      - uses: EddieHubCommunity/gh-action-community@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
-          pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!'
-          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account**'
+          pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request from branch `${{ github.event.pull_request.head.ref }}`!'
+          footer: 'Soon the maintainers/owner will review it and provide feedback. Do not forget to **star this awesome repository** and **follow the account**.'
