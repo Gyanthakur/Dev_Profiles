@@ -353,6 +353,13 @@ header {
   margin: 5px;
 }
 
+.projects-bg-color{
+  background-color: #ADD8E6;
+  color: var(--color-body-bg);
+  font-weight: 600;
+  margin: 5px;
+}
+
 footer {
   padding: 20px;
   margin-bottom: 5px;
