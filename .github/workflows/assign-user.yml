@@ -8,9 +8,6 @@ on:
         types: [opened, reopened]
     issues:
         types: [opened, reopened]
-    permissions:
-        pull-requests: write  # Ensure permissions are granted for pull requests
-
 jobs:
   assign-author:
     runs-on: ubuntu-latest
