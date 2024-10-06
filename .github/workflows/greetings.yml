@@ -26,11 +26,11 @@ jobs:
           issue-message: |
             Welcome, @${{ github.actor }}! Thanks for raising the issue.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account** for updates!
+            Make sure to **star this awesome repository** and **follow the account!** 
           pr-message: |
             Great job, @${{ github.actor }}! Thanks for creating the pull request.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account** for updates!
+            Make sure to **star this awesome repository** and **follow the account!** 
           footer: 'Make sure to stay involved and contribute to the project!'
 
 
