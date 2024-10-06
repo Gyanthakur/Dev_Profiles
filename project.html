@@ -346,33 +346,6 @@
         <!-- project  -->
     </div>
 
-    <script type="text/javascript">
-        const darkMode = document.querySelector(".dark-btn");
-        var icon=document.getElementById("icon");
-
-        darkMode.addEventListener("click", () => {
-            document.body.classList.toggle("light-background");
-            if(document.body.classList.contains("light-background")){
-        icon.src="Sun.png";
-    }else{
-        icon.src="Moon.png";
-    }
-            darkMode.classList.toggle("light-background");
-            darkMode.classList.toggle("icon-color")
-            document.querySelector(".title").classList.toggle("text-color");
-            // the below selctor of h1 logs null 
-            //  document.querySelector("h1").classList.toggle("text-color");
-
-            const projectButtons = document.querySelectorAll('.add')
-    
-            projectButtons
-            .forEach((btn) => {
-                btn.classList.toggle("projects-bg-color")
-            })
-        });
-
-    </script>
-
 <footer class="footer">
     <ul class="social-icon">
       <li class="social-icon__item"><a class="social-icon__link" href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
