@@ -25,7 +25,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            github.issues.addLabels({
+            github.rest.issues.addLabels({
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -37,7 +37,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            github.issues.addLabels({
+            github.rest.issues.addLabels({
               issue_number: context.payload.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
