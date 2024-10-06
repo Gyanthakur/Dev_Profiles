@@ -89,7 +89,8 @@ A place to list and shocase your developer skills and profile
 
 7. Wait for Merge.
 
-8. ## Need Help? Contact Me!
+ 
+ ## Need Help? Contact Me!
 
 If you have any query or confusion, you can WhatsApp me by clicking the button below:
 
