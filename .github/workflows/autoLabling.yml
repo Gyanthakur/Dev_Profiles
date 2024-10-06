@@ -20,29 +20,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Add default labels for PRs
       - name: Add default labels to PRs
         if: github.event_name == 'pull_request'
-        uses: actions/add-labels@v1.0.2
+        uses: actions/github-script@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Hactoberfest_2024
-            Hactoberfest-accepted
-            Hactoberfest
+          script: |
+            github.issues.addLabels({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
+            })
 
-      # Add default labels for Issues
       - name: Add default labels to Issues
         if: github.event_name == 'issues'
-        uses: actions/add-labels@v1.0.2
+        uses: actions/github-script@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            Hactoberfest_2024
-            Hactoberfest-accepted
-            Hactoberfest
+          script: |
+            github.issues.addLabels({
+              issue_number: context.payload.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
+            })
 
-  # Define PR label logic
   label-prs:
     runs-on: ubuntu-latest
     outputs:
@@ -62,7 +63,6 @@ jobs:
             echo "::set-output name=label::hacktoberfest"
           fi
 
-  # Define Issue label logic
   label-issues:
     runs-on: ubuntu-latest
     outputs:
