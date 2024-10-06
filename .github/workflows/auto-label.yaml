@@ -3,7 +3,7 @@ name: 'Auto Label Assignment'
 on:
   issues:
     types: [opened]
-  pull_request_target:  # Changed to pull_request_target
+  pull_request_target:  # Using pull_request_target
     types: [opened]
 
 permissions:  # Set permissions for the workflow
