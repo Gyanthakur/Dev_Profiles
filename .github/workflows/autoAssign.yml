@@ -1,0 +1,33 @@
+name: Auto Assign Issues and PRs
+
+on:
+  pull_request:
+    types: [opened, reopened]
+  issues:
+    types: [opened]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Assign the issue or PR
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const assignee = context.payload.sender.login; // Get the username of the contributor
+            if (context.eventName === 'pull_request') {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                assignees: [assignee] // Assign the pull request to the contributor
+              });
+            } else if (context.eventName === 'issues') {
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                assignees: [assignee] // Assign the issue to the contributor
+              });
+            }
