@@ -473,7 +473,9 @@ footer {
 
 .contribution-steps li:hover {
     background-color: var(--color-green); /* Highlight on hover */
+    color: black; /* Change text color to black on hover */
 }
+
 
 /* Footer for About Page */
 .about-footer {
