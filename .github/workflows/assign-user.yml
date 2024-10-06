@@ -1,16 +1,15 @@
 name: 'Author Assign'
 
 on:
-  push:
-    branches: ['**']  # Trigger on push for all branches
-  pull_request:
-    branches: ['**']  # Trigger on pull requests for all branches
-    types: [opened, reopened]
-  issues:
-    types: [opened, reopened]
-
-permissions:
-  pull-requests: write  # Ensure permissions are granted for pull requests
+    push:
+        branches: ['**']  # Matches all branches
+    pull_request:
+        branches: ['**'] # Trigger on pull requests for all branches
+        types: [opened, reopened]
+    issues:
+        types: [opened, reopened]
+    permissions:
+        pull-requests: write  # Ensure permissions are granted for pull requests
 
 jobs:
   assign-author:
