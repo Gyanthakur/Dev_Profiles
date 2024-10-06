@@ -1,13 +1,15 @@
 name: 'Greetings'
+
 on:
   push:
     branches:
-      - '**'  # or you can specify specific branches like 'gyan', 'Gyanthakur-patch-1', etc.
+      - '**'  # Trigger on all branches for push events
   issues:
-    types: [opened]
+    types: [opened]  # Trigger on issue opened events
   pull_request:
-    types: [opened]
-    #gyan singh
+    branches:
+      - '**'  # Trigger on pull request opened for all branches
+    types: [opened]  # You can add other types like reopened if needed
 
 permissions:
   issues: write
@@ -21,6 +23,40 @@ jobs:
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
-          pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!'
-          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account**'
+          issue-message: |
+            Welcome, @${{ github.actor }}! Thanks for raising the issue.
+            Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+            Make sure to **star this awesome repository** and **follow the account** for updates!
+          pr-message: |
+            Great job, @${{ github.actor }}! Thanks for creating the pull request.
+            Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+            Make sure to **star this awesome repository** and **follow the account** for updates!
+          footer: 'Make sure to stay involved and contribute to the project!'
+
+
+# name: 'Greetings'
+# on:
+#   push:
+#     branches:
+#       - '**'  # or you can specify specific branches like 'gyan', 'Gyanthakur-patch-1', etc.
+#   issues:
+#     types: [opened]
+#   pull_request:
+#     types: [opened]
+#     #gyan singh
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# jobs:
+#   welcome:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           issue-message: 'Welcome, @${{ github.actor }}! Thanks for raising the issue!'
+#           pr-message: 'Great job, @${{ github.actor }}! Thanks for creating the pull request!'
+#           footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.Make sure to **star this awesome repository** and **follow the account**'
