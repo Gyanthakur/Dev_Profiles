@@ -1,0 +1,23 @@
+name: Auto Label PR Contributor
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add "contributor" label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: "contributor"
+
+      - name: Confirm label assignment
+        run: echo "Label 'contributor' added successfully."
