@@ -1,7 +1,10 @@
-name: Auto Label PR Contributor
+name: Auto Label for PRs and Issues
 
 on:
   pull_request:
+    types:
+      - opened
+  issues:
     types:
       - opened
 
@@ -13,11 +16,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Add "contributor" label
+      - name: Add "contributor" label to PRs
+        if: github.event_name == 'pull_request'
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: "contributor"
 
-      - name: Confirm label assignment
-        run: echo "Label 'contributor' added successfully."
+      - name: Add "issue" label to Issues
+        if: github.event_name == 'issues'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: "issue"
