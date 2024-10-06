@@ -7,11 +7,9 @@ let currentDate  = new Date()
 let currentYear  = currentDate.getFullYear()
 date.innerHTML = currentYear
 
-
-
-
-searchInput.addEventListener('input', filterProfiles);
-
+if (searchInput) {
+	searchInput.addEventListener('input', filterProfiles);
+}
 function filterProfiles() {
     const query = searchInput.value.toLowerCase();
     profiles.forEach((profile) => {
@@ -28,7 +26,6 @@ function filterProfiles() {
 
 const darkMode = document.querySelector(".dark-btn");
 var icon=document.getElementById("icon");
-
 
 darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");

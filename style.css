@@ -427,3 +427,58 @@ footer {
   transform: translateY(-3px); /* Slight upward movement */
   border-radius: 8px; /* Slightly more rounded corners */
 }
+
+/* About Page Styling */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: var(--color-profile-card-bg); /* Use the card background color */
+    border-radius: 10px;
+    color: var(--color-white); /* Text color */
+    font-family: "Poppins", sans-serif; /* Consistent font */
+}
+
+.about-section {
+    background-color: var(--color-body-bg); /* Match body background */
+    border: 1px solid var(--color-profile-border); /* Use border color from profile */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slightly heavier shadow for depth */
+    margin: 20px 0;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-profile-border); /* Use the profile border color for titles */
+}
+
+.about-content {
+    font-size: 16px;
+    color: var(--color-white); /* Use white for better readability */
+}
+
+.contribution-steps {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contribution-steps li {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--color-white); /* Consistent text color */
+    transition: background-color 0.3s ease;
+}
+
+.contribution-steps li:hover {
+    background-color: var(--color-green); /* Highlight on hover */
+}
+
+/* Footer for About Page */
+.about-footer {
+    background-color: var(--color-profile-border); /* Consistent footer background */
+    padding: 20px;
+    color: var(--color-white);
+    text-align: center;
+}
