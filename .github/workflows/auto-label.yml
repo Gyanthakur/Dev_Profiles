@@ -13,7 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up GitHub CLI
+        run: |
+          echo "Setting up GitHub CLI"
+          sudo apt-get install gh
+
       - name: Assign always-required labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the GH_TOKEN environment variable
         run: |
           # Always add these labels
           echo "Adding always assigned labels: hacktoberfest, hacktoberfest-accepted, hactoberfest2024"
@@ -22,6 +29,8 @@ jobs:
           gh issue edit ${{ github.event.issue.number || github.event.pull_request.number }} --add-label "hactoberfest2024"
 
       - name: Auto assign specific labels based on conditions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the GH_TOKEN environment variable
         run: |
           ISSUE_TITLE="${{ github.event.issue.title || github.event.pull_request.title }}"
           
