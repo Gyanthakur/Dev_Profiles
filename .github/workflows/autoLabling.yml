@@ -1,5 +1,9 @@
 name: Auto Label for PRs and Issues
 
+permissions:
+  issues: write
+  pull-requests: write
+
 on:
   pull_request:
     types:
