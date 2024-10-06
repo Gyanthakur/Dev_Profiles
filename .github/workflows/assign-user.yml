@@ -1,10 +1,10 @@
 name: 'Author Assign'
 
 on:
-push:
-    branches: ['**']  # Matches all branches
+  push:
+    branches: ['**']  # Trigger on push for all branches
   pull_request:
-    branches: ['**'] # Trigger on pull requests for all branches
+    branches: ['**']  # Trigger on pull requests for all branches
     types: [opened, reopened]
   issues:
     types: [opened, reopened]
@@ -15,5 +15,25 @@ jobs:
     steps:
       - uses: toshimaru/auto-author-assign@v1.1.0
         with:
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+
+# name: 'Author Assign'
+
+# on:
+# push:
+#     branches: ['**']  # Matches all branches
+#   pull_request:
+#     branches: ['**'] # Trigger on pull requests for all branches
+#     types: [opened, reopened]
+#   issues:
+#     types: [opened, reopened]
+
+# jobs:
+#   assign-author:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: toshimaru/auto-author-assign@v1.1.0
+#         with:
+#           repo-token: '${{ secrets.GITHUB_TOKEN }}'
 
