@@ -1,4 +1,4 @@
-name: Auto Label for PRs and Issues
+name: Auto Label Issues and PRs
 
 permissions:
   issues: write
@@ -18,18 +18,116 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Add "contributor" label to PRs
+      # Add default labels for PRs
+      - name: Add default labels to PRs
         if: github.event_name == 'pull_request'
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions/add-labels@v1.0.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: "contributor"
+          labels: |
+            Hactoberfest_2024
+            Hactoberfest-accepted
+            Hactoberfest
 
-      - name: Add "issue" label to Issues
+      # Add default labels for Issues
+      - name: Add default labels to Issues
         if: github.event_name == 'issues'
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions/add-labels@v1.0.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: "issue"
+          labels: |
+            Hactoberfest_2024
+            Hactoberfest-accepted
+            Hactoberfest
+
+  # Define PR label logic
+  label-prs:
+    runs-on: ubuntu-latest
+    outputs:
+      label: ${{ steps.set-label.outputs.label }}
+
+    steps:
+      - name: Determine PR Label
+        id: set-label
+        run: |
+          if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
+            echo "::set-output name=label::bug"
+          elif [[ "${{ github.event.pull_request.title }}" =~ documentation ]]; then
+            echo "::set-output name=label::documentation"
+          elif [[ "${{ github.event.pull_request.title }}" =~ enhancement ]]; then
+            echo "::set-output name=label::enhancement"
+          elif [[ "${{ github.event.pull_request.title }}" =~ hacktoberfest ]]; then
+            echo "::set-output name=label::hacktoberfest"
+          fi
+
+  # Define Issue label logic
+  label-issues:
+    runs-on: ubuntu-latest
+    outputs:
+      label: ${{ steps.set-label.outputs.label }}
+
+    steps:
+      - name: Determine Issue Label
+        id: set-label
+        run: |
+          if [[ "${{ github.event.issue.title }}" =~ bug ]]; then
+            echo "::set-output name=label::bug"
+          elif [[ "${{ github.event.issue.title }}" =~ "Something isn't working" ]]; then
+            echo "::set-output name=label::Something isn't working"
+          elif [[ "${{ github.event.issue.title }}" =~ documentation ]]; then
+            echo "::set-output name=label::documentation"
+          elif [[ "${{ github.event.issue.title }}" =~ "Improvements or additions to documentation" ]]; then
+            echo "::set-output name=label::Improvements or additions to documentation"
+          elif [[ "${{ github.event.issue.title }}" =~ duplicate ]]; then
+            echo "::set-output name=label::duplicate"
+          elif [[ "${{ github.event.issue.title }}" =~ enhancement ]]; then
+            echo "::set-output name=label::enhancement"
+          elif [[ "${{ github.event.issue.title }}" =~ "good first issue" ]]; then
+            echo "::set-output name=label::good first issue"
+          elif [[ "${{ github.event.issue.title }}" =~ hacktoberfest ]]; then
+            echo "::set-output name=label::hacktoberfest"
+          elif [[ "${{ github.event.issue.title }}" =~ question ]]; then
+            echo "::set-output name=label::question"
+          fi
+
+
+
+
+
+# name: Auto Label for PRs and Issues
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#   issues:
+#     types:
+#       - opened
+
+# jobs:
+#   auto-label:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+
+#       - name: Add "contributor" label to PRs
+#         if: github.event_name == 'pull_request'
+#         uses: actions-ecosystem/action-add-labels@v1
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           labels: "contributor"
+
+#       - name: Add "issue" label to Issues
+#         if: github.event_name == 'issues'
+#         uses: actions-ecosystem/action-add-labels@v1
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           labels: "issue"
