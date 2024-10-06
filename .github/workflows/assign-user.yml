@@ -3,7 +3,7 @@ name: 'Author Assign'
 on:
   push:
     branches: ['**']  # Trigger on push for all branches
-  pull_request_target:
+  pull_request:
     branches: ['**']  # Trigger on pull requests for all branches
     types: [opened, reopened]
   issues:
