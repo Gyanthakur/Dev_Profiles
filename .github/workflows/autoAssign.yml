@@ -8,7 +8,7 @@ on:
 
 permissions:
   issues: write
-  pull-requests: write  # Add explicit permission for pull requests
+  pull-requests: write  # Add explicit permission for pull 
 
 jobs:
   auto-assign:
