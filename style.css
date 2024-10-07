@@ -36,6 +36,17 @@
   box-sizing: border-box;
 }
 
+.title {
+  text-decoration: none;
+  color: #ff4500;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.title:hover {
+  color: #ff8086;
+}
+
 body {
   width: 100vw;
   background-color: var(--color-body-bg);
@@ -44,12 +55,17 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
-body, .title, h3, footer, .dark-btn {
+body,
+.title,
+h3,
+footer,
+.dark-btn {
   transition: background-color 500ms ease, color 500ms ease;
 }
 
-body .title{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body .title {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .container {
   display: flex;
@@ -72,12 +88,12 @@ body .title{
   width: calc(33.33% - 40px);
   text-align: center;
   transition: background-color 0.3s ease, transform 1s ease,
-  border-color 1s ease;
+    border-color 1s ease;
   overflow: hidden;
   background-color: var(--color-body-bg);
 }
 
-.profile>* {
+.profile > * {
   position: relative;
   z-index: 10;
 }
@@ -90,56 +106,74 @@ body .title{
   left: 0;
   right: 0;
   bottom: 75%;
-  background-image: linear-gradient(to right, #e35205, #ff6462, #ff87a5, #ffaed7, #f5d4f5, #f8dbf8, #fce1fc, #ffe8ff, #ffd2ee, #ffc0b9, #ffbf6e, #ffd200);
+  background-image: linear-gradient(
+    to right,
+    #e35205,
+    #ff6462,
+    #ff87a5,
+    #ffaed7,
+    #f5d4f5,
+    #f8dbf8,
+    #fce1fc,
+    #ffe8ff,
+    #ffd2ee,
+    #ffc0b9,
+    #ffbf6e,
+    #ffd200
+  );
   transform: scaleX(2);
   animation: breatheX 1s ease-in-out infinite alternate-reverse;
- z-index: 10;
+  z-index: 10;
 }
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
 }
 
-.profile .lines{
- position: absolute;
- inset: 0;
- background: #000;
- overflow: hidden;
- 
+.profile .lines {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
 }
 
-.profile .lines::before{
-  content: '';
+.profile .lines::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
   width: 600px;
   height: 120px;
-  background: linear-gradient(transparent, var(--color-profile-border), var(--color-profile-border), var(--color-profile-border), transparent);
+  background: linear-gradient(
+    transparent,
+    var(--color-profile-border),
+    var(--color-profile-border),
+    var(--color-profile-border),
+    transparent
+  );
   animation: animate 4s linear infinite;
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
-  100%{
+  100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
-.profile .lines::after{
-  content: '';
+.profile .lines::after {
+  content: "";
   position: absolute;
-  inset:3px;
+  inset: 3px;
   background: var(--color-body-bg);
 }
 
-.profile .pfp{
+.profile .pfp {
   z-index: 13;
 }
-
 
 .pfp img {
   width: 100px;
@@ -147,7 +181,7 @@ body .title{
   border-radius: 50%;
   margin-bottom: 10px;
   outline: 0.5rem solid var(--color-body-bg);
-} 
+}
 
 .name {
   font-family: "Poppins", sans-serif;
@@ -346,15 +380,15 @@ header {
   color: #000;
 }
 
-.bg-color{
-  background-color: #ADD8E6;
+.bg-color {
+  background-color: #add8e6;
   color: var(--color-body-bg);
   font-weight: 600;
   margin: 5px;
 }
 
-.projects-bg-color{
-  background-color: #ADD8E6;
+.projects-bg-color {
+  background-color: #add8e6;
   color: var(--color-body-bg);
   font-weight: 600;
   margin: 5px;
@@ -369,7 +403,14 @@ footer {
 .footer {
   position: relative;
   width: 100%;
-  background-image: linear-gradient(to right, #e35205, #ff6462, #ff87a5, #ffbf6e, #ffd200);
+  background-image: linear-gradient(
+    to right,
+    #e35205,
+    #ff6462,
+    #ff87a5,
+    #ffbf6e,
+    #ffd200
+  );
   min-height: 100px;
   padding: 20px 50px;
   display: flex;
@@ -430,57 +471,62 @@ footer {
 
 /* About Page Styling */
 .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: var(--color-profile-card-bg); /* Use the card background color */
-    border-radius: 10px;
-    color: var(--color-white); /* Text color */
-    font-family: "Poppins", sans-serif; /* Consistent font */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: var(
+    --color-profile-card-bg
+  ); /* Use the card background color */
+  border-radius: 10px;
+  color: var(--color-white); /* Text color */
+  font-family: "Poppins", sans-serif; /* Consistent font */
 }
 
 .about-section {
-    background-color: var(--color-body-bg); /* Match body background */
-    border: 1px solid var(--color-profile-border); /* Use border color from profile */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slightly heavier shadow for depth */
-    margin: 20px 0;
+  background-color: var(--color-body-bg); /* Match body background */
+  border: 1px solid var(--color-profile-border); /* Use border color from profile */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slightly heavier shadow for depth */
+  margin: 20px 0;
 }
 
 .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--color-profile-border); /* Use the profile border color for titles */
+  font-size: 24px;
+  font-weight: bold;
+  color: var(
+    --color-profile-border
+  ); /* Use the profile border color for titles */
 }
 
 .about-content {
-    font-size: 16px;
-    color: var(--color-white); /* Use white for better readability */
+  font-size: 16px;
+  color: var(--color-white); /* Use white for better readability */
 }
 
 .contribution-steps {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .contribution-steps li {
-    padding: 10px;
-    font-size: 16px;
-    color: var(--color-white); /* Consistent text color */
-    transition: background-color 0.3s ease;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--color-white); /* Consistent text color */
+  transition: background-color 0.3s ease;
 }
 
 .contribution-steps li:hover {
-    background-color: var(--color-green); /* Highlight on hover */
-    color: black; /* Change text color to black on hover */
+  background-color: var(--color-green); /* Highlight on hover */
+  color: black; /* Change text color to black on hover */
 }
-
 
 /* Footer for About Page */
 .about-footer {
-    background-color: var(--color-profile-border); /* Consistent footer background */
-    padding: 20px;
-    color: var(--color-white);
-    text-align: center;
+  background-color: var(
+    --color-profile-border
+  ); /* Consistent footer background */
+  padding: 20px;
+  color: var(--color-white);
+  text-align: center;
 }
