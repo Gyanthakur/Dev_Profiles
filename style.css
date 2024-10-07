@@ -36,6 +36,46 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1e;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ff8086;
+}
+
+.title a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff8086;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.title a:hover {
+  color: #fff;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 128, 134, 0.8);
+}
+
+.dark-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dark-btn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.dark-btn:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
 body {
   width: 100vw;
   background-color: var(--color-body-bg);
