@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step to add logging
+      # Step to add logginggg
       - name: Log context for debugging
         uses: actions/github-script@v6
         with:
