@@ -9,7 +9,7 @@ on:
   pull_request:
     branches:
       - '**'  # Trigger on pull request opened for all branches
-    types: [opened]  # You can add other types like reopened if needed
+    types: [opened]  # Trigger on pull request opened
 
 permissions:
   issues: write
@@ -19,19 +19,59 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+      # Using the latest checkout version
+      - uses: actions/checkout@v3
+
+      # Use the correct version of the welcome action
+      - uses: EddieHubCommunity/gh-action-community@v2.0.0  # Check if v2.0.0 is available in the Marketplace
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
             Welcome, @${{ github.actor }}! Thanks for raising the issue.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account!** 
+            Make sure to **star this awesome repository** and **follow the account!**
           pr-message: |
             Great job, @${{ github.actor }}! Thanks for creating the pull request.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account!** 
+            Make sure to **star this awesome repository** and **follow the account!**
           footer: 'Make sure to stay involved and contribute to the project! If you have not followed the account or starred the repository, your pull request may not be accepted.'
+
+
+
+# name: 'Greetings'
+
+# on:
+#   push:
+#     branches:
+#       - '**'  # Trigger on all branches for push events
+#   issues:
+#     types: [opened]  # Trigger on issue opened events
+#   pull_request:
+#     branches:
+#       - '**'  # Trigger on pull request opened for all branches
+#     types: [opened]  # You can add other types like reopened if needed
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# jobs:
+#   welcome:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           issue-message: |
+#             Welcome, @${{ github.actor }}! Thanks for raising the issue.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account!** 
+#           pr-message: |
+#             Great job, @${{ github.actor }}! Thanks for creating the pull request.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account!** 
+#           footer: 'Make sure to stay involved and contribute to the project! If you have not followed the account or starred the repository, your pull request may not be accepted.'
 
 
 # name: 'Greetings'
