@@ -3,32 +3,74 @@ name: 'Greetings'
 on:
   push:
     branches:
-      - '**'  # Trigger on all branches for push events
+      - '**'
   issues:
-    types: [opened]  # Trigger on issue opened events
+    types: [opened]
   pull_request:
     branches:
-      - '**'  # Trigger on pull request opened for all branches
-    types: [opened]  # Trigger on pull request events like opened, reopened if needed
+      - '**'
+    types: [opened]
 
 permissions:
   issues: write
-  pull-requests: write  # Ensure pull request permissions are explicitly set to 'write'
+  pull-requests: write
 
 jobs:
   welcome:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+      - uses: actions/checkout@v4  # Updated to the latest version
+
+      - name: Send Welcome Message
+        uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}  # Ensure the token is set
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
             Welcome, @${{ github.actor }}! Thanks for raising the issue.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account** for updates!
+            Make sure to **star this awesome repository** and **follow the account!** 
           pr-message: |
             Great job, @${{ github.actor }}! Thanks for creating the pull request.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account** for updates!
-          footer: 'Make sure to stay involved and contribute to the project!'
+            Make sure to **star this awesome repository** and **follow the account!** 
+          # footer: 'Make sure to stay involved and contribute to the project!'
+
+
+
+
+
+# name: 'Greetings'
+
+# on:
+#   push:
+#     branches:
+#       - '**'  # Trigger on all branches for push events
+#   issues:
+#     types: [opened]  # Trigger on issue opened events
+#   pull_request:
+#     branches:
+#       - '**'  # Trigger on pull request opened for all branches
+#     types: [opened]  # Trigger on pull request events like opened, reopened if needed
+
+# permissions:
+#   issues: write
+#   pull-requests: write  # Ensure pull request permissions are explicitly set to 'write'
+
+# jobs:
+#   welcome:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+#         with:
+#           github-token: doler{{ secrets.GITHUB_TOKEN }}  # Ensure the token is set
+#           issue-message: |
+#             Welcome, @doler{{ github.actor }}! Thanks for raising the issue.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account** for updates!
+#           pr-message: |
+#             Great job, @doler{{ github.actor }}! Thanks for creating the pull request.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account** for updates!
+#           footer: 'Make sure to stay involved and contribute to the project!'
