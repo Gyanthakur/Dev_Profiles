@@ -443,12 +443,12 @@ footer {
 }
 
 .social-icon__link:hover {
-  transform: translateY(-10px);
+  transform: translateY(-7px);
 }
 
 .menu__link {
   font-size: 1.2rem;
-  color: #fff;
+  color: #000;
   margin: 0 10px;
   display: inline-block;
   padding: 8px 15px; /* Adds padding to make room for the box effect */
