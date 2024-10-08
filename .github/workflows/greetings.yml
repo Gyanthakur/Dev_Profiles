@@ -8,7 +8,7 @@ on:
     types: [opened] # Trigger on issue opened events
   pull_request:
     branches:
-      - "**" # Trigger on pull request opened for all branches
+      - "**" # Trigger on pull 
     types: [opened] # You can add other types like reopened if needed
 
 permissions:
