@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, reopened]  # Trigger on opened and reopened PRs
   issues:
-    types: [opened]            # Trigger on issue opened events
+    types: [opened]            # Trigger on issue open events
 
 permissions:
   issues: write
