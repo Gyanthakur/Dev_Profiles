@@ -1,23 +1,23 @@
-# Contribution Guidelines for DevProfiles
+# DevProfiles
+A place to list and shocase your developer skills and profile
 
-Welcome to **DevProfiles**! This project is a place to list and showcase your developer skills and profile. We appreciate your interest in contributing!
 
-## How to Contribute
+## Contribute.
+1. Give Star on the repo
 
-1. **Star the Repository**  
-   Show your support by giving a star ⭐ to the repository.
+2. Follow Account
 
-2. **Follow the Account**  
-   Stay updated by following our GitHub account.
+3. Fork this Repository
 
-3. **Fork this Repository**  
-   Create a personal copy of the repository by forking it.
+4. Create Issue 
 
-4. **Create an Issue**  
-   Before making changes, consider creating an issue to discuss your proposed changes.
+5. add following code to HTML `index.html` between another `<!--Profiles-->` comment
 
-5. **Add Your Profile to `index.html`**  
-   Add the following code snippet between the existing `<!--Profiles-->` comment in `index.html`:
+6. before adding profile or project, update or sync your branch by clicking `Sync fork`button
+ <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">
+
+   
+## 5.and keep in mind don't add in top and bottom your profile, add in between.  
 
 ```html
         <div class="profile">
@@ -39,24 +39,12 @@ Welcome to **DevProfiles**! This project is a place to list and showcase your de
         </div>
     </div>
 ```
-
-6. **Note:**
-Do not add your profile at the top or bottom; it should be placed in between.
-
-7. **Sync Your Branch**
-Before adding your profile or project, update or sync your branch by clicking the Sync fork button.
-
-
-
-8. **Change Placeholders** 
-Replace the placeholders in the HTML snippet with your actual information:
-
+> Note: Do not add your profile in top.
+3. Change/Replace the placeholders with your image and profiles urls
     - [IMAGE-URL] with your image URL
     - [YOUR_NAME] with your name
     - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
     - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
-
-
 
 ### and your project in `project.html` as follows and keep in mind don't add in top and bottom your project, add in between  another project.
 
@@ -91,18 +79,17 @@ Replace the placeholders in the HTML snippet with your actual information:
         </div>
 ```
 
-9. **Commit Your Changes**
-After adding your profile and project, commit your changes.
 
-10. **Push the Changes**
-Push your changes to your forked repository.
 
-11. **Create a Pull Request**
-Open a pull request to merge your changes into the main repository.
+4. Commit your changes.
 
-12. **Wait for Merge**
-Once your pull request is reviewed and approved, it will be merged into the main repository.
+5. Push the changes.
 
+6. Create a Pull Request.
+
+7. Wait for Merge.
+
+ 
  ## Need Help? Contact Me!
 
 If you have any query or confusion, you can WhatsApp me by clicking the button below:
@@ -114,21 +101,8 @@ If you have any query or confusion, you can WhatsApp me by clicking the button b
 Or reach me directly at this whatsapp number: **+91 895-7818-597**
 
 
-Thank you to every contributor of this repository!
+
+
+## Thank You
+Thank you to every contributor of this repository <br>
 Show some love by giving a star ⭐ to this repository!
-
-
-### Explanation of Sections:
-- **Title and Introduction**: A warm welcome to contributors.
-- **Contribution Steps**: Detailed steps for contributing, ensuring clarity.
-- **Need Help Section**: Provides contact options for assistance.
-- **Thank You Note**: Acknowledges the contributions and encourages engagement.
-
-Feel free to modify any section to better suit your project's needs!
-
-
-
-
-
-
-
