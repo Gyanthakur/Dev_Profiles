@@ -5,7 +5,7 @@ on:
     branches:
       - '**'  # Trigger on all branches for push events
   issues:
-    types: [opened]  # Trigger on issue opened events
+    types: [opened]  # Trigger on issue opened event
   pull_request:
     branches:
       - '**'  # Trigger on pull request opened for all branches
