@@ -49,7 +49,18 @@ body,
 h3,
 footer,
 .dark-btn {
-  transition: background-color 500ms ease, color 500ms ease;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.dark-btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 body .title {
