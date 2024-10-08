@@ -3,13 +3,13 @@ name: "Greetings"
 on:
   push:
     branches:
-      - "**" # Trigger on all branches for push events
+      - "**" 
   issues:
-    types: [opened] # Trigger on issue opened events
+    types: [opened] 
   pull_request:
     branches:
-      - "**" # Trigger on pull request opened for all branches
-    types: [opened] # You can add other types like reopened if needed
+      - "**" 
+    types: [opened] 
 
 permissions:
   issues: write
