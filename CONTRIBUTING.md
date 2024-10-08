@@ -40,22 +40,25 @@ Welcome to **DevProfiles**! This project is a place to list and showcase your de
     </div>
 ```
 
-6. Note: Do not add your profile at the top or bottom; it should be placed in between.
+6. **Note:**
+Do not add your profile at the top or bottom; it should be placed in between.
 
-7. Sync Your Branch 
+7. **Sync Your Branch**
 Before adding your profile or project, update or sync your branch by clicking the Sync fork button.
 
 
 
-8. Change Placeholders 
+8. **Change Placeholders** 
 Replace the placeholders in the HTML snippet with your actual information:
 
-[IMAGE-URL]: Your profile image URL.
-Your Name: Your name.
-[SKILL-1], [SKILL-2], [SKILL-3]: Your skills.
-[YOUR GITHUB URL], [YOUR X/TWITTER URL], [YOUR LINKEDIN URL]: Your respective profile URLs.
-Add Your Project to project.html
-Similarly, add your project information between the existing project entries in project.html using the following code snippet:
+    - [IMAGE-URL] with your image URL
+    - [YOUR_NAME] with your name
+    - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
+    - [YOUR GITHUB URL], [YOUR X/TWITTER URL] & [YOUR LINKEDIN URL] with your Github, X/Twitter & LinkedIn profile URL repectively.
+
+
+
+### and your project in `project.html` as follows and keep in mind don't add in top and bottom your project, add in between  another project.
 
 ```html
         <div class="profile">
@@ -88,31 +91,32 @@ Similarly, add your project information between the existing project entries in 
         </div>
 ```
 
-
-9. Commit Your Changes
+9. **Commit Your Changes**
 After adding your profile and project, commit your changes.
 
-10. Push the Changes
+10. **Push the Changes**
 Push your changes to your forked repository.
 
-11. Create a Pull Request
+11. **Create a Pull Request**
 Open a pull request to merge your changes into the main repository.
 
-12. Wait for Merge
+12. **Wait for Merge**
 Once your pull request is reviewed and approved, it will be merged into the main repository.
 
-Need Help? Contact Me!
-If you have any queries or confusion, feel free to reach out to me via WhatsApp by clicking the button below:
+ ## Need Help? Contact Me!
 
-<a href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F"> <img src="https://img.shields.io/badge/WhatsApp-Click%20Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp" /> </a>
-You can also reach me directly at this WhatsApp number: +91 895-7818-597.
+If you have any query or confusion, you can WhatsApp me by clicking the button below:
 
-Thank You
+<a href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
+    <img src="https://img.shields.io/badge/WhatsApp-Click%20Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp" />
+</a>
+
+Or reach me directly at this whatsapp number: **+91 895-7818-597**
+
+
 Thank you to every contributor of this repository!
 Show some love by giving a star ⭐ to this repository!
 
-markdown
-Copy code
 
 ### Explanation of Sections:
 - **Title and Introduction**: A warm welcome to contributors.
