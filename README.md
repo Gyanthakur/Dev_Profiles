@@ -98,7 +98,7 @@ If you have any query or confusion, you can WhatsApp me by clicking the button b
     <img src="https://img.shields.io/badge/WhatsApp-Click%20Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp" />
 </a>
 
-Or reach me directly at this number: **+91 895-7818-597**
+Or reach me directly at this whatsapp number: **+91 895-7818-597**
 
 
 
