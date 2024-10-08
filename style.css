@@ -501,6 +501,7 @@ footer {
 .about-content {
   font-size: 16px;
   color: var(--color-white); /* Use white for better readability */
+  margin-bottom: 10px;
 }
 
 .contribution-steps {
@@ -512,12 +513,27 @@ footer {
   padding: 10px;
   font-size: 16px;
   color: var(--color-white); /* Consistent text color */
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px; /* Rounded corners for list items */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.contribution-steps li i {
+  margin-right: 10px;
+  color: var(--color-profile-border); /* Icon color */
 }
 
 .contribution-steps li:hover {
-  background-color: var(--color-green); /* Highlight on hover */
-  color: black; /* Change text color to black on hover */
+  background-color: #e35205; /* Highlight on hover */
+  color: white; /* Change text color to black on hover */
+  transform: scale(1.05); /* Slightly enlarge the item */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  cursor: pointer;
+}
+
+.contribution-steps li:hover i {
+  color: white; /* Change icon color to black on hover */
+
 }
 
 /* Footer for About Page */

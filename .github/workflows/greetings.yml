@@ -5,7 +5,7 @@ on:
     branches:
       - '**'
   issues:
-    types: [opened]
+    types: [opened]  # Trigger on issue opened event
   pull_request:
     branches:
       - '**'
