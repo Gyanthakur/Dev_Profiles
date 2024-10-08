@@ -1,4 +1,3 @@
-# Pull Request Template
 
 ## Description
 
