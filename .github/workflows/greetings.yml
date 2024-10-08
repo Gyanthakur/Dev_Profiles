@@ -1,19 +1,19 @@
-name: "Greetings"
+name: 'Greetings'
 
 on:
   push:
     branches:
-      - "**" 
+      - '**'  # Trigger on all branches for push events
   issues:
-    types: [opened] 
+    types: [opened]  # Trigger on issue opened events
   pull_request:
     branches:
-      - "**" 
-    types: [opened] 
+      - '**'  # Trigger on pull request opened for all branches
+    types: [opened]  # Trigger on pull request events like opened, reopened if needed
 
 permissions:
   issues: write
-  pull-requests: write
+  pull-requests: write  # Ensure pull request permissions are explicitly set to 'write'
 
 jobs:
   welcome:
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}  # Ensure the token is set
           issue-message: |
             Welcome, @${{ github.actor }}! Thanks for raising the issue.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
@@ -31,4 +31,4 @@ jobs:
             Great job, @${{ github.actor }}! Thanks for creating the pull request.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
             Make sure to **star this awesome repository** and **follow the account** for updates!
-          footer: "Make sure to stay involved and contribute to the project!"
+          footer: 'Make sure to stay involved and contribute to the project!'
