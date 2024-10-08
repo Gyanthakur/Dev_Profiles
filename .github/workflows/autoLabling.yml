@@ -5,7 +5,7 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
   issues:
@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Add default labels to PRs
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request_target'
         uses: actions/github-script@v6
         with:
           script: |
@@ -29,7 +29,7 @@ jobs:
               issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
+              labels: ['Hacktoberfest_2024', 'Hacktoberfest-accepted', 'Hacktoberfest']
             })
 
       - name: Add default labels to Issues
@@ -41,17 +41,15 @@ jobs:
               issue_number: context.payload.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
+              labels: ['Hacktoberfest_2024', 'Hacktoberfest-accepted', 'Hacktoberfest']
             })
 
   label-prs:
     runs-on: ubuntu-latest
-    outputs:
-      label: ${{ steps.set-label.outputs.label }}
 
     steps:
       - name: Determine PR Label
-        id: set-label
+        id: set-pr-label
         run: |
           if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
             echo "::set-output name=label::bug"
@@ -63,14 +61,23 @@ jobs:
             echo "::set-output name=label::hacktoberfest"
           fi
 
+      - name: Apply PR Label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['${{ steps.set-pr-label.outputs.label }}']
+            })
+
   label-issues:
     runs-on: ubuntu-latest
-    outputs:
-      label: ${{ steps.set-label.outputs.label }}
 
     steps:
       - name: Determine Issue Label
-        id: set-label
+        id: set-issue-label
         run: |
           if [[ "${{ github.event.issue.title }}" =~ bug ]]; then
             echo "::set-output name=label::bug"
@@ -91,3 +98,14 @@ jobs:
           elif [[ "${{ github.event.issue.title }}" =~ question ]]; then
             echo "::set-output name=label::question"
           fi
+
+      - name: Apply Issue Label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.payload.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['${{ steps.set-issue-label.outputs.label }}']
+            })
