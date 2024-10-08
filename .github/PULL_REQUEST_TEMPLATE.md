@@ -6,6 +6,9 @@ Please include a summary of the changes and the related issue(s) this pull reque
 
 Fixes: #[issue_number] (replace with the issue number, if applicable)
 
+Use [x] to represent a checked (ticked) not changes box.❌
+Use [ ] to represent an unchecked box.✅
+
 ## Type of Change
 
 - [ ] Profile Added
