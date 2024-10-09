@@ -394,6 +394,7 @@ header {
 }
 
 footer {
+  color: black;
   padding: 20px;
   margin-bottom: 5px;
 }
@@ -436,7 +437,7 @@ footer {
 
 .social-icon__link {
   font-size: 2rem;
-  color: #fff;
+  color: black;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -448,7 +449,7 @@ footer {
 
 .menu__link {
   font-size: 1.2rem;
-  color: #fff;
+  color: black;
   margin: 0 10px;
   display: inline-block;
   padding: 8px 15px; /* Adds padding to make room for the box effect */
@@ -461,7 +462,7 @@ footer {
 
 /* Add hover effect to menu links */
 .menu__link:hover {
-  background-color: #fff; /* Adds the translucent box effect */
+  background-color: black; /* Adds the translucent box effect */
   color: #e35205; /* Keeps text color orange */
   opacity: 1; /* Fully opaque on hover */
   transform: translateY(-3px); /* Slight upward movement */
