@@ -47,8 +47,7 @@ body {
 body,
 .title,
 h3,
-footer,
-.dark-btn {
+footer{
   transition: background-color 500ms ease, color 500ms ease;
 }
 
@@ -340,21 +339,33 @@ header {
   margin-top: 15px;
 }
 
+/* Dark Mode - Light mode Button */
+
 .dark-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  right: 10px;
   top: 10px;
-  padding: 5px 10px;
+  right: 10px;
   cursor: pointer;
-  background-color: transparent;
-  transition: all 500ms;
   font-size: 30px;
-  transition: all 0.3s;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: color 500ms ease, color 500ms ease;
+}
+
+.dark-btn:hover{
+  border-radius: 50%;
 }
 
 .dark-btn img {
-  width: 50px;
-  height: auto;
+  filter: invert(100%);
+  height: 30px;
 }
 
 .dark-btn #icon:hover {
