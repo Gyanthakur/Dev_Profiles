@@ -5,7 +5,7 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - opened
   issues:
@@ -21,42 +21,34 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Add default labels to PRs
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request_target'
         uses: actions/github-script@v6
         with:
           script: |
-            const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
-            if (labels.length > 0) {
-              github.rest.issues.addLabels({
-                issue_number: context.payload.pull_request.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: labels
-              }).catch(err => {
-                console.error("Error adding labels to PR:", err);
-              });
-            } else {
-              console.log("No labels to add for PR");
-            }
+            const labels = ['hacktoberfest_2024', 'hacktoberfest-accepted', 'hacktoberfest'];
+            github.rest.issues.addLabels({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: labels
+            }).catch(err => {
+              console.error("Error adding labels to PR:", err);
+            });
 
       - name: Add default labels to Issues
         if: github.event_name == 'issues'
         uses: actions/github-script@v6
         with:
           script: |
-            const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
-            if (labels.length > 0) {
-              github.rest.issues.addLabels({
-                issue_number: context.payload.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: labels
-              }).catch(err => {
-                console.error("Error adding labels to Issue:", err);
-              });
-            } else {
-              console.log("No labels to add for Issue");
-            }
+            const labels = ['hacktoberfest_2024', 'hacktoberfest-accepted', 'hacktoberfest'];
+            github.rest.issues.addLabels({
+              issue_number: context.payload.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: labels
+            }).catch(err => {
+              console.error("Error adding labels to Issue:", err);
+            });
 
   label-prs:
     runs-on: ubuntu-latest
@@ -130,105 +122,80 @@ jobs:
 #         uses: actions/github-script@v6
 #         with:
 #           script: |
-#             github.rest.issues.addLabels({
-#               issue_number: context.payload.pull_request.number,
-#               owner: context.repo.owner,
-#               repo: context.repo.repo,
-#               labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
-#             })
+#             const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
+#             if (labels.length > 0) {
+#               github.rest.issues.addLabels({
+#                 issue_number: context.payload.pull_request.number,
+#                 owner: context.repo.owner,
+#                 repo: context.repo.repo,
+#                 labels: labels
+#               }).catch(err => {
+#                 console.error("Error adding labels to PR:", err);
+#               });
+#             } else {
+#               console.log("No labels to add for PR");
+#             }
 
 #       - name: Add default labels to Issues
 #         if: github.event_name == 'issues'
 #         uses: actions/github-script@v6
 #         with:
 #           script: |
-#             github.rest.issues.addLabels({
-#               issue_number: context.payload.issue.number,
-#               owner: context.repo.owner,
-#               repo: context.repo.repo,
-#               labels: ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest']
-#             })
+#             const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
+#             if (labels.length > 0) {
+#               github.rest.issues.addLabels({
+#                 issue_number: context.payload.issue.number,
+#                 owner: context.repo.owner,
+#                 repo: context.repo.repo,
+#                 labels: labels
+#               }).catch(err => {
+#                 console.error("Error adding labels to Issue:", err);
+#               });
+#             } else {
+#               console.log("No labels to add for Issue");
+#             }
 
 #   label-prs:
 #     runs-on: ubuntu-latest
-#     outputs:
-#       label: ${{ steps.set-label.outputs.label }}
 
 #     steps:
 #       - name: Determine PR Label
 #         id: set-label
 #         run: |
 #           if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
-#             echo "::set-output name=label::bug"
+#             echo "label=bug" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.pull_request.title }}" =~ documentation ]]; then
-#             echo "::set-output name=label::documentation"
+#             echo "label=documentation" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.pull_request.title }}" =~ enhancement ]]; then
-#             echo "::set-output name=label::enhancement"
+#             echo "label=enhancement" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.pull_request.title }}" =~ hacktoberfest ]]; then
-#             echo "::set-output name=label::hacktoberfest"
+#             echo "label=hacktoberfest" >> $GITHUB_ENV
 #           fi
 
 #   label-issues:
 #     runs-on: ubuntu-latest
-#     outputs:
-#       label: ${{ steps.set-label.outputs.label }}
 
 #     steps:
 #       - name: Determine Issue Label
 #         id: set-label
 #         run: |
 #           if [[ "${{ github.event.issue.title }}" =~ bug ]]; then
-#             echo "::set-output name=label::bug"
+#             echo "label=bug" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ "Something isn't working" ]]; then
-#             echo "::set-output name=label::Something isn't working"
+#             echo "label='Something isn't working'" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ documentation ]]; then
-#             echo "::set-output name=label::documentation"
+#             echo "label=documentation" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ "Improvements or additions to documentation" ]]; then
-#             echo "::set-output name=label::Improvements or additions to documentation"
+#             echo "label='Improvements or additions to documentation'" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ duplicate ]]; then
-#             echo "::set-output name=label::duplicate"
+#             echo "label=duplicate" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ enhancement ]]; then
-#             echo "::set-output name=label::enhancement"
+#             echo "label=enhancement" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ "good first issue" ]]; then
-#             echo "::set-output name=label::good first issue"
+#             echo "label='good first issue'" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ hacktoberfest ]]; then
-#             echo "::set-output name=label::hacktoberfest"
+#             echo "label=hacktoberfest" >> $GITHUB_ENV
 #           elif [[ "${{ github.event.issue.title }}" =~ question ]]; then
-#             echo "::set-output name=label::question"
+#             echo "label=question" >> $GITHUB_ENV
 #           fi
 
-# # name: Auto Label for PRs and Issues
-
-# # permissions:
-# #   issues: write
-# #   pull-requests: write
-
-# # on:
-# #   pull_request:
-# #     types:
-# #       - opened
-# #   issues:
-# #     types:
-# #       - opened
-
-# # jobs:
-# #   auto-label:
-# #     runs-on: ubuntu-latest
-
-# #     steps:
-# #       - name: Checkout repository
-# #         uses: actions/checkout@v3
-
-# #       - name: Add "contributor" label to PRs
-# #         if: github.event_name == 'pull_request'
-# #         uses: actions-ecosystem/action-add-labels@v1
-# #         with:
-# #           github_token: ${{ secrets.GITHUB_TOKEN }}
-# #           labels: "contributor"
-
-# #       - name: Add "issue" label to Issues
-# #         if: github.event_name == 'issues'
-# #         uses: actions-ecosystem/action-add-labels@v1
-# #         with:
-# #           github_token: ${{ secrets.GITHUB_TOKEN }}
-# #           labels: "issue"
