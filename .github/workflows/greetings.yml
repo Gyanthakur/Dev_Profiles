@@ -5,8 +5,8 @@ on:
     branches:
       - '**'
   issues:
-    types: [opened]  # Trigger on issue opened event
-  pull_request:
+    types: [opened]
+  pull_request_target:
     branches:
       - '**'
     types: [opened]
@@ -14,13 +14,14 @@ on:
 permissions:
   issues: write
   pull-requests: write
+  contents: read
 
 jobs:
   welcome:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4  # Updated to the latest version
+      - uses: actions/checkout@v4
 
       - name: Send Welcome Message
         uses: EddieHubCommunity/gh-action-community/src/welcome@main
@@ -29,11 +30,49 @@ jobs:
           issue-message: |
             Welcome, @${{ github.actor }}! Thanks for raising the issue.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account!** 
+            Make sure to **star this awesome repository** and **follow the account!**
           pr-message: |
             Great job, @${{ github.actor }}! Thanks for creating the pull request.
             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
-            Make sure to **star this awesome repository** and **follow the account!** 
+            Make sure to **star this awesome repository** and **follow the account!**
+
+
+# name: 'Greetings'
+
+# on:
+#   push:
+#     branches:
+#       - '**'
+#   issues:
+#     types: [opened]  # Trigger on issue opened event
+#   pull_request:
+#     branches:
+#       - '**'
+#     types: [opened]
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# jobs:
+#   welcome:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - uses: actions/checkout@v4  # Updated to the latest version
+
+#       - name: Send Welcome Message
+#         uses: EddieHubCommunity/gh-action-community/src/welcome@main
+#         with:
+#           github-token: ${{ secrets.GITHUB_TOKEN }}
+#           issue-message: |
+#             Welcome, @${{ github.actor }}! Thanks for raising the issue.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account!** 
+#           pr-message: |
+#             Great job, @${{ github.actor }}! Thanks for creating the pull request.
+#             Soon the maintainers/owner will review it and provide you with feedback/suggestions.
+#             Make sure to **star this awesome repository** and **follow the account!** 
           # footer: 'Make sure to stay involved and contribute to the project!'
 
 
