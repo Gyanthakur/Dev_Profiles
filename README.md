@@ -21,6 +21,7 @@ A place to list and shocase your developer skills and profile
 
 ```html
         <div class="profile">
+            <div class="lines"></div>
             <!-- change './default.png' to your profile image url -->
             <div class="pfp"><img src="./default.png" alt="User Image"></div>
             <h3 class="name">Your Name</h3>
@@ -50,6 +51,7 @@ A place to list and shocase your developer skills and profile
 
 ```html
         <div class="profile">
+            <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
             <h3 class="name">Gyan Pratap Singh</h3>
             <div class="project">

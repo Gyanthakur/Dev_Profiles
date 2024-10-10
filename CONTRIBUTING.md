@@ -21,6 +21,7 @@ A place to list and shocase your developer skills and profile
 
 ```html
         <div class="profile">
+            <div class="lines"></div>
             <!-- change './default.png' to your profile image url -->
             <div class="pfp"><img src="./default.png" alt="User Image"></div>
             <h3 class="name">Your Name</h3>
@@ -50,8 +51,10 @@ A place to list and shocase your developer skills and profile
 
 ```html
         <div class="profile">
-            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
-            <h3 class="name">Gyan Pratap Singh</h3>
+            <div class="lines"></div>
+            <!-- change './default.png' to your profile image url -->
+            <div class="pfp"><img src="./default.png" alt="User Image"></div>
+            <h3 class="name">Your Name</h3>
             <div class="project">
                 <a href="[Your Github URL]" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="[Your Github Repository URL]" target="_blank"><i class="fa-solid fa-money-bill-transfer"></i></a>
