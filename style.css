@@ -47,8 +47,7 @@ body {
 body,
 .title,
 h3,
-footer,
-.dark-btn {
+footer{
   transition: background-color 500ms ease, color 500ms ease;
 }
 
@@ -70,6 +69,7 @@ body .title {
   padding: 20px;
 }
 
+
 .profile {
   --backdrop-bg-color: var(--color-profile-card-bg);
 
@@ -85,6 +85,7 @@ body .title {
     border-color 1s ease;
   overflow: hidden;
   background-color: var(--color-body-bg);
+  display: inline-block;
 }
 
 .profile > * {
@@ -122,6 +123,8 @@ body .title {
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
+  text-decoration: underline;
+  color: #FEE5FE;
 }
 
 .profile .lines {
@@ -340,21 +343,33 @@ header {
   margin-top: 15px;
 }
 
+/* Dark Mode - Light mode Button */
+
 .dark-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  right: 10px;
   top: 10px;
-  padding: 5px 10px;
+  right: 10px;
   cursor: pointer;
-  background-color: transparent;
-  transition: all 500ms;
   font-size: 30px;
-  transition: all 0.3s;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: color 500ms ease, color 500ms ease;
+}
+
+.dark-btn:hover{
+  border-radius: 50%;
 }
 
 .dark-btn img {
-  width: 50px;
-  height: auto;
+  filter: invert(100%);
+  height: 30px;
 }
 
 .dark-btn #icon:hover {
@@ -514,7 +529,8 @@ footer {
   padding: 10px;
   font-size: 16px;
   color: var(--color-white); /* Consistent text color */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
   border-radius: 4px; /* Rounded corners for list items */
   margin-bottom: 10px; /* Space between list items */
 }
@@ -534,7 +550,6 @@ footer {
 
 .contribution-steps li:hover i {
   color: white; /* Change icon color to black on hover */
-
 }
 
 #backToTopBtn i {
@@ -542,31 +557,31 @@ footer {
 }
 
 #backToTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 50%;
-    box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),-0.1em 0 0.4em rgba(227, 86, 5, 0.838);
-    transition: transform ease 0.5s, box-shadow ease 0.5s;
-  
-  }
-  
-  /* Button hover effect */
-  #backToTopBtn:hover {
-    background-color: #333;
-    transform: translateY(-5px);
-    box-shadow: 1px 10px 20px 2px rgba(227, 86, 5, 0.415);
-  }
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+  box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),
+    -0.1em 0 0.4em rgba(227, 86, 5, 0.838);
+  transition: transform ease 0.5s, box-shadow ease 0.5s;
+}
+
+/* Button hover effect */
+#backToTopBtn:hover {
+  background-color: #333;
+  transform: translateY(-5px);
+  box-shadow: 1px 10px 20px 2px rgba(227, 86, 5, 0.415);
+}
 
 /* Footer for About Page */
 .about-footer {
@@ -638,3 +653,9 @@ footer {
     border-radius: 8px;
     display: none; /* Hidden by default */
 } 
+
+.link-primary {
+  color: var(--color-profile-border);
+  font-weight: bold;
+  text-decoration: none;
+}

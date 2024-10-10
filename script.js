@@ -30,9 +30,11 @@ var icon=document.getElementById("icon");
 darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");
     if(document.body.classList.contains("light-background")){
-        icon.src="Sun.png";
+        icon.style.filter='invert(0%)';
+        icon.src="light.png";
     }else{
-        icon.src="Moon.png";
+        icon.style.filter='invert(100%)';
+        icon.src="dark.png";
     }
     darkMode.classList.toggle("icon-position")
     darkMode.classList.toggle("light-background");
