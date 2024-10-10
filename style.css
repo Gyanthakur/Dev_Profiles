@@ -593,6 +593,67 @@ footer {
   text-align: center;
 }
 
+.contact-container {
+  max-width: 1200px;
+  margin: 100px auto 350px auto;
+  padding: 100px;
+  background-color: var(--backdrop-bg-color);
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form .input-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #d3d3d3; /* Gray background */
+    border: none;
+    border-radius: 25px; /* Rounded input fields */
+    color: #fff; /* Placeholder text color */
+    font-size: 14px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ffffff; /* White placeholder */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-profile-border);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ac3c00;
+}
+
+/* Error message styles */
+.error-message {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+} 
+
 .link-primary {
   color: var(--color-profile-border);
   font-weight: bold;
