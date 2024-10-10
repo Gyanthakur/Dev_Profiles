@@ -282,6 +282,7 @@ button {
 }
 
 button:hover {
+  
   box-shadow: 10px 10px 20px rgba(106, 106, 137, 0.3);
   border-radius: 10px;
 }
