@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="shortcut icon" href="https://oyepriyansh.pages.dev/i/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
+        <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
+    </head>
+</head>
+
+<body>
+    <button class="dark-btn"><img id="icon" src="Moon.png" alt="Dark"></img></button>
+    <p class="title" style="margin-bottom: 10px;">Contact Us</p>
+
+
+    <div class="button-container">
+        <a href="index.html">
+            <button class="add">
+                Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i>
+            </button>
+        </a>
+
+        <a href="project.html">
+            <button class="add">
+                Go to Project section &nbsp; <i class="fa-solid fa-list-check"></i>
+            </button>
+        </a>
+
+        <a href="about-us.html">
+            <button class="add" onclick='window.open("about-us.html","_self")'>
+                About Us &nbsp; <i class="fa-solid fa-info-circle"></i>
+            </button>
+        </a>
+    </div>
+
+    <div class="line"><br /></div>
+
+    <div class="container">
+        <div class="add contact-container">
+            <form class="contact-form" action="formsoree url" method="POST">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="input-group">
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+    </div>
+
+    <div class="line"><br /></div>
+
+    <button id="backToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link"
+                    href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href=" https://twitter.com/gps_96169">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href=" https://www.instagram.com/gp.singh.ro.ckstar4438/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item">
+                <a class="menu__link" href="about-us.html">About</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="project.html">Project Section</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="contect-us.html">Contact</a>
+            </li>
+        </ul>
+        <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -67,3 +67,82 @@ function scrollFunction() {
 backToTopBtn.onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Clear any existing error messages
+  const errorMessageDiv = document.getElementById('error-message');
+  const form = event.target;
+  errorMessageDiv.style.display = 'none';
+  errorMessageDiv.textContent = '';
+
+  // Form inputs
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Validate input fields
+  if (!name || !email || !message) {
+      showError('All fields are required.');
+      return;
+  }
+
+  if (!validateEmail(email)) {
+      showError('Please enter a valid email address.');
+      return;
+  }
+
+  // Create a form data object to send
+  const formData = new FormData(form);
+
+  // Submit the form using fetch
+  fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => {
+      if (response.ok) {
+          showSuccess('Message sent successfully!');
+          form.reset(); // Reset the form fields after success
+      } else {
+          showError('Oops! Something went wrong. Please try again later.');
+      }
+  }).catch(error => {
+      showError('There was a problem submitting the form. Please try again.');
+  });
+});
+
+// Function to show error message
+function showError(message) {
+  const errorMessageDiv = document.getElementById('error-message');
+  errorMessageDiv.textContent = message;
+  errorMessageDiv.style.display = 'block';
+
+  // Hide the error message after 5 seconds
+  setTimeout(() => {
+      errorMessageDiv.style.display = 'none';
+  }, 5000);
+}
+
+// Function to show success message
+function showSuccess(message) {
+  const errorMessageDiv = document.getElementById('error-message');
+  errorMessageDiv.textContent = message;
+  errorMessageDiv.style.backgroundColor = '#4BB543'; // Change background to green for success
+  errorMessageDiv.style.display = 'block';
+
+  // Hide the success message after 5 seconds
+  setTimeout(() => {
+      errorMessageDiv.style.display = 'none';
+      errorMessageDiv.style.backgroundColor = '#ff4d4d'; // Reset to default error color
+  }, 5000);
+}
+
+// Function to validate email format
+function validateEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
