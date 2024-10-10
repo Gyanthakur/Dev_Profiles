@@ -70,6 +70,7 @@ body .title {
   padding: 20px;
 }
 
+
 .profile {
   --backdrop-bg-color: var(--color-profile-card-bg);
 
@@ -85,6 +86,7 @@ body .title {
     border-color 1s ease;
   overflow: hidden;
   background-color: var(--color-body-bg);
+  display: inline-block;
 }
 
 .profile > * {
@@ -122,6 +124,8 @@ body .title {
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
+  text-decoration: underline;
+  color: #FEE5FE;
 }
 
 .profile .lines {
