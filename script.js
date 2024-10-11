@@ -3,6 +3,7 @@ const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
 const date = document.getElementById('dates')
 
+
 let currentDate  = new Date()
 let currentYear  = currentDate.getFullYear()
 date.innerHTML = currentYear
@@ -32,9 +33,11 @@ darkMode.addEventListener("click", () => {
     if(document.body.classList.contains("light-background")){
         icon.style.filter='invert(0%)';
         icon.src="light.png";
+
     }else{
         icon.style.filter='invert(100%)';
         icon.src="dark.png";
+
     }
     darkMode.classList.toggle("icon-position")
     darkMode.classList.toggle("light-background");
@@ -42,7 +45,7 @@ darkMode.addEventListener("click", () => {
     document.querySelector(".title").classList.toggle("text-color");
     document.querySelector("footer").classList.toggle("text-color");
     const buttons = document.querySelectorAll('.add');
-
+    
     buttons.forEach(button => {
     button.classList.toggle('bg-color');
     });
