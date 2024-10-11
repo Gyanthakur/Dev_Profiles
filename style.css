@@ -44,6 +44,22 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
+/* Navbar */
+
+nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+}
+
 body,
 .title,
 h3,
@@ -336,7 +352,7 @@ header {
 }
 
 .title {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   text-align: center;
   font-size: 36px;
   font-family: "PT Serif", serif;
@@ -352,7 +368,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
   right: 10px;
   cursor: pointer;
@@ -386,7 +402,7 @@ header {
 }
 
 .icon-position {
-  position: absolute;
+  /* position: absolute; */
   top: 6px;
   right: 12px;
 }
