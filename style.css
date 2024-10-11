@@ -51,18 +51,15 @@ nav{
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
+  /* padding: 0px 10px; */
+  border: 2px solid white;
 
 }
 
 .nav-links{
   display: flex;
   align-items: center;
-}
-
-.about-dark{
-  position: absolute !important;
-  right: 0% !important;
-  top: 0% !important;
 }
 
 body,
