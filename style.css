@@ -279,11 +279,13 @@ button {
   font-family: "Poppins", sans-serif;
   font-size: 1.1em;
   border-radius: 5%;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  
+
   box-shadow: 10px 10px 20px rgba(106, 106, 137, 0.3);
+  transform: scale(1.1);
   border-radius: 10px;
 }
 
