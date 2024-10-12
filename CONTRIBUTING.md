@@ -51,12 +51,12 @@ git remote -v
 git pull upstream main
 ```
 
-**6.Create a Branch: **
+**6.Create a Branch:**
 ```bash
 git checkout -b <Branch-name>
 ```
 
-**7. Make Changes and Add them: **
+**7. Make Changes and Add them:**
 <br>
 - After you have made your changes, check the status of the changed files using the following command:
   
