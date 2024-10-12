@@ -1,23 +1,101 @@
-# DevProfiles
-A place to list and shocase your developer skills and profile
+# DevProfiles 👩‍💻👨‍💻
+DevProfiles is a platform to list and showcase your developer skills and profiles, allowing you to create a personalized profile to highlight your projects, and expertise. It's designed to help developers connect with collaborators, and the wider developer community.
+
+<hr>
+
+# **Contributing Guidelines** 📄
+
+This documentation contains a set of guidelines to help you during the contribution process.
+We are happy to welcome all the contributions from anyone willing to improve/add new scripts to this project.
+Thank you for helping out and remember, **no contribution is too small.**
 
 
-## Contribute.
-1. Give Star on the repo
+- Drop a Star ⭐ in this repo
+- Follow Account
+   -https://github.com/Gyanthakur
+- Take a look at the existing [Issues](https://github.com/Gyanthakur/Dev_Profiles/issuess) or Create an `Issue` of your own. 
+- At first raise an issue in which you want to work and wait till its is assigned to you
+- Then after being assigned issue,work on it & make a PR 
+- Create a **Pull Request**, which will be promptly reviewed by the maintainer 
+- Suggestion: Add screenshots or screen captures to your `Pull Request` to help us understand the effects of the changes that are included in 
+  your commits.
 
-2. Follow Account
+  <hr>
 
-3. Fork this Repository
 
-4. Create Issue 
+# **Steps to making a PR**
 
-5. add following code to HTML `index.html` between another `<!--Profiles-->` comment
+**1. Start by forking the [**Dev_Profiles**](https://github.com/Gyanthakur/Dev_Profiles) repository. Click on the <a href="https://github.com/Gyanthakur/Dev_Profiles/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.**
 
-6. before adding profile or project, update or sync your branch by clicking `Sync fork`button
- <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">
+**2. Clone your forked repository to your local environment:**
+
+```bash
+git clone https://github.com/[your-username]/Dev_Profiles.git
+```
+
+**3. Add a reference(remote) to the original repository:**
+
+```bash
+git remote add upstream https://github.com/GyanthakurDev_Profiles
+```
+
+**4. Check the remotes for this repository:**
+
+```bash
+git remote -v
+```
+
+**5.Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).**
+
+```bash
+git pull upstream main
+```
+
+**6.Create a Branch: **
+```bash
+git checkout -b <Branch-name>
+```
+
+**7. Make Changes and Add them: **
+<br>
+- After you have made your changes, check the status of the changed files using the following command:
+  
+    ```sh
+    git status -s
+    ```
+```bash
+git add .
+git add <filename>
+```
+
+**8.Commit your Changes with a descriptive commit message:** 
+
+```bash
+git commit -m <Concise Description of the changes made>
+```
+
+**9. Push Changes: Push your changes to your forked repository:** 
+
+```bash
+git push origin <Branch-name>
+```
+
+**10. Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.** 
+
+**11.Congratulations! You've made contribution! 🙌🏼** 
+
+
+<hr>
+
+# **Want to add your Profile to [**Dev_Profiles**](https://github.com/Gyanthakur/Dev_Profiles) ?**
+
+Simply add following code to HTML `index.html` between another `<!--Profiles-->` comment
+
+**1. before adding profile or project, update or sync your branch by clicking `Sync fork`button
+ <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">** 
 
    
-## 5.and keep in mind don't add in top and bottom your profile, add in between.  
+## 2.and keep in mind don't add in top and bottom your profile, add in between.  
 
 ```html
         <div class="profile">
@@ -41,7 +119,8 @@ A place to list and shocase your developer skills and profile
     </div>
 ```
 > Note: Do not add your profile in top.
-3. Change/Replace the placeholders with your image and profiles urls
+
+## 3. Change/Replace the placeholders with your image and profiles urls** 
     - [IMAGE-URL] with your image URL
     - [YOUR_NAME] with your name
     - [SKILL-1], [SKILL-2], [SKILL-3] with your skills
@@ -84,13 +163,13 @@ A place to list and shocase your developer skills and profile
 
 
 
-4. Commit your changes.
+**4. Commit your changes.** 
 
-5. Push the changes.
+**5. Push the changes.** 
 
-6. Create a Pull Request.
+**6. Create a Pull Request.** 
 
-7. Wait for Merge.
+**7. Wait for Merge.** 
 
  
  ## Need Help? Contact Me!
@@ -106,6 +185,6 @@ Or reach me directly at this whatsapp number: **+91 895-7818-597**
 
 
 
-## Thank You
+## Thank You!!!
 Thank you to every contributor of this repository <br>
 Show some love by giving a star ⭐ to this repository!
