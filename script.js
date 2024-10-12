@@ -7,6 +7,15 @@ let currentDate  = new Date()
 let currentYear  = currentDate.getFullYear()
 date.innerHTML = currentYear
 
+window.addEventListener('scroll',()=> {
+  const progressBar = document.getElementById('bar');
+  const scrollTotal = document.body.scrollHeight - window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const scrollPercentage = (scrollPosition / scrollTotal) * 100;
+  progressBar.style.width = scrollPercentage + '%';
+  });
+
+  
 if (searchInput) {
 	searchInput.addEventListener('input', filterProfiles);
 }
