@@ -25,38 +25,38 @@ Thank you for helping out and remember, **no contribution is too small.**
 
 # **Steps to making a PR**
 
-**1. Start by forking the [**Dev_Profiles**](https://github.com/Gyanthakur/Dev_Profiles) repository. Click on the <a href="https://github.com/Gyanthakur/Dev_Profiles/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.**
+## **1. Start by forking the [**Dev_Profiles**](https://github.com/Gyanthakur/Dev_Profiles) repository. Click on the <a href="https://github.com/Gyanthakur/Dev_Profiles/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.**
 
-**2. Clone your forked repository to your local environment:**
+## **2. Clone your forked repository to your local environment:**
 
 ```bash
 git clone https://github.com/[your-username]/Dev_Profiles.git
 ```
 
-**3. Add a reference(remote) to the original repository:**
+## **3. Add a reference(remote) to the original repository:**
 
 ```bash
 git remote add upstream https://github.com/GyanthakurDev_Profiles
 ```
 
-**4. Check the remotes for this repository:**
+## **4. Check the remotes for this repository:**
 
 ```bash
 git remote -v
 ```
 
-**5.Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).**
+## **5.Always take a pull from the upstream repository to your master branch to keep it at par with the main project (updated repository).**
 
 ```bash
 git pull upstream main
 ```
 
-**6.Create a Branch:**
+## **6.Create a Branch:**
 ```bash
 git checkout -b <Branch-name>
 ```
 
-**7. Make Changes and Add them:**
+## **7. Make Changes and Add them:**
 <br>
 - After you have made your changes, check the status of the changed files using the following command:
   
@@ -68,21 +68,21 @@ git add .
 git add <filename>
 ```
 
-**8.Commit your Changes with a descriptive commit message:** 
+## **8.Commit your Changes with a descriptive commit message:** 
 
 ```bash
 git commit -m <Concise Description of the changes made>
 ```
 
-**9. Push Changes: Push your changes to your forked repository:** 
+## **9. Push Changes: Push your changes to your forked repository:** 
 
 ```bash
 git push origin <Branch-name>
 ```
 
-**10. Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.** 
+## **10. Submit a Pull Request: Go to your forked repository on GitHub and submit a pull request. Be sure to provide a detailed description of your changes and why they are necessary.** 
 
-**11.Congratulations! You've made contribution! 🙌🏼** 
+## **11.Congratulations! You've made contribution! 🙌🏼** 
 
 
 <hr>
@@ -95,7 +95,7 @@ Simply add following code to HTML `index.html` between another `<!--Profiles-->`
  <img width="684" alt="image" src="https://github.com/Gyanthakur/Dev_Profiles/assets/98226958/d8924e0d-3817-468a-9205-1af3df47327f">** 
 
    
-## 2.and keep in mind don't add in top and bottom your profile, add in between.  
+2.and keep in mind don't add in top and bottom your profile, add in between.  
 
 ```html
         <div class="profile">
@@ -163,13 +163,13 @@ Simply add following code to HTML `index.html` between another `<!--Profiles-->`
 
 
 
-**4. Commit your changes.** 
+## **4. Commit your changes.** 
 
-**5. Push the changes.** 
+## **5. Push the changes.** 
 
-**6. Create a Pull Request.** 
+## **6. Create a Pull Request.** 
 
-**7. Wait for Merge.** 
+## **7. Wait for Merge.** 
 
  
  ## Need Help? Contact Me!
