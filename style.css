@@ -45,6 +45,24 @@ body {
   overflow-x: hidden;
 }
 
+/* Progress bar */
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: transparent;
+  z-index: 999;
+}
+.bar{
+  height: 100%;
+  width: 0%;
+  background-color: rgb(244, 58, 58);
+  transition: width 0.1s linear;
+}
+
 /* Navbar */
 
 nav{
