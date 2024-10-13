@@ -93,6 +93,7 @@ body .title {
 .title a {
   text-decoration: none;
   color: red;
+  
 }
 .container {
   display: flex;
@@ -326,7 +327,22 @@ button:hover {
   color: var(--color-body-bg);
   font-weight: 600;
   margin: 5px;
+  border-radius: 23px;
+  transition:0.3s;
 }
+.add:hover{
+  background-color: #f9c1ed;
+  
+}
+.title{
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 
 .search {
   max-width: 1200px;
@@ -375,7 +391,14 @@ header {
   font-size: 36px;
   font-family: "PT Serif", serif;
   color: var(--color-profile-border);
-  margin-top: 15px;
+  margin-top: 1px;
+  border-radius: 13px;
+  height: 60px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.title:hover{
+  background: #b0d5ee;
 }
 
 /* Dark Mode - Light mode Button */
