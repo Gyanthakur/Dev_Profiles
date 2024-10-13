@@ -158,8 +158,12 @@ body .title {
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
-  text-decoration: underline;
   color: #FEE5FE;
+}
+
+.profile:hover .name {
+
+  text-decoration: underline;
 }
 
 .profile .lines {
