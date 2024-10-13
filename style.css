@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
 
 @keyframes breatheX {
   0% {
@@ -373,9 +374,19 @@ header {
   /* flex-grow: 1; */
   text-align: center;
   font-size: 36px;
-  font-family: "PT Serif", serif;
+  /* font-family: "PT Serif", serif; */
+  font-family: "Sixtyfour Convergence", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
   color: var(--color-profile-border);
   margin-top: 15px;
+  margin-left: 15px;
 }
 
 /* Dark Mode - Light mode Button */
