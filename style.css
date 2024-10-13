@@ -65,7 +65,7 @@ body {
 
 /* Navbar */
 
-nav{
+/* nav{
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -76,7 +76,127 @@ nav{
 .nav-links{
   display: flex;
   align-items: center;
+} */
+
+
+
+
+
+
+
+
+
+
+/* General Styles for Navbar */
+nav {
+  /* background: yellow; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
+
+.title a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.add {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add i {
+  margin-left: 5px;
+}
+
+.dark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img#icon {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 5px; */
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .add {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title a {
+    font-size: 1.2rem;
+  }
+
+  .add {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  img#icon {
+    width: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body,
 .title,
@@ -260,7 +380,7 @@ body .title {
 }
 
 .project a:hover {
-  color: #333;
+  color: #c83a3a;
   font-size: 28px;
 }
 
