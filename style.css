@@ -556,31 +556,36 @@ footer {
 }
 
 .about-section {
-  background-color: var(--color-body-bg); /* Match body background */
-  border: 1px solid var(--color-profile-border); /* Use border color from profile */
-  padding: 20px;
+  background-color: var(--color-body-bg);
+  border: 2px solid var(--color-profile-border);
+  padding: 35px 25px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Slightly heavier shadow for depth */
-  margin: 20px 0;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 30px 0;
 }
 
 .section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(
-    --color-profile-border
-  ); /* Use the profile border color for titles */
+  font-size: 27px;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: inherit;
+  color: var(--color-profile-border);
+  top: -23px;
 }
 
 .about-content {
   font-size: 16px;
-  color: var(--color-white); /* Use white for better readability */
+  color: var(--color-white);
+  text-align: left;
   margin-bottom: 10px;
 }
 
 .contribution-steps {
   list-style-type: none;
-  padding-left: 0;
+    padding-left: 0;
+    text-align: left;
 }
 
 .contribution-steps li {
