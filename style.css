@@ -786,6 +786,9 @@ footer {
   color: #333;
   font-family: "Poppins", sans-serif;
 } 
+.contact-form {
+  width: 100%;
+}
 
 /* Input group styling */
 .contact-form .input-group {
@@ -867,7 +870,7 @@ footer {
 
 /* Button styling */
 .contact-form button {
-  width: 80%;
+  width: 90%;
 }
 }
 
@@ -880,22 +883,18 @@ footer {
   }
 
   .contact-form .input-group {
-    width: 75%;
+    width: 90%;
   }
 
   .contact-form input,
   .contact-form textarea {
-    margin: 5% 40% 0 5%;
+    margin: 5% 20% 0 5%;
     max-width: 100%;
   }
-
   .contact-form button {
-    width: 60%;
+    width: 100%;
+    margin: 5% 20% 0 5%;
   }
+
 }
 
-@media (max-width: 450px) {
-  .contact-form .input-group {
-    width: 55%;
-  }
-}
