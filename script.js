@@ -1,3 +1,24 @@
+
+
+
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Optional: CSS to handle display toggling via the 'active' class
+const style = document.createElement('style');
+style.innerHTML = `
+    .nav-links.active {
+        display: flex !important;
+    }
+`;
+document.head.appendChild(style);
+
+  
+
 document.addEventListener("DOMContentLoaded", function() {
 const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
@@ -160,3 +181,5 @@ function validateEmail(email) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
 }
+
+
