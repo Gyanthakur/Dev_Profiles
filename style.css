@@ -108,10 +108,10 @@ nav {
   align-items: center;
   gap: 15px;
 }
-
+.nav-links a{
+  text-decoration: none;
+}
 .add {
-  background-color: #007BFF;
-  color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -121,6 +121,7 @@ nav {
 }
 
 .add i {
+  text-decoration: none;
   margin-left: 5px;
 }
 
