@@ -817,12 +817,13 @@ footer {
 /* Hover effect */
 .info-item:hover {
   background-color: rgba(255, 99, 71, 0.1); /* Light background color on hover */
-  color: #ff6347; /* Change text color on hover */
+  color: #ff6347; 
+  border: 1px solid rgba(255, 255, 255, 0.509);/* Change text color on hover */
 }
 
 .info-item i {
   margin-right: 10px; /* Space between icon and text */
-  color: #ff6347; /* Icon color */
+  color: #ff6347;
 }
 
 
