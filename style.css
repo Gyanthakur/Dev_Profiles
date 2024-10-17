@@ -29,7 +29,9 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-green);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -79,11 +81,15 @@ body {
   display: flex;
   align-items: center;
 } */
+.nav-link{
+  text-decoration: none;
+}
 
 
 
-
-
+.profile:hover{
+  cursor: pointer;
+}
 
 
 
@@ -111,10 +117,10 @@ nav {
   align-items: center;
   gap: 15px;
 }
-
+.nav-links a{
+  text-decoration: none;
+}
 .add {
-  background-color: #007BFF;
-  color: white;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -124,6 +130,7 @@ nav {
 }
 
 .add i {
+  text-decoration: none;
   margin-left: 5px;
 }
 
@@ -198,27 +205,6 @@ img#icon {
     width: 25px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 body,
@@ -819,7 +805,7 @@ footer {
 
 /* Contact container styling */
 .contact-container {
-  max-width: 800px;
+  max-width: 50rem;
   margin: 50px auto;
   padding: 50px;
   background-color: #f9f9f9;
@@ -827,6 +813,11 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #333;
   font-family: "Poppins", sans-serif;
+
+} 
+.contact-form {
+  width: 100%;
+
 }
 
 /* Input group styling */
@@ -837,7 +828,8 @@ footer {
 /* Input and textarea styling */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 30rem;
+  max-width: 30rem;
   padding: 15px;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -896,4 +888,47 @@ footer {
   color: var(--color-profile-border);
   font-weight: bold;
   text-decoration: none;
+
 }
+}
+
+@media (max-width: 768px) {
+  /* Contact container styling */
+.contact-container {
+  max-width: 90%;
+  margin: 5%;
+  padding: 5%;
+} 
+
+
+/* Button styling */
+.contact-form button {
+  width: 90%;
+}
+}
+
+@media (max-width: 620px) {
+
+  .contact-container {
+    max-width: 100%;
+    margin: 5%;
+    padding: 5%;
+  }
+
+  .contact-form .input-group {
+    width: 90%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    margin: 5% 20% 0 5%;
+    max-width: 100%;
+  }
+  .contact-form button {
+    width: 100%;
+    margin: 5% 20% 0 5%;
+  }
+
+}
+
+

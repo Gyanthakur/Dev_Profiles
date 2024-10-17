@@ -182,4 +182,3 @@ function validateEmail(email) {
   return emailPattern.test(email);
 }
 
-
