@@ -1,3 +1,10 @@
+const toggleBtn = document.querySelector("#toggleBtn");
+const navLinks = document.querySelector(".nav-links")
+toggleBtn.addEventListener('click',()=>{
+  navLinks.classList.toggle('active')
+ 
+})
+
 document.addEventListener("DOMContentLoaded", function() {
 const searchInput = document.getElementById('searchInput');
 const profiles = document.querySelectorAll('.profile');
