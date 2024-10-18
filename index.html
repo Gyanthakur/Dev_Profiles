@@ -1444,7 +1444,8 @@
 
         // Loop through each profile and add the AOS attribute
         profiles.forEach((profile) => {
-            profile.setAttribute('data-aos', 'fade-down');
+            profile.setAttribute('data-aos', 'fade-up');
+
         });
 
 
@@ -1481,7 +1482,9 @@
 
     </script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true, // Animation occurs only once and doesn't reset when scrolling up
+        });
     </script>
 
 </body>
