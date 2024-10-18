@@ -782,126 +782,139 @@ footer {
   text-align: center;
 }
 
-/* Contact container styling */
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Left Contact Info Styling */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Takes up available space */
+  max-width: 400px; /* Limit the width of the contact info */
+  margin-right: 100px; /* Space between containers */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* Default text color */
+  transition: color 0.3s, background-color 0.3s; /* Transition for smooth hover effect */
+  padding: 10px; /* Add some padding for hover effect */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Hover effect */
+.info-item:hover {
+  background-color: rgba(255, 99, 71, 0.1); /* Light background color on hover */
+  color: #ff6347; 
+  border: 1px solid rgba(255, 255, 255, 0.509);/* Change text color on hover */
+}
+
+.info-item i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #ff6347;
+}
+
+
+
+/* Right Contact Form Container */
+/* Contact Container Styling */
 .contact-container {
-  max-width: 50rem;
+  max-width: 800px;
   margin: 50px auto;
   padding: 50px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #333;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   font-family: "Poppins", sans-serif;
-} 
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.contact-container:hover {
+  border: 1px solid rgba(0, 0, 0, 0.061);
+  box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.869); /* Inner shadow effect */
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.contact-container p {
+  color: black;
+  margin-bottom: 30px;
+  text-align: center; /* Center the paragraph text */
+}
+
+/* Contact Form Styling */
 .contact-form {
-  width: 100%;
+  display: flex;
+  flex-direction: column; /* Arrange inputs in a column */
 }
 
-/* Input group styling */
-.contact-form .input-group {
-  margin-bottom: 20px;
+.input-group {
+  margin-bottom: 20px; /* Space between input fields */
 }
 
-/* Input and textarea styling */
 .contact-form input,
 .contact-form textarea {
-  width: 30rem;
-  max-width: 30rem;
+  width: 100%;
   padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  color: #333;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   font-size: 16px;
-  transition: border-color 0.3s;
+  color: #333;
+  box-sizing: border-box; /* Ensures padding is included in width */
   font-family: "Poppins", sans-serif;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #999;
-}
-
-/* Focus state for inputs and textarea */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--color-profile-border);
+  border: 1px solid #ff6347; /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.2); /* Shadow on focus */
 }
 
-/* Button styling */
+/* Submit Button Styling */
 .contact-form button {
-  width: 100%;
+  width: 70%; /* Button width */
   padding: 15px;
-  background-color: var(--color-profile-border);
-  color: #fff;
+  background-color: #ff6347; /* Button color */
+  color: white; /* Text color */
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+  align-self: center; /* Center the button */
 }
 
-/* Hover state for button */
 .contact-form button:hover {
-  background-color: var(--color-profile-border);
-  transform: translateY(-2px);
+  background-color: #e5533d; /* Darker color on hover */
 }
 
-/* Error message styles */
+/* Error Message Styling */
 .error-message {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #ff4d4d;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    display: none; /* Hidden by default */
-} 
-
-.link-primary {
-  color: var(--color-profile-border);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  /* Contact container styling */
-.contact-container {
-  max-width: 90%;
-  margin: 5%;
-  padding: 5%;
-} 
-
-
-/* Button styling */
-.contact-form button {
-  width: 90%;
-}
-}
-
-@media (max-width: 620px) {
-
-  .contact-container {
-    max-width: 100%;
-    margin: 5%;
-    padding: 5%;
-  }
-
-  .contact-form .input-group {
-    width: 90%;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    margin: 5% 20% 0 5%;
-    max-width: 100%;
-  }
-  .contact-form button {
-    width: 100%;
-    margin: 5% 20% 0 5%;
-  }
+  color: rgb(0, 0, 0); /* Error message color */
+  text-align: center; /* Center the error message */
+  margin-top: 20px; /* Space above the error message */
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 10px;
+  font-weight: ;
 
 }
-
