@@ -57,11 +57,11 @@ jobs:
       - name: Determine PR Label
         id: set-label
         run: |
-          if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
+          if [[ "${{ github.event.pull_request.title }}" =~ Bug ]]; then
             echo "label=bug" >> $GITHUB_ENV
-          elif [[ "${{ github.event.pull_request.title }}" =~ documentation ]]; then
+          elif [[ "${{ github.event.pull_request.title }}" =~ Documentation ]]; then
             echo "label=documentation" >> $GITHUB_ENV
-          elif [[ "${{ github.event.pull_request.title }}" =~ enhancement ]]; then
+          elif [[ "${{ github.event.pull_request.title }}" =~ Enhancement ]]; then
             echo "label=enhancement" >> $GITHUB_ENV
           elif [[ "${{ github.event.pull_request.title }}" =~ hacktoberfest ]]; then
             echo "label=hacktoberfest" >> $GITHUB_ENV
