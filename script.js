@@ -55,6 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("footer").classList.toggle("text-color");
     const buttons = document.querySelectorAll(".add");
 
+    // const contactContainer = document.querySelector(".contact-container");
+    // if (contactContainer) {
+    //     darkMode.classList.toggle("light-background");
+    // }
     buttons.forEach((button) => {
       button.classList.toggle("bg-color");
     });

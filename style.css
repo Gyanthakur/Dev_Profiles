@@ -741,143 +741,138 @@ footer {
 }
 
 /* Contact Section */
+/* ... (keep all existing CSS rules) ... */
 
+/* UPDATED: Improved Contact Page Styles */
 .contact-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 50px 20px;
+  /* background-color: var(--color-body-bg); */
 }
 
-/* Left Contact Info Styling */
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  /* background: var(--color-profile-card-bg); */
+  border-radius: 20px;
+  box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.227);
+  overflow: hidden;
+  padding:0;
+
+}
 
 .contact-info {
+  flex: 1;
+  padding: 50px;
+  background: linear-gradient(135deg, var(--color-profile-border), var(--color-green));
+  color: white;
   display: flex;
   flex-direction: column;
-  flex: 1; 
-  max-width: 400px; 
-  margin-right: 100px; 
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .info-item {
   display: flex;
-  justify-content: flex-start; 
-  align-items: center; 
-  margin-bottom: 15px;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none; 
-  color: #ffffff; 
-  transition: color 0.3s, background-color 0.3s; 
-  padding: 10px; 
-  border-radius: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-
 .info-item:hover {
-  background-color: rgba(255, 99, 71, 0.1); 
-  color: #ff6347; 
-  border: 1px solid rgba(255, 255, 255, 0.509);
+  transform: translateX(10px);
 }
 
 .info-item i {
-  margin-right: 10px; 
-  color: #ff6347;
+  margin-right: 15px;
+  font-size: 24px;
 }
 
-
-
-/* Right Contact Form Container */
-/* Contact Container Styling */
-
-.contact-container {
-  max-width: 800px;
-  margin: 50px auto;
+.contact-form-container {
+  flex: 1;
   padding: 50px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif;
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+  background: white;
 }
 
-.contact-container:hover {
-  border: 1px solid rgba(0, 0, 0, 0.061);
-  box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.869); 
-}
-
-.contact-container h2 {
-  text-align: center;
-  margin-bottom: 5px;
-  color: #333;
-  font-size: 32px;
-  font-weight: 900;
-}
-
-.contact-container p {
-  color: black;
+.contact-form-container h2 {
+  color: var(--color-profile-border);
   margin-bottom: 30px;
-  text-align: center; 
+  font-size: 28px;
 }
-
-/* Contact Form Styling */
 
 .contact-form {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .input-group {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 16px;
-  color: #333;
-  box-sizing: border-box; 
-  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
-  border: 1px solid #ff6347; 
-  box-shadow: 0 0 10px rgba(255, 99, 71, 0.2);
+    outline: none;
 }
 
-/* Submit Button Styling */
-
 .contact-form button {
-  width: 70%; 
-  padding: 15px;
-  background-color: #ff6347; 
-  color: white; 
+  padding: 15px 30px;
+  background-color: #ee8122;
+  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 18px;
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-  align-self: center; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #e5533d; 
+  background-color:#f0642d ;
 }
-
-/* Error Message Styling */
 
 .error-message {
-  color: rgb(0, 0, 0); 
   text-align: center;
+  color: #ff6347;
   margin-top: 20px;
-  height: fit-content;
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 99, 71, 0.1);
 }
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-info, .contact-form-container {
+      padding: 30px;
+  }
+}
+
+/* ... (keep all existing CSS rules after this point) ... */
