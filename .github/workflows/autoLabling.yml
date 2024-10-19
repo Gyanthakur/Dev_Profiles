@@ -57,11 +57,11 @@ jobs:
       - name: Determine PR Label
         id: set-label
         run: |
-          if [[ "${{ github.event.pull_request.title }}" =~ Bug ]]; then
+          if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
             echo "label=bug" >> $GITHUB_ENV
-          elif [[ "${{ github.event.pull_request.title }}" =~ Documentation ]]; then
+          elif [[ "${{ github.event.pull_request.title }}" =~ documentation ]]; then
             echo "label=documentation" >> $GITHUB_ENV
-          elif [[ "${{ github.event.pull_request.title }}" =~ Enhancement ]]; then
+          elif [[ "${{ github.event.pull_request.title }}" =~ enhancement ]]; then
             echo "label=enhancement" >> $GITHUB_ENV
           elif [[ "${{ github.event.pull_request.title }}" =~ hacktoberfest ]]; then
             echo "label=hacktoberfest" >> $GITHUB_ENV
@@ -74,23 +74,128 @@ jobs:
       - name: Determine Issue Label
         id: set-label
         run: |
-          if [[ "${{ github.event.issue.title }}" =~ Bug ]]; then
+          if [[ "${{ github.event.issue.title }}" =~ bug ]]; then
             echo "label=bug" >> $GITHUB_ENV
           elif [[ "${{ github.event.issue.title }}" =~ "Something isn't working" ]]; then
             echo "label='Something isn't working'" >> $GITHUB_ENV
-          elif [[ "${{ github.event.issue.title }}" =~ Documentation ]]; then
+          elif [[ "${{ github.event.issue.title }}" =~ documentation ]]; then
             echo "label=documentation" >> $GITHUB_ENV
           elif [[ "${{ github.event.issue.title }}" =~ "Improvements or additions to documentation" ]]; then
             echo "label='Improvements or additions to documentation'" >> $GITHUB_ENV
-          elif [[ "${{ github.event.issue.title }}" =~Duplicate ]]; then
+          elif [[ "${{ github.event.issue.title }}" =~ duplicate ]]; then
             echo "label=duplicate" >> $GITHUB_ENV
-          elif [[ "${{ github.event.issue.title }}" =~ Enhancement ]]; then
+          elif [[ "${{ github.event.issue.title }}" =~ enhancement ]]; then
             echo "label=enhancement" >> $GITHUB_ENV
           elif [[ "${{ github.event.issue.title }}" =~ "good first issue" ]]; then
             echo "label='good first issue'" >> $GITHUB_ENV
           elif [[ "${{ github.event.issue.title }}" =~ hacktoberfest ]]; then
             echo "label=hacktoberfest" >> $GITHUB_ENV
-          elif [[ "${{ github.event.issue.title }}" =~ Question ]]; then
+          elif [[ "${{ github.event.issue.title }}" =~ question ]]; then
             echo "label=question" >> $GITHUB_ENV
           fi
+
+
+# name: Auto Label Issues and PRs
+
+# permissions:
+#   issues: write
+#   pull-requests: write
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+#   issues:
+#     types:
+#       - opened
+
+# jobs:
+#   auto-label:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+
+#       - name: Add default labels to PRs
+#         if: github.event_name == 'pull_request'
+#         uses: actions/github-script@v6
+#         with:
+#           script: |
+#             const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
+#             if (labels.length > 0) {
+#               github.rest.issues.addLabels({
+#                 issue_number: context.payload.pull_request.number,
+#                 owner: context.repo.owner,
+#                 repo: context.repo.repo,
+#                 labels: labels
+#               }).catch(err => {
+#                 console.error("Error adding labels to PR:", err);
+#               });
+#             } else {
+#               console.log("No labels to add for PR");
+#             }
+
+#       - name: Add default labels to Issues
+#         if: github.event_name == 'issues'
+#         uses: actions/github-script@v6
+#         with:
+#           script: |
+#             const labels = ['Hactoberfest_2024', 'Hactoberfest-accepted', 'Hactoberfest'];
+#             if (labels.length > 0) {
+#               github.rest.issues.addLabels({
+#                 issue_number: context.payload.issue.number,
+#                 owner: context.repo.owner,
+#                 repo: context.repo.repo,
+#                 labels: labels
+#               }).catch(err => {
+#                 console.error("Error adding labels to Issue:", err);
+#               });
+#             } else {
+#               console.log("No labels to add for Issue");
+#             }
+
+#   label-prs:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Determine PR Label
+#         id: set-label
+#         run: |
+#           if [[ "${{ github.event.pull_request.title }}" =~ bug ]]; then
+#             echo "label=bug" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.pull_request.title }}" =~ documentation ]]; then
+#             echo "label=documentation" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.pull_request.title }}" =~ enhancement ]]; then
+#             echo "label=enhancement" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.pull_request.title }}" =~ hacktoberfest ]]; then
+#             echo "label=hacktoberfest" >> $GITHUB_ENV
+#           fi
+
+#   label-issues:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Determine Issue Label
+#         id: set-label
+#         run: |
+#           if [[ "${{ github.event.issue.title }}" =~ bug ]]; then
+#             echo "label=bug" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ "Something isn't working" ]]; then
+#             echo "label='Something isn't working'" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ documentation ]]; then
+#             echo "label=documentation" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ "Improvements or additions to documentation" ]]; then
+#             echo "label='Improvements or additions to documentation'" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ duplicate ]]; then
+#             echo "label=duplicate" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ enhancement ]]; then
+#             echo "label=enhancement" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ "good first issue" ]]; then
+#             echo "label='good first issue'" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ hacktoberfest ]]; then
+#             echo "label=hacktoberfest" >> $GITHUB_ENV
+#           elif [[ "${{ github.event.issue.title }}" =~ question ]]; then
+#             echo "label=question" >> $GITHUB_ENV
+#           fi
 
