@@ -766,6 +766,33 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="script.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const container = document.querySelector('.container');
+
+            const profiles = Array.from(container.querySelectorAll('.profile'));
+
+            profiles.sort((a, b) => {
+                const nameA = a.querySelector('.name').textContent.toUpperCase();
+                const nameB = b.querySelector('.name').textContent.toUpperCase();
+
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            container.innerHTML = '';
+
+            profiles.forEach(profile => {
+                container.appendChild(profile);
+            });
+        });
+    </script>
 
 </body>
 
