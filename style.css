@@ -632,37 +632,59 @@ footer {
 
 .about-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: var(
-    --color-profile-card-bg
-  ); 
-  border-radius: 10px;
+  margin: 40px auto;
+  padding: 60px;
+  background: linear-gradient(145deg, var(--color-profile-card-bg), #1a2634);
+  border-radius: 20px;
   color: var(--color-white);
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .about-section {
-  background-color: var(--color-body-bg); 
-  border: 1px solid var(--color-profile-border);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
-  margin: 20px 0;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--color-profile-border);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  margin: 30px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.25);
 }
 
 .section-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: var(
-    --color-profile-border
-  ); 
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-profile-border);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--color-profile-border);
+  border-radius: 3px;
 }
 
 .about-content {
-  font-size: 16px;
-  color: var(--color-white); 
-  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
 
 .contribution-steps {
@@ -671,207 +693,55 @@ footer {
 }
 
 .contribution-steps li {
-  padding: 10px;
+  padding: 15px 20px;
   font-size: 16px;
   color: var(--color-white);
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-  border-radius: 4px; 
-  margin-bottom: 10px; 
+  background: rgba(227, 82, 5, 0.1);
+  border-left: 4px solid var(--color-profile-border);
+  transition: all 0.3s ease;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .contribution-steps li i {
-  margin-right: 10px;
-  color: var(--color-profile-border); /* Icon color */
+  margin-right: 15px;
+  color: var(--color-profile-border);
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
 
 .contribution-steps li:hover {
-  background-color: #e35205;
-  color: white; 
-  transform: scale(1.05); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  background: var(--color-profile-border);
+  color: white;
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(227, 82, 5, 0.3);
   cursor: pointer;
 }
 
 .contribution-steps li:hover i {
-  color: white; 
-}
-
-#backToTopBtn i {
-  font-size: 24px;
-}
-
-#backToTopBtn {
-  display: none; 
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  background-color: #444;
   color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 50%;
-  box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),
-    -0.1em 0 0.4em rgba(227, 86, 5, 0.838);
-  transition: transform ease 0.5s, box-shadow ease 0.5s;
+  transform: scale(1.2);
 }
 
-/* Button hover effect */
-
-#backToTopBtn:hover {
-  background-color: #333;
-  transform: translateY(-5px);
-  box-shadow: 1px 10px 20px 2px rgba(227, 86, 5, 0.415);
-}
-
-/* Footer for About Page */
-
-.about-footer {
-  background-color: var(
-    --color-profile-border
-  ); 
-  padding: 20px;
-  color: var(--color-white);
-  text-align: center;
-}
-
-/* Contact Section */
-/* ... (keep all existing CSS rules) ... */
-
-/* UPDATED: Improved Contact Page Styles */
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 100px);
-  padding: 50px 20px;
-  /* background-color: var(--color-body-bg); */
-}
-
-.contact-container {
-  display: flex;
-  max-width: 1200px;
-  /* background: var(--color-profile-card-bg); */
-  border-radius: 20px;
-  box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.227);
-  overflow: hidden;
-  padding:0;
-
-}
-
-.contact-info {
-  flex: 1;
-  padding: 50px;
-  background: linear-gradient(135deg, var(--color-profile-border), var(--color-green));
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-info h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  margin-bottom: 30px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.info-item:hover {
-  transform: translateX(10px);
-}
-
-.info-item i {
-  margin-right: 15px;
-  font-size: 24px;
-}
-
-.contact-form-container {
-  flex: 1;
-  padding: 50px;
-  background: white;
-}
-
-.contact-form-container h2 {
-  color: var(--color-profile-border);
-  margin-bottom: 30px;
-  font-size: 28px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-}
-
-.contact-form button {
-  padding: 15px 30px;
-  background-color: #ee8122;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color:#f0642d ;
-}
-
-.error-message {
-  text-align: center;
-  color: #ff6347;
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(255, 99, 71, 0.1);
-}
-
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-  .contact-container {
-      flex-direction: column;
+  .about-container {
+    padding: 30px;
+    margin: 20px;
   }
-
-  .contact-info, .contact-form-container {
-      padding: 30px;
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .about-content {
+    font-size: 15px;
+  }
+  
+  .contribution-steps li {
+    padding: 12px 15px;
+    font-size: 14px;
   }
 }
 
