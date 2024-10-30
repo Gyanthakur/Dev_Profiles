@@ -16,6 +16,7 @@
   --color-body-bg: #121212;
   --color-profile-card-bg: #2f4054;
   --color-profile-border: #e35205;
+  --color-text: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +42,7 @@ html{
 body {
   width: 100vw;
   background-color: var(--color-body-bg);
-  color: #ffffff;
+  color: var(--color-text);
   font-family: Arial, sans-serif;
   text-align: center;
   overflow-x: hidden;
@@ -167,7 +168,15 @@ img#icon {
 body,
 .title,
 h3,
-footer{
+footer,
+.profile,
+.profile .lines::after,
+.social a,
+#searchInput,
+.about-container,
+.about-section,
+.about-content,
+.contribution-steps li {
   transition: background-color 500ms ease, color 500ms ease;
 }
 
@@ -202,7 +211,7 @@ body .title {
   transition: background-color 0.3s ease, transform 1s ease,
     border-color 1s ease;
   overflow: hidden;
-  background-color: var(--color-body-bg);
+  background-color: var(--color-profile-card-bg);
   display: inline-block;
 }
 
@@ -287,7 +296,7 @@ body .title {
   content: "";
   position: absolute;
   inset: 3px;
-  background: var(--color-body-bg);
+  background: var(--color-profile-card-bg);
   border-radius: 7px;
 }
 
@@ -300,7 +309,7 @@ body .title {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
-  outline: 0.5rem solid var(--color-body-bg);
+  outline: 0.5rem solid var(--color-profile-card-bg);
 }
 
 .name {
@@ -371,7 +380,7 @@ body .title {
 }
 
 .social a {
-  color: #ffffff;
+  color: var(--color-text);
   margin: 0 10px;
   font-size: 24px;
   text-decoration: none;
@@ -446,7 +455,7 @@ button:hover {
   border: none;
   border-radius: 100rem;
   background-color: var(--color-profile-card-bg);
-  color: white;
+  color: var(--color-text);
   font-size: 16px;
   box-shadow: 0.2rem 0.4rem 2rem #2f405450;
   transition: box-shadow 0.5s ease-in-out;
@@ -454,6 +463,10 @@ button:hover {
 
 #searchInput::placeholder {
   color: rgba(255, 255, 255, 0.37);
+}
+
+.light-background #searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.37);
 }
 
 #searchInput:focus {
@@ -522,6 +535,47 @@ header {
 
 .light-background {
   background-color: #fff;
+  color: #000;
+}
+
+.light-background .profile {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.light-background .profile .lines::after {
+  background-color: #f5f5f5;
+}
+
+.light-background .pfp img {
+  outline-color: #f5f5f5;
+}
+
+.light-background .social a {
+  color: #000;
+}
+
+.light-background #searchInput {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.light-background .about-container {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.light-background .about-section {
+  background-color: #fff;
+  color: #000;
+}
+
+.light-background .about-content {
+  color: #000;
+}
+
+.light-background .contribution-steps li {
+  color: #000;
 }
 
 .icon-color {
@@ -638,7 +692,7 @@ footer {
     --color-profile-card-bg
   ); 
   border-radius: 10px;
-  color: var(--color-white);
+  color: var(--color-text);
   font-family: "Poppins", sans-serif; 
 }
 
@@ -661,7 +715,7 @@ footer {
 
 .about-content {
   font-size: 16px;
-  color: var(--color-white); 
+  color: var(--color-text); 
   margin-bottom: 10px;
 }
 
@@ -673,7 +727,7 @@ footer {
 .contribution-steps li {
   padding: 10px;
   font-size: 16px;
-  color: var(--color-white);
+  color: var(--color-text);
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
   border-radius: 4px; 
