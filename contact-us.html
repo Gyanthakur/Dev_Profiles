@@ -12,18 +12,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
     <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
-
-
 </head>
 
 <body>
     <!-- Navigation Header -->
     <header>
         <nav>
-           <p class="title">Contact Us</p>
+            <p class="title">Contact Us</p>
             <div class="nav-links">
                 <a href="index.html">
-                    <button class="add" >
+                    <button class="add">
                         Go To Profile Section &nbsp;<i class="fa-solid fa-user"></i>
                     </button>
                 </a>
@@ -68,18 +66,18 @@
                     <span>Fatehpur, Uttar Pradesh, India</span>
                 </a>
             </div>
-            
+
             <div class="contact-form-container">
                 <h2>Send us a message</h2>
                 <form class="contact-form" action="https://formspree.io/f/mdkonvre" method="POST">
                     <div class="input-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required />
+                        <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your Name" />
                     </div>
                     <div class="input-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required />
+                        <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
                     </div>
                     <div class="input-group">
-                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
                     </div>
                     <div class="input-group">
                         <button type="submit">Send Message</button>
