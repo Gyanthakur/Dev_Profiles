@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
+    <title>About Us</title>
     <link
       rel="shortcut icon"
       href="https://oyepriyansh.pages.dev/i/favicon.ico"
@@ -29,56 +29,105 @@
       type="text/javascript"
       src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"
     ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        text-align: left; /* Changed text alignment to left */
+      }
+      .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0; /* Increased padding */
+      }
+      .navbar .nav-links a {
+        margin: 0 20px; /* Increased margin */
+      }
+      .navbar .nav-links button {
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .navbar .nav-links button:hover {
+        background-color: #555;
+      }
+      .about-section {
+        margin: 40px 0; /* Increased margin */
+        padding: 50px; /* Increased padding */
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: transform 0.3s;
+        font-size: 1.8em; /* Increased text size */
+      }
+      .about-section:hover {
+        transform: scale(1.02);
+      }
+      .scroll-up-container button {
+        background-color: #333; /* Grayish black */
+        border: none; /* Remove border */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .scroll-up-container button:hover {
+        background-color: #555; /* Darker gray on hover */
+      }
+      .scroll-up-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+      /* Added margin to header and paragraph text */
+      .about-section h2 {
+        margin-top: 20px; /* Added margin top */
+      }
+      .about-section p {
+        margin-top: 10px; /* Added margin top */
+        font-size: 0.7em; /* Decreased paragraph text size */
+      }
+    </style>
   </head>
 
   <body>
     <div class="progress-bar" id="progressBar">
       <div class="bar" id="bar"></div>
-  </div>
+    </div>
 
-
-
-  <div class="navbar">
+    <div class="navbar">
       <header>
         <nav>
-    
-          <p class="title" >About Us</p>
+          <p class="title">About Us</p>
           <div class="nav-links">
-    
-    
-              <a href="index.html">
-                <button class="add">
-                  Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i>
-                </button>
-              </a>
-            
-              <a href="project.html">
-                <button class="add">
-                  Go to Project section &nbsp; <i class="fa-solid fa-list-check"></i>
-                </button>
-              </a>
-              
-              <a href="about-us.html">
-                <button class="add" onclick='window.open("about-us.html","_self")'>
-                  About Us &nbsp; <i class="fa-solid fa-info-circle"></i>
-                </button>
-              </a>
-              
-              <a href="contact-us.html">
-                <button class="add" onclick='window.open("contact-us.html","_self")'>
-                  Contact Us &nbsp; <i class="fa-solid fa-address-book"></i>
-                </button>
-              </a>
-              <button class="dark-btn about-dark"><img id="icon" src="dark.png" alt="Dark" style="right: 0%;top: 0%;"></img></button>
+            <a href="index.html">
+              <button class="add">
+                Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i>
+              </button>
+            </a>
+            <a href="project.html">
+              <button class="add">
+                Go to Project section &nbsp; <i class="fa-solid fa-list-check"></i>
+              </button>
+            </a>
+            <a href="about-us.html">
+              <button class="add" onclick='window.open("about-us.html","_self")'>
+                About Us &nbsp; <i class="fa-solid fa-info-circle"></i>
+              </button>
+            </a>
+            <a href="contact-us.html">
+              <button class="add" onclick='window.open("contact-us.html","_self")'>
+                Contact Us &nbsp; <i class="fa-solid fa-address-book"></i>
+              </button>
+            </a>
+            <button class="dark-btn about-dark"><img id="icon" src="dark.png" alt="Dark" style="right: 0%;top: 0%;"></img></button>
           </div>
-    
         </nav>
       </header>
-  </div>
-
-
-
-
+    </div>
 
     <div class="line"><br /></div>
 
@@ -142,17 +191,12 @@
               class="link-primary"
               >GitHub Repository</a
             >.
-
           </p>
         </div>
       </main>
     </div>
 
     <div class="line"><br /></div>
-
-    <button id="backToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i>
-    </button>
-  <script src="script.js"></script>
 
     <footer class="footer">
       <ul class="social-icon">
@@ -185,14 +229,12 @@
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </li>
-
         <li class="social-icon__item"></i><a class="social-icon__link" href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
           <ion-icon name="logo-whatsapp"></ion-icon>
         </a></li>
       </ul>
       <ul class="menu">
         <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-        
         <li class="menu__item">
           <a class="menu__link" href="project.html">Project Section</a>
         </li>
@@ -207,6 +249,11 @@
           >
         </li>
       </ul>
+      <div class="scroll-up-container">
+        <button id="backToTopBtn" title="Go to top" class="add">
+          <i class="fa-solid fa-arrow-up" style="font-size: 24px;"></i>
+        </button>
+      </div>
       <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
     </footer>
 
@@ -219,5 +266,43 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <script src="script.js"></script>
-  </body>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
