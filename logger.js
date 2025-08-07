@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          clientSecret: "f274a57c-fe8f-4967-9cd7-9b109d339fea",
-          applicationId: "16cea802-947d-48ff-8761-3fda8350083b",
+          clientSecret: "21c56528-1ecd-432f-a7c6-75fd5c97c37f",
+          applicationId: "c01c2ed0-32ae-4c27-8db3-9cd087844371",
         }),
       };
   
