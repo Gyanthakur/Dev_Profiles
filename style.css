@@ -502,7 +502,7 @@ header {
 
 .title {
   text-align: center;
-  font-size: 36px;
+  font-size: 1.5rem;
   font-family: "PT Serif", serif;
   color: var(--color-profile-border);
   margin-top: 1px;
