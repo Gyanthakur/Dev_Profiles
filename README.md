@@ -1,5 +1,5 @@
 # DevProfiles
-A place to list and shocase your developer skills and profile
+A place to list and showcase your developer skills and profile
 
 
 ## Contribute.
