@@ -766,35 +766,39 @@ footer {
 }
 
 #backToTopBtn i {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #backToTopBtn {
-  display: none; 
+  display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 30px;
+  right: 10px;
   z-index: 99;
-  font-size: 18px;
-  background-color: #444;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  background-color: black;
   color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border: 3px solid #e35205;
   border-radius: 50%;
-  box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),
-    -0.1em 0 0.4em rgba(227, 86, 5, 0.838);
-  transition: transform ease 0.5s, box-shadow ease 0.5s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3),
+    0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button hover effect */
 
 #backToTopBtn:hover {
-  background-color: #333;
+  background-color: #e35205;
+  color: black;
   transform: translateY(-5px);
-  box-shadow: 1px 10px 20px 2px rgba(227, 86, 5, 0.415);
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer for About Page */
