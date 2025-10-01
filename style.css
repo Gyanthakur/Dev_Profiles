@@ -460,32 +460,50 @@ button:hover {
   margin: 1rem auto;
   padding: 0 9%;
   text-align: center;
+  position: relative;
 }
 
 #searchInput {
   width: 100%;
   display: block;
-  padding: 1.2em 2em;
-  border: none;
+  padding: 1.2em 3em 1.2em 2em;
+  border: 2px solid var(--color-profile-border);
   border-radius: 100rem;
   background-color: var(--color-profile-card-bg);
   color: var(--color-text);
   font-size: 16px;
-  box-shadow: 0.2rem 0.4rem 2rem #2f405450;
-  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.2);
+  transition: all 0.3s ease;
 }
 
-#searchInput::placeholder {
-  color: rgba(255, 255, 255, 0.37);
-}
-
-.light-background #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.37);
+#searchInput:hover {
+  border-color: var(--color-green);
+  box-shadow: 0 6px 16px rgba(227, 86, 5, 0.3);
 }
 
 #searchInput:focus {
   outline: none;
-  box-shadow: 0.2rem 0.4rem 2rem #2f405497;
+  border-color: var(--color-green);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.4), 0 0 0 3px rgba(227, 86, 5, 0.1);
+}
+
+#searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.light-background #searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search-icon {
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 h1 {
