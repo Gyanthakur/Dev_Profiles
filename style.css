@@ -773,13 +773,15 @@ footer {
   display: none; 
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 15px;
   z-index: 99;
   font-size: 18px;
   background-color: #444;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 10px;
+  width: 45px;        
+  height: 45px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -787,6 +789,7 @@ footer {
   box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),
     -0.1em 0 0.4em rgba(227, 86, 5, 0.838);
   transition: transform ease 0.5s, box-shadow ease 0.5s;
+   
 }
 
 /* Button hover effect */
