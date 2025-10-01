@@ -469,26 +469,26 @@ button:hover {
   padding: 1.2em 3em 1.2em 2em;
   border: 2px solid var(--color-profile-border);
   border-radius: 100rem;
-  background-color: var(--color-profile-card-bg);
-  color: var(--color-text);
+  background-color: #fff;
+  color: #000;
   font-size: 16px;
   box-shadow: 0 4px 12px rgba(227, 86, 5, 0.2);
   transition: all 0.3s ease;
 }
 
 #searchInput:hover {
-  border-color: var(--color-green);
-  box-shadow: 0 6px 16px rgba(227, 86, 5, 0.3);
+  border-color: var(--color-profile-border);
+  box-shadow: 0 6px 16px rgba(227, 86, 5, 0.4), 0 0 0 3px rgba(227, 86, 5, 0.1);
 }
 
 #searchInput:focus {
   outline: none;
-  border-color: var(--color-green);
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.4), 0 0 0 3px rgba(227, 86, 5, 0.1);
+  border-color: var(--color-profile-border);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.5), 0 0 0 3px rgba(227, 86, 5, 0.2);
 }
 
 #searchInput::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .light-background #searchInput::placeholder {
