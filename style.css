@@ -1243,3 +1243,32 @@ body:not(.light-background) .search-clear:hover {
 #searchInput:focus {
   animation: searchPulse 2s ease-in-out infinite;
 }
+
+/* Dark Mode Styles for Contact Section */
+body:not(.light-background) .contact-container {
+  background: var(--color-profile-card-bg);
+  box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.4);
+}
+
+body:not(.light-background) .contact-form-container {
+  background: var(--color-profile-card-bg);
+  color: var(--color-text);
+}
+
+body:not(.light-background) .contact-form input,
+body:not(.light-background) .contact-form textarea {
+  background-color: var(--color-body-bg);
+  color: var(--color-text);
+  border: 1px solid #333;
+}
+
+body:not(.light-background) .contact-form input::placeholder,
+body:not(.light-background) .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body:not(.light-background) .contact-form input:focus,
+body:not(.light-background) .contact-form textarea:focus {
+  border-color: var(--color-profile-border);
+  box-shadow: 0 0 0 2px rgba(227, 82, 5, 0.3);
+}
