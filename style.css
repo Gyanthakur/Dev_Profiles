@@ -460,32 +460,54 @@ button:hover {
   margin: 1rem auto;
   padding: 0 9%;
   text-align: center;
+  position: relative;
 }
 
 #searchInput {
   width: 100%;
   display: block;
-  padding: 1.2em 2em;
-  border: none;
+  padding: 1.2em 3em 1.2em 2em;
+  border: 2px solid var(--color-profile-border);
   border-radius: 100rem;
-  background-color: var(--color-profile-card-bg);
-  color: var(--color-text);
+  background-color: #fff;
+  color: #000;
   font-size: 16px;
-  box-shadow: 0.2rem 0.4rem 2rem #2f405450;
-  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.2);
+  transition: all 0.3s ease;
 }
 
-#searchInput::placeholder {
-  color: rgba(255, 255, 255, 0.37);
-}
-
-.light-background #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.37);
+#searchInput:hover {
+  border-color: var(--color-profile-border);
+  box-shadow: 0 6px 16px rgba(227, 86, 5, 0.4), 0 0 0 3px rgba(227, 86, 5, 0.1);
 }
 
 #searchInput:focus {
   outline: none;
-  box-shadow: 0.2rem 0.4rem 2rem #2f405497;
+  border-color: var(--color-profile-border);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.5), 0 0 0 3px rgba(227, 86, 5, 0.2);
+}
+
+#searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.light-background #searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search-icon {
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text);
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.light-background .search-icon {
+  color: #000;
 }
 
 h1 {
@@ -766,35 +788,39 @@ footer {
 }
 
 #backToTopBtn i {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #backToTopBtn {
-  display: none; 
+  display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 30px;
+  right: 10px;
   z-index: 99;
-  font-size: 18px;
-  background-color: #444;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  background-color: black;
   color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border: 3px solid #e35205;
   border-radius: 50%;
-  box-shadow: 5px 0px 10px 0px rgba(227, 86, 5, 0.838),
-    -0.1em 0 0.4em rgba(227, 86, 5, 0.838);
-  transition: transform ease 0.5s, box-shadow ease 0.5s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3),
+    0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button hover effect */
 
 #backToTopBtn:hover {
-  background-color: #333;
+  background-color: #e35205;
+  color: black;
   transform: translateY(-5px);
-  box-shadow: 1px 10px 20px 2px rgba(227, 86, 5, 0.415);
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer for About Page */
