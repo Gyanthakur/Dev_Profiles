@@ -454,9 +454,8 @@ button:hover {
 }
 
 
-
 .search {
-  max-width: 1200px;
+  max-width: 1700px;
   margin: 1rem auto;
   padding: 0 9%;
   text-align: center;
@@ -466,7 +465,6 @@ button:hover {
   gap: 15px; 
 }
 
-
 .search-box {
   position: relative;
   width: 100%;
@@ -474,11 +472,13 @@ button:hover {
 
 .search-box input {
   width: 100%;
+  max-width: 700px;
   padding: 10px 10px 15px 20px;
   border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
 
 .search-box .search-icon {
   position: absolute;
@@ -536,6 +536,9 @@ button:hover {
   pointer-events: none;
   opacity: 0.7;
 }
+
+
+
 
 .light-background .search-icon {
   color: #000;
