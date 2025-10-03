@@ -461,7 +461,38 @@ button:hover {
   padding: 0 9%;
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px; 
 }
+
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 10px 15px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  top: 50%;
+  margin-right: 15px;
+  transform: translateY(-50%);
+  color: #666;
+  pointer-events: none; 
+}
+
+.search > a {
+  text-decoration: none;
+}
+
 
 #searchInput {
   width: 100%;
