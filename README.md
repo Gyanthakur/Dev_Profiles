@@ -1,6 +1,20 @@
 # DevProfiles
 A place to list and showcase your developer skills and profile
 
+## Chrome Extension (Additional Feature)
+You can use Dev-Profiles as a Chrome extension for quick access.
+
+📦 **Using the Extension**
+
+1 Clone the repository.
+
+2 Open Chrome → go to Extensions → Developer Mode → Load Unpacked.
+
+3 Select the Chrome extension folder directly from the cloned repo.
+
+4 Pin the extension to your browser.
+
+5 Click the extension icon anytime to open Moments quickly.
 
 ## Contribute.
 1. Give Star on the repo
