@@ -555,7 +555,7 @@ header {
 
 .title {
   text-align: center;
-  font-size: 36px;
+  font-size: 1.5rem;
   font-family: "PT Serif", serif;
   color: var(--color-profile-border);
   margin-top: 1px;
@@ -1001,3 +1001,305 @@ footer {
 }
 
 /* ... (keep all existing CSS rules after this point) ... */
+/* Enhanced Search Bar Styles */
+.search {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 9%;
+  text-align: center;
+  position: relative;
+}
+
+.search::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 4rem);
+  height: 70px;
+  background: linear-gradient(90deg, 
+    var(--color-profile-border), 
+    #ff6462, 
+    #ff87a5, 
+    #ffbf6e, 
+    #ffd200);
+  border-radius: 100rem;
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.search:hover::before {
+  opacity: 0.3;
+}
+
+#searchInput {
+  width: 100%;
+  display: block;
+  padding: 1.3em 3.5em 1.3em 3.5em;
+  border: 2px solid var(--color-profile-border);
+  border-radius: 100rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15),
+              0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+#searchInput:hover {
+  border-color: #ff6462;
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25), 
+              0 3px 12px rgba(255, 100, 98, 0.2),
+              0 0 0 4px rgba(227, 86, 5, 0.08);
+  transform: translateY(-2px);
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--color-profile-border);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
+              0 4px 15px rgba(255, 100, 98, 0.25),
+              0 0 0 5px rgba(227, 86, 5, 0.12);
+  transform: translateY(-3px) scale(1.01);
+}
+
+#searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+#searchInput:focus::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Search Icon (Left) */
+.search::after {
+  content: '\f002';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  left: calc(9% + 2.5em);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-profile-border);
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.3s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search:hover::after {
+  color: #ff6462;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Clear button (appears when typing) */
+.search-clear {
+  position: absolute;
+  right: calc(9% + 1.2em);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(227, 86, 5, 0.1);
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+  color: var(--color-profile-border);
+  font-size: 14px;
+}
+
+.search-clear:hover {
+  background-color: var(--color-profile-border);
+  color: white;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* Light Mode Adjustments */
+.light-background #searchInput {
+  background-color: #fff;
+  color: #000;
+  border-color: var(--color-profile-border);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12),
+              0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.light-background #searchInput:hover {
+  border-color: #ff6462;
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2), 
+              0 3px 12px rgba(255, 100, 98, 0.15),
+              0 0 0 4px rgba(227, 86, 5, 0.06);
+}
+
+.light-background #searchInput:focus {
+  border-color: var(--color-profile-border);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25), 
+              0 4px 15px rgba(255, 100, 98, 0.2),
+              0 0 0 5px rgba(227, 86, 5, 0.1);
+}
+
+.light-background #searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.light-background .search::after {
+  color: var(--color-profile-border);
+}
+
+.light-background .search:hover::after {
+  color: #ff6462;
+}
+
+/* Dark Mode Styles */
+body:not(.light-background) #searchInput {
+  background-color: var(--color-profile-card-bg);
+  color: var(--color-text);
+  border-color: var(--color-profile-border);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2),
+              0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body:not(.light-background) #searchInput:hover {
+  background-color: #0f1215;
+  border-color: #ff6462;
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3), 
+              0 3px 12px rgba(255, 100, 98, 0.25),
+              0 0 0 4px rgba(227, 86, 5, 0.1);
+}
+
+body:not(.light-background) #searchInput:focus {
+  background-color: #0f1215;
+  border-color: var(--color-profile-border);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
+              0 4px 15px rgba(255, 100, 98, 0.3),
+              0 0 0 5px rgba(227, 86, 5, 0.15);
+}
+
+body:not(.light-background) #searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+body:not(.light-background) #searchInput:focus::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+body:not(.light-background) .search::after {
+  color: var(--color-green);
+}
+
+body:not(.light-background) .search:hover::after {
+  color: #ff6462;
+}
+
+body:not(.light-background) .search-clear {
+  background-color: rgba(104, 235, 184, 0.1);
+  color: var(--color-green);
+}
+
+body:not(.light-background) .search-clear:hover {
+  background-color: var(--color-green);
+  color: var(--color-body-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search {
+    padding: 0 5%;
+  }
+
+  #searchInput {
+    padding: 1.1em 3em 1.1em 3em;
+    font-size: 16px;
+  }
+
+  .search::after {
+    left: calc(5% + 1em);
+    font-size: 16px;
+  }
+
+  .search-clear {
+    right: calc(5% + 1em);
+  }
+}
+
+@media (max-width: 480px) {
+  #searchInput {
+    padding: 1em 2.5em 1em 2.5em;
+    font-size: 15px;
+  }
+
+  .search::after {
+    left: calc(5% + 0.8em);
+    font-size: 15px;
+  }
+
+  .search-clear {
+    right: calc(5% + 0.8em);
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+}
+
+/* Pulse animation on focus */
+@keyframes searchPulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
+                0 4px 15px rgba(255, 100, 98, 0.25),
+                0 0 0 5px rgba(227, 86, 5, 0.12);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
+                0 4px 15px rgba(255, 100, 98, 0.3),
+                0 0 0 8px rgba(227, 86, 5, 0.08);
+  }
+}
+
+#searchInput:focus {
+  animation: searchPulse 2s ease-in-out infinite;
+}
+
+/* Dark Mode Styles for Contact Section */
+body:not(.light-background) .contact-container {
+  background: var(--color-profile-card-bg);
+  box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.4);
+}
+
+body:not(.light-background) .contact-form-container {
+  background: var(--color-profile-card-bg);
+  color: var(--color-text);
+}
+
+body:not(.light-background) .contact-form input,
+body:not(.light-background) .contact-form textarea {
+  background-color: var(--color-body-bg);
+  color: var(--color-text);
+  border: 1px solid #333;
+}
+
+body:not(.light-background) .contact-form input::placeholder,
+body:not(.light-background) .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body:not(.light-background) .contact-form input:focus,
+body:not(.light-background) .contact-form textarea:focus {
+  border-color: var(--color-profile-border);
+  box-shadow: 0 0 0 2px rgba(227, 82, 5, 0.3);
+}
