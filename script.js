@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (savedTheme === "light") {
     document.body.classList.add("light-background");
     icon.style.filter = "invert(0%)";
-    icon.src = "light.png";
+    icon.src = "/assets/light.png";
     document.querySelector(".title").classList.add("text-color");
     document.querySelector("footer").classList.add("text-color");
     const buttons = document.querySelectorAll(".add");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
     document.body.classList.remove("light-background");
     icon.style.filter = "invert(100%)";
-    icon.src = "dark.png";
+    icon.src = "/assets/dark.png";
     localStorage.setItem("theme", "dark"); 
   }
 
@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document.body.classList.contains("light-background")) {
       icon.style.filter = "invert(0%)";
-      icon.src = "light.png";
+      icon.src = "/assets/light.png";
       localStorage.setItem("theme", "light");
     } else {
       icon.style.filter = "invert(100%)";
-      icon.src = "dark.png";
+      icon.src = "/assets/dark.png";
       localStorage.setItem("theme", "dark");
     }
 
