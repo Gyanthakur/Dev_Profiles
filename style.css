@@ -81,264 +81,138 @@ body {
 /* Navbar */
 
 /* General Styles for Navbar */
+/* ✅ Navbar Base */
 nav {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 12px 25px;
+  width: 100%;
   background-color: #1a1a1a;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Light Mode Navbar */
 .light-background nav {
   background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ✅ Title */
 .title a {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
-  color: #ff4500;
   background: linear-gradient(135deg, #413f3e, #ff6b35);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transition: transform 0.3s ease;
 }
 
-.title a:hover {
-  transform: scale(1.05);
-}
-
+/* ✅ Nav Links Container */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 14px;
+  transition: max-height 0.4s ease-in-out;
 }
 
+/* ✅ Nav Links Style */
 .nav-links a {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   background-color: #2a2a2a;
   padding: 8px 14px;
-  border-radius: 25px;
+  border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: 500;
-  border: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-  outline: none;
+  transition: 0.3s;
 }
 
-/* Light Mode Links */
-.light-background .nav-links a {
-  color: #333333;
-  background-color: #f0f0f0;
-}
-
-/* Remove visited state styling - it was causing the issue */
-.nav-links a:visited {
-  color: #ffffff;
-}
-
-.light-background .nav-links a:visited {
-  color: #333333;
-}
-
-/* Reset focus and active to match default state */
-.nav-links a:focus,
-.nav-links a:active {
-  background-color: #2a2a2a;
-  color: #ffffff;
-  border: none;
-  outline: none;
-}
-
-.light-background .nav-links a:focus,
-.light-background .nav-links a:active {
-  background-color: #f0f0f0;
-  color: #333333;
-  border: none;
-  outline: none;
-}
-
-/* Pink hover - must come AFTER focus/active to work properly */
 .nav-links a:hover {
   background-color: #ff69b4;
-  color: #ffffff;
 }
 
-.nav-links a i {
-  font-size: 0.95rem;
-}
-
+/* ✅ Add Button */
 .add {
+  background-color: #2a2a2a;
+  color: #fff;
   border: none;
-  padding: 10px 14px;
-  border-radius: 25px;
+  padding: 8px 14px;
+  border-radius: 20px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background-color: #2a2a2a;
-  color: #ffffff;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  outline: none;
+  transition: 0.3s;
 }
 
-.light-background .add {
-  background-color: #f0f0f0;
-  color: #333333;
-}
-
-.add:focus,
-.add:active {
-  background-color: #2a2a2a;
-  color: #ffffff;
-  border: none;
-  outline: none;
-}
-
-.light-background .add:focus,
-.light-background .add:active {
-  background-color: #f0f0f0;
-  color: #333333;
-  border: none;
-  outline: none;
-}
-
-/* Pink hover for add button - must come AFTER focus/active */
 .add:hover {
   background-color: #ff69b4;
-  color: #ffffff;
 }
 
-.add i {
-  margin-left: 0;
-}
-
+/* ✅ Dark/Light Button */
 .dark-btn {
   background-color: #2a2a2a;
-  border: 2px solid #3a3a3a;
+  border: none;
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  width: 40px;
-  height: 40px;
-}
-
-.light-background .dark-btn {
-  background-color: #f0f0f0;
-  border: 2px solid #e0e0e0;
-}
-
-.dark-btn:hover {
-  background-color: #f0c8dc;
-  border-color: #f00f80;
 }
 
 img#icon {
   width: 20px;
   height: 20px;
-  object-fit: contain;
   filter: brightness(0) invert(1);
-  transition: filter 0.3s ease;
 }
 
-.light-background img#icon {
-  filter: brightness(0) invert(0);
+/* ✅ Hamburger Menu Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* ✅ Mobile View */
 @media (max-width: 768px) {
   nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .title a {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    margin-top: 0;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
     flex-wrap: wrap;
-  }
-
-  .nav-links a,
-  .add {
-    flex: 1;
-    min-width: 35px;
-    justify-content: center;
-    padding: 8px 6px;
-    font-size: 0.85rem;
-  }
-
-  /* Hide text on mobile, show only icons */
-  .nav-links a span,
-  .add span {
-    display: none;
-  }
-
-  .dark-btn {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title a {
-    font-size: 1.3rem;
+    padding: 10px 20px;
   }
 
   .nav-links {
-    gap: 6px;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* expands when toggled */
+    padding: 10px 0;
   }
 
   .nav-links a,
   .add {
-    padding: 7px 5px;
-    font-size: 0.8rem;
+    width: 90%;
+    text-align: center;
+    background-color: #2a2a2a;
   }
 
-  .nav-links a i,
-  .add i {
-    font-size: 0.85rem;
-  }
-
-  img#icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .dark-btn {
-    width: 35px;
-    height: 35px;
+  .hamburger {
+    display: flex;
   }
 }
+
 
 body,
 .title,
