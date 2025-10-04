@@ -2,10 +2,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("searchInput");
   const profiles = document.querySelectorAll(".profile");
   const date = document.getElementById("dates");
+  const savedTheme = localStorage.getItem("theme");
+  const darkMode = document.querySelector(".dark-btn");
+  const icon = document.getElementById("icon");
 
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   date.innerHTML = currentYear;
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light-background");
+    icon.style.filter = "invert(0%)";
+    icon.src = "/assets/light.png";
+    document.querySelector(".title").classList.add("text-color");
+    document.querySelector("footer").classList.add("text-color");
+    const buttons = document.querySelectorAll(".add");
+    buttons.forEach((button) => {
+      button.classList.add("bg-color");
+    });
+    darkMode.classList.add("icon-position", "light-background", "icon-color");
+  } else {
+ 
+    document.body.classList.remove("light-background");
+    icon.style.filter = "invert(100%)";
+    icon.src = "/assets/dark.png";
+    localStorage.setItem("theme", "dark"); 
+  }
 
   window.addEventListener("scroll", () => {
     const progressBar = document.getElementById("bar");
@@ -36,29 +58,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const darkMode = document.querySelector(".dark-btn");
-  var icon = document.getElementById("icon");
-
   darkMode.addEventListener("click", () => {
     document.body.classList.toggle("light-background");
+
     if (document.body.classList.contains("light-background")) {
       icon.style.filter = "invert(0%)";
-      icon.src = "light.png";
+      icon.src = "/assets/light.png";
+      localStorage.setItem("theme", "light");
     } else {
       icon.style.filter = "invert(100%)";
-      icon.src = "dark.png";
+      icon.src = "/assets/dark.png";
+      localStorage.setItem("theme", "dark");
     }
+
     darkMode.classList.toggle("icon-position");
     darkMode.classList.toggle("light-background");
     darkMode.classList.toggle("icon-color");
     document.querySelector(".title").classList.toggle("text-color");
     document.querySelector("footer").classList.toggle("text-color");
     const buttons = document.querySelectorAll(".add");
-
-    // const contactContainer = document.querySelector(".contact-container");
-    // if (contactContainer) {
-    //     darkMode.classList.toggle("light-background");
-    // }
     buttons.forEach((button) => {
       button.classList.toggle("bg-color");
     });
