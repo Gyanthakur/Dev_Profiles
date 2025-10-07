@@ -24,38 +24,40 @@
     </div>
 
     <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="title">
-                <a href="index.html">Dev Profiles</a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">
-                    <button class="add">
-                        Home<i class="fa-solid fa-house"></i>
-                    </button>
-                </a>
-                <a href="about.html" class="nav-link">
-                    <button class="add">
-                        About<i class="fa-solid fa-circle-info"></i>
-                    </button>
-                </a>
-                <a href="contact.html" class="nav-link">
-                    <button class="add">
-                        Contact<i class="fa-solid fa-address-book"></i> 
-                    </button>
-                </a>
-                <a href="faq.html" class="nav-link">
-                    <button class="add">
-                        FAQ<i class="fa-solid fa-circle-question"></i> 
-                    </button>
-                </a>
-                <button class="dark-btn">
-                    <img src="/assets/dark.png" id="icon" alt="Dark Mode Toggle">
-                </button>
-            </div>
-        </nav>
-    </header>
+<header>
+  <nav>
+    <!-- Title / Logo -->
+    <p class="title"><a href="index.html">Dev Profiles</a></p>
+
+    <!-- Hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Nav links -->
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-user"></i> Profile Section
+      </a>
+      <a class="nav-link" href="project.html">
+        <i class="fa-solid fa-list-check"></i> Projects
+      </a>
+      <a class="nav-link" href="about-us.html">
+        <i class="fa-solid fa-info-circle"></i> About Us
+      </a>
+      <a class="nav-link" href="contact-us.html">
+        <i class="fa-solid fa-address-book"></i> Contact
+      </a>
+
+      <!-- Dark mode button -->
+      <button class="dark-btn" id="icon">
+        <img src="/assets/dark.png" alt="Dark" style="width:24px; height:24px;">
+      </button>
+    </div>
+  </nav>
+</header>
 
     <!-- FAQ Section -->
     <section class="faq-section">

@@ -38,54 +38,46 @@
       <div class="bar" id="bar"></div>
     </div>
 
-    <div class="navbar">
-      <header>
-        <nav>
-          <p class="title"><a href="index.html">Dev Profiles</a></p>
-          <div class="nav-links">
-            <a href="index.html"
-              ><button class="add">
-                Go To Profile Section &nbsp;
-                <i class="fa-solid fa-user"></i></button
-            ></a>
+<header>
+  <nav>
+    <!-- Title / Logo -->
+    <p class="title"><a href="index.html">Dev Profiles</a></p>
 
-            <a href="https://github.com/Gyanthakur/DevProfile" target="_blank">
-              <button class="add">
-                Add your Project &nbsp;
-                <i class="fa-sharp fa-solid fa-user-plus"></i>
-              </button>
-            </a>
 
+    <!-- Hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
             <a class="nav-link" href="privacy.html">
               <button class="add" onclick='window.open("privacy.html","_self")'>
                 Privacy Policy &nbsp; <i class="fa-solid fa-shield-halved"></i>
               </button>
             </a>
 
-            <a href="about-us.html">
-              <button
-                class="add"
-                onclick='window.open("about-us.html","_self")'
-              >
-                About Us &nbsp; <i class="fa-solid fa-info-circle"></i>
-              </button>
-            </a>
+    <!-- Nav links -->
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-user"></i> Profile Section
+      </a>
+      <a class="nav-link" href="project.html">
+        <i class="fa-solid fa-list-check"></i> Projects
+      </a>
+      <a class="nav-link" href="about-us.html">
+        <i class="fa-solid fa-info-circle"></i> About Us
+      </a>
+      <a class="nav-link" href="contact-us.html">
+        <i class="fa-solid fa-address-book"></i> Contact
+      </a>
 
-            <a href="contact-us.html">
-              <button
-                class="add"
-                onclick='window.open("contact-us.html","_self")'
-              >
-                Contact Us &nbsp; <i class="fa-solid fa-address-book"></i>
-              </button>
-            </a>
-            <button class="dark-btn">
-              <img id="icon" src="/assets/dark.png" alt="Dark" />
-            </button>
-          </div>
-        </nav>
-      </header>
+      <!-- Dark mode button -->
+      <button class="dark-btn" id="icon">
+        <img src="/assets/dark.png" alt="Dark" style="width:24px; height:24px;">
+      </button>
     </div>
+  </nav>
+</header>
 
     <div class="logger">
       <!-- <h2>Logger</h2> -->
