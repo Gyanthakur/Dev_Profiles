@@ -1,31 +1,57 @@
 ---
 name: "Issue Template"
-about: "Use this template for reporting a bug, suggesting an enhancement, or requesting a feature."
+about: "Report a bug 🐛 | Suggest an enhancement 💡 | Request a feature 🚀"
 title: "[ISSUE] - Short Description"
 labels: bug, enhancement, question
 assignees: ''
 ---
 
 ## 📝 Description
-<!-- A clear and concise description of what the issue is. Please include a summary of the problem, bug, or feature request. -->
+<!-- Provide a clear and concise description of the issue. 
+Include what the problem is, why it matters, and what outcome you expect. -->
 
-### 📷 Screenshot or Visual Reference (optional)
-<!-- If applicable, add screenshots or visual aids to help explain the problem. -->
+---
+
+## 📸 Screenshot or Visual Reference (optional)
+<!-- If applicable, attach screenshots or visual references to explain the issue better. -->
+
+---
 
 ## 🐛 Bug Report (if applicable)
-<!-- If you're reporting a bug, please include specific details to help reproduce the issue. -->
-- **Steps to Reproduce:** 
+<!-- If this is a bug, please provide details to help reproduce and fix it. -->
+
+- **Steps to Reproduce:**
   1. Step 1
   2. Step 2
   3. Step 3
-- **Expected behavior:** What should happen?
-- **Actual behavior:** What happened instead?
-- **Environment (if applicable):**
+- **Expected Behavior:** What you expected to happen.
+- **Actual Behavior:** What actually happened.
+- **Environment:**
   - Browser/OS: 
   - Device: 
+  - Version (if applicable): 
+
+---
 
 ## 💡 Enhancement / Feature Request (if applicable)
-<!-- If this is a feature request or enhancement suggestion, explain why it would be useful and how it should work. -->
+<!-- If you’re suggesting a new feature or improvement, describe the benefit or problem it solves. 
+Explain how it should ideally work. -->
+
+**Why is this needed?**  
+_Explain how this will improve the project or user experience._
+
+**Proposed Solution:**  
+_Describe your proposed idea or approach clearly._
+
+---
+
+## 🔗 Related Pull Requests
+<!-- Mention related PRs if any -->
+<!-- Example: -->
+<!-- This issue will be closed automatically when the PR below is merged -->
+<!-- Closes #<issue_number> -->
+
+---
 
 ## 🌐 Additional Context
-<!-- Add any other context, links, or resources related to the issue here. -->
+<!-- Add any other context, references, or resources related to the issue. -->
