@@ -30,7 +30,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-green);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -71,7 +71,7 @@ body {
   background: transparent;
   z-index: 999;
 }
-.bar{
+.bar {
   height: 100%;
   width: 0%;
   background-color: rgb(244, 58, 58);
@@ -213,7 +213,6 @@ img#icon {
   }
 }
 
-
 body,
 .title,
 h3,
@@ -237,7 +236,6 @@ body .title {
 .title a {
   text-decoration: none;
   color: red;
-  
 }
 .container {
   display: flex;
@@ -247,7 +245,6 @@ body .title {
   margin: 0 auto;
   padding: 20px;
 }
-
 
 .profile {
   --backdrop-bg-color: var(--color-profile-card-bg);
@@ -299,11 +296,10 @@ body .title {
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
-  color: #FEE5FE;
+  color: #fee5fe;
 }
 
 .profile:hover .name {
-
   text-decoration: underline;
 }
 
@@ -465,7 +461,6 @@ button {
 }
 
 button:hover {
-  
   box-shadow: 10px 10px 20px rgba(106, 106, 137, 0.3);
   border-radius: 10px;
 }
@@ -476,20 +471,17 @@ button:hover {
   font-weight: 600;
   margin: 5px;
   border-radius: 23px;
-  transition:0.3s;
+  transition: 0.3s;
 }
-.add:hover{
+.add:hover {
   background-color: #f9c1ed;
-  
 }
-.title{
+.title {
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .search {
   max-width: 1700px;
@@ -499,7 +491,7 @@ button:hover {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .search-box {
@@ -516,20 +508,18 @@ button:hover {
   font-size: 16px;
 }
 
-
 .search-box .search-icon {
   position: absolute;
   top: 50%;
   margin-right: 15px;
   transform: translateY(-50%);
   color: #666;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .search > a {
   text-decoration: none;
 }
-
 
 #searchInput {
   width: 100%;
@@ -574,9 +564,6 @@ button:hover {
   opacity: 0.7;
 }
 
-
-
-
 .light-background .search-icon {
   color: #000;
 }
@@ -604,7 +591,7 @@ header {
   font-weight: 500;
   padding: 5px 10px;
 }
-.title:hover{
+.title:hover {
   background: #b0d5ee;
 }
 
@@ -627,7 +614,7 @@ header {
   transition: color 500ms ease, color 500ms ease;
 }
 
-.dark-btn:hover{
+.dark-btn:hover {
   border-radius: 50%;
 }
 
@@ -771,7 +758,7 @@ footer {
   color: black;
   margin: 0 10px;
   display: inline-block;
-  padding: 8px 15px; 
+  padding: 8px 15px;
   transition: 0.3s;
   text-decoration: none;
   opacity: 0.75;
@@ -782,11 +769,11 @@ footer {
 /* Add hover effect to menu links */
 
 .menu__link:hover {
-  background-color: black; 
-  color: #e35205; 
+  background-color: black;
+  color: #e35205;
   opacity: 1;
-  transform: translateY(-3px); 
-  border-radius: 8px; 
+  transform: translateY(-3px);
+  border-radius: 8px;
 }
 
 /* About Page Styling */
@@ -795,34 +782,30 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px;
-  background-color: var(
-    --color-profile-card-bg
-  ); 
+  background-color: var(--color-profile-card-bg);
   border-radius: 10px;
   color: var(--color-text);
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 
 .about-section {
-  background-color: var(--color-body-bg); 
+  background-color: var(--color-body-bg);
   border: 1px solid var(--color-profile-border);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
-  color: var(
-    --color-profile-border
-  ); 
+  color: var(--color-profile-border);
 }
 
 .about-content {
   font-size: 16px;
-  color: var(--color-text); 
+  color: var(--color-text);
   margin-bottom: 10px;
 }
 
@@ -837,8 +820,8 @@ footer {
   color: var(--color-text);
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
-  border-radius: 4px; 
-  margin-bottom: 10px; 
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .contribution-steps li i {
@@ -848,14 +831,14 @@ footer {
 
 .contribution-steps li:hover {
   background-color: #e35205;
-  color: white; 
-  transform: scale(1.05); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 .contribution-steps li:hover i {
-  color: white; 
+  color: white;
 }
 
 #backToTopBtn i {
@@ -877,8 +860,7 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3),
-    0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -890,16 +872,13 @@ footer {
   background-color: #e35205;
   color: black;
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5),
-    0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer for About Page */
 
 .about-footer {
-  background-color: var(
-    --color-profile-border
-  ); 
+  background-color: var(--color-profile-border);
   padding: 20px;
   color: var(--color-white);
   text-align: center;
@@ -925,14 +904,17 @@ footer {
   border-radius: 20px;
   box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.227);
   overflow: hidden;
-  padding:0;
-
+  padding: 0;
 }
 
 .contact-info {
   flex: 1;
   padding: 50px;
-  background: linear-gradient(135deg, var(--color-profile-border), var(--color-green));
+  background: linear-gradient(
+    135deg,
+    var(--color-profile-border),
+    var(--color-green)
+  );
   color: white;
   display: flex;
   flex-direction: column;
@@ -1002,7 +984,7 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
+  outline: none;
 }
 
 .contact-form button {
@@ -1017,7 +999,7 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color:#f0642d ;
+  background-color: #f0642d;
 }
 
 .error-message {
@@ -1032,11 +1014,12 @@ footer {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .contact-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .contact-info, .contact-form-container {
-      padding: 30px;
+  .contact-info,
+  .contact-form-container {
+    padding: 30px;
   }
 }
 
@@ -1051,19 +1034,21 @@ footer {
 }
 
 .search::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 4rem);
   height: 70px;
-  background: linear-gradient(90deg, 
-    var(--color-profile-border), 
-    #ff6462, 
-    #ff87a5, 
-    #ffbf6e, 
-    #ffd200);
+  background: linear-gradient(
+    90deg,
+    var(--color-profile-border),
+    #ff6462,
+    #ff87a5,
+    #ffbf6e,
+    #ffd200
+  );
   border-radius: 100rem;
   opacity: 0;
   filter: blur(20px);
@@ -1086,8 +1071,7 @@ footer {
   color: #000;
   font-size: 17px;
   font-weight: 500;
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15),
-              0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 1;
@@ -1095,18 +1079,16 @@ footer {
 
 #searchInput:hover {
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25), 
-              0 3px 12px rgba(255, 100, 98, 0.2),
-              0 0 0 4px rgba(227, 86, 5, 0.08);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25),
+    0 3px 12px rgba(255, 100, 98, 0.2), 0 0 0 4px rgba(227, 86, 5, 0.08);
   transform: translateY(-2px);
 }
 
 #searchInput:focus {
   outline: none;
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
-              0 4px 15px rgba(255, 100, 98, 0.25),
-              0 0 0 5px rgba(227, 86, 5, 0.12);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3),
+    0 4px 15px rgba(255, 100, 98, 0.25), 0 0 0 5px rgba(227, 86, 5, 0.12);
   transform: translateY(-3px) scale(1.01);
 }
 
@@ -1122,8 +1104,8 @@ footer {
 
 /* Search Icon (Left) */
 .search::after {
-  content: '\f002';
-  font-family: 'Font Awesome 6 Free';
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
   left: calc(9% + 2.5em);
@@ -1176,22 +1158,19 @@ footer {
   background-color: #fff;
   color: #000;
   border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12),
-              0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .light-background #searchInput:hover {
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2), 
-              0 3px 12px rgba(255, 100, 98, 0.15),
-              0 0 0 4px rgba(227, 86, 5, 0.06);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2),
+    0 3px 12px rgba(255, 100, 98, 0.15), 0 0 0 4px rgba(227, 86, 5, 0.06);
 }
 
 .light-background #searchInput:focus {
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25), 
-              0 4px 15px rgba(255, 100, 98, 0.2),
-              0 0 0 5px rgba(227, 86, 5, 0.1);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25),
+    0 4px 15px rgba(255, 100, 98, 0.2), 0 0 0 5px rgba(227, 86, 5, 0.1);
 }
 
 .light-background #searchInput::placeholder {
@@ -1211,24 +1190,21 @@ body:not(.light-background) #searchInput {
   background-color: var(--color-profile-card-bg);
   color: var(--color-text);
   border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2),
-              0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 body:not(.light-background) #searchInput:hover {
   background-color: #0f1215;
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3), 
-              0 3px 12px rgba(255, 100, 98, 0.25),
-              0 0 0 4px rgba(227, 86, 5, 0.1);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3),
+    0 3px 12px rgba(255, 100, 98, 0.25), 0 0 0 4px rgba(227, 86, 5, 0.1);
 }
 
 body:not(.light-background) #searchInput:focus {
   background-color: #0f1215;
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
-              0 4px 15px rgba(255, 100, 98, 0.3),
-              0 0 0 5px rgba(227, 86, 5, 0.15);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4),
+    0 4px 15px rgba(255, 100, 98, 0.3), 0 0 0 5px rgba(227, 86, 5, 0.15);
 }
 
 body:not(.light-background) #searchInput::placeholder {
@@ -1299,15 +1275,14 @@ body:not(.light-background) .search-clear:hover {
 
 /* Pulse animation on focus */
 @keyframes searchPulse {
-  0%, 100% {
-    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
-                0 4px 15px rgba(255, 100, 98, 0.25),
-                0 0 0 5px rgba(227, 86, 5, 0.12);
+  0%,
+  100% {
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3),
+      0 4px 15px rgba(255, 100, 98, 0.25), 0 0 0 5px rgba(227, 86, 5, 0.12);
   }
   50% {
-    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
-                0 4px 15px rgba(255, 100, 98, 0.3),
-                0 0 0 8px rgba(227, 86, 5, 0.08);
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4),
+      0 4px 15px rgba(255, 100, 98, 0.3), 0 0 0 8px rgba(227, 86, 5, 0.08);
   }
 }
 
@@ -1343,3 +1318,19 @@ body:not(.light-background) .contact-form textarea:focus {
   border-color: var(--color-profile-border);
   box-shadow: 0 0 0 2px rgba(227, 82, 5, 0.3);
 }
+
+.nav-link.active {
+  color: #ff87a5; /* highlight color */
+  font-weight: 600;
+  border-bottom: 2px solid #ff4081;
+}
+
+.light-background .nav-link.active {
+  color: #d81b60; /* lighter variant for light mode */
+  border-bottom-color: #d81b60;
+}
+
+/* #e35205,
+    #ff6462,
+    #ff87a5,
+    #ffaed7, */
