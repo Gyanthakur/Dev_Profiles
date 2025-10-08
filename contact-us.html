@@ -19,40 +19,14 @@
 
 <body>
     <!-- Navigation Header -->
-   <header>
-  <nav>
-    <!-- Title / Logo -->
-    <p class="title"><a href="index.html">Dev Profiles</a></p>
+    <div id="header"></div>
 
-    <!-- Hamburger icon for mobile -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <script>
 
-    <!-- Nav links -->
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="index.html">
-        <i class="fa-solid fa-user"></i> Profile Section
-      </a>
-      <a class="nav-link" href="project.html">
-        <i class="fa-solid fa-list-check"></i> Projects
-      </a>
-      <a class="nav-link" href="about-us.html">
-        <i class="fa-solid fa-info-circle"></i> About Us
-      </a>
-      <a class="nav-link" href="contact-us.html">
-        <i class="fa-solid fa-address-book"></i> Contact
-      </a>
-
-      <!-- Dark mode button -->
-      <button class="dark-btn" id="icon">
-        <img src="/assets/dark.png" alt="Dark" style="width:24px; height:24px;">
-      </button>
-    </div>
-  </nav>
-</header>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
 
 
     <div class="logger">
@@ -73,12 +47,13 @@
                     <i class="fas fa-envelope"></i>
                     <span>gps.96169@gmail.com</span>
                 </a>
-                <a href="https://www.google.com/maps/place/Fatehpur,+Uttar+Pradesh,+India" class="info-item" target="_blank">
+                <a href="https://www.google.com/maps/place/Fatehpur,+Uttar+Pradesh,+India" class="info-item"
+                    target="_blank">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Fatehpur, Uttar Pradesh, India</span>
                 </a>
             </div>
-            
+
             <div class="contact-form-container">
                 <h2>Send us a message</h2>
                 <form class="contact-form" action="https://formspree.io/f/mdkonvre" method="POST">
@@ -106,7 +81,8 @@
     <footer class="footer">
         <ul class="social-icon">
             <li class="social-icon__item">
-                <a class="social-icon__link" href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
+                <a class="social-icon__link"
+                    href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </li>
@@ -126,7 +102,8 @@
                 </a>
             </li>
             <li class="social-icon__item">
-                <a class="social-icon__link" href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
+                <a class="social-icon__link"
+                    href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </li>

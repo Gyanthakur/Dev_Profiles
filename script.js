@@ -3,30 +3,81 @@ document.addEventListener("DOMContentLoaded", function () {
   const profiles = document.querySelectorAll(".profile");
   const date = document.getElementById("dates");
   const savedTheme = localStorage.getItem("theme");
-  const darkMode = document.querySelector(".dark-btn");
-  const icon = document.getElementById("icon");
 
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   date.innerHTML = currentYear;
 
-  if (savedTheme === "light") {
-    document.body.classList.add("light-background");
+  // Load the header first
+  fetch("header.html")
+    .then((res) => res.text())
+    .then((data) => {
+      const header = document.getElementById("header");
+      header.innerHTML = data;
+
+      // Now the elements exist — select them here
+      const darkMode = document.querySelector(".dark-btn");
+      const icon = document.getElementById("icon");
+
+      // Apply saved theme
+      if (savedTheme === "light") {
+        applyLightMode(icon, darkMode);
+      } else {
+        applyDarkMode(icon, darkMode);
+        localStorage.setItem("theme", "dark");
+      }
+
+      // Add toggle functionality
+      darkMode.addEventListener("click", () => {
+        const isLight = document.body.classList.toggle("light-background");
+        if (isLight) {
+          applyLightMode(icon, darkMode);
+          localStorage.setItem("theme", "light");
+        } else {
+          applyDarkMode(icon, darkMode);
+          localStorage.setItem("theme", "dark");
+        }
+      });
+
+      // Highlight active page
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = header.querySelectorAll(".nav-link");
+
+      navLinks.forEach((link) => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+  // Theme helpers
+  function applyLightMode(icon, darkMode) {
     icon.style.filter = "invert(0%)";
     icon.src = "/assets/light.png";
-    document.querySelector(".title").classList.add("text-color");
-    document.querySelector("footer").classList.add("text-color");
-    const buttons = document.querySelectorAll(".add");
-    buttons.forEach((button) => {
-      button.classList.add("bg-color");
-    });
+    document.body.classList.add("light-background");
+    document.querySelector(".title")?.classList.add("text-color");
+    document.querySelector("footer")?.classList.add("text-color");
     darkMode.classList.add("icon-position", "light-background", "icon-color");
-  } else {
- 
-    document.body.classList.remove("light-background");
+    document
+      .querySelectorAll(".add")
+      .forEach((b) => b.classList.add("bg-color"));
+  }
+
+  function applyDarkMode(icon, darkMode) {
     icon.style.filter = "invert(100%)";
     icon.src = "/assets/dark.png";
-    localStorage.setItem("theme", "dark"); 
+    document.body.classList.remove("light-background");
+    document.querySelector(".title")?.classList.remove("text-color");
+    document.querySelector("footer")?.classList.remove("text-color");
+    darkMode.classList.remove(
+      "icon-position",
+      "light-background",
+      "icon-color"
+    );
+    document
+      .querySelectorAll(".add")
+      .forEach((b) => b.classList.remove("bg-color"));
   }
 
   window.addEventListener("scroll", () => {
@@ -57,30 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  darkMode.addEventListener("click", () => {
-    document.body.classList.toggle("light-background");
-
-    if (document.body.classList.contains("light-background")) {
-      icon.style.filter = "invert(0%)";
-      icon.src = "/assets/light.png";
-      localStorage.setItem("theme", "light");
-    } else {
-      icon.style.filter = "invert(100%)";
-      icon.src = "/assets/dark.png";
-      localStorage.setItem("theme", "dark");
-    }
-
-    darkMode.classList.toggle("icon-position");
-    darkMode.classList.toggle("light-background");
-    darkMode.classList.toggle("icon-color");
-    document.querySelector(".title").classList.toggle("text-color");
-    document.querySelector("footer").classList.toggle("text-color");
-    const buttons = document.querySelectorAll(".add");
-    buttons.forEach((button) => {
-      button.classList.toggle("bg-color");
-    });
-  });
 });
 
 // Get the button
