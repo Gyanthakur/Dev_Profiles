@@ -17,6 +17,24 @@
   --color-profile-card-bg: #090b0e;
   --color-profile-border: #e35205;
   --color-text: #ffffff;
+  --warm-red: #e43636;
+  --warm-cream: #f6efd2;
+  --warm-sand: #e2ddb4;
+  --pure-black: #000000;
+
+  /* Cool palette */
+  --cool-dark: #000000;
+  --cool-blue: #5682b1;
+  --cool-soft-blue: #739ec9;
+  --cool-peach: #ffe8db;
+
+  /* Unified accents */
+  --text-dark: #111;
+  --text-light: #f8f8f8;
+  --muted-dark: #5c5c5c;
+  --muted-light: #cccccc;
+
+  --radius: 14px;
 }
 
 ::-webkit-scrollbar {
@@ -30,7 +48,7 @@
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-green);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 * {
@@ -71,7 +89,7 @@ body {
   background: transparent;
   z-index: 999;
 }
-.bar{
+.bar {
   height: 100%;
   width: 0%;
   background-color: rgb(244, 58, 58);
@@ -213,7 +231,6 @@ img#icon {
   }
 }
 
-
 body,
 .title,
 h3,
@@ -237,7 +254,6 @@ body .title {
 .title a {
   text-decoration: none;
   color: red;
-  
 }
 .container {
   display: flex;
@@ -247,7 +263,6 @@ body .title {
   margin: 0 auto;
   padding: 20px;
 }
-
 
 .profile {
   --backdrop-bg-color: var(--color-profile-card-bg);
@@ -299,11 +314,10 @@ body .title {
 
 .profile:hover {
   transform: translateY(-2%) scale(1.02);
-  color: #FEE5FE;
+  color: #fee5fe;
 }
 
 .profile:hover .name {
-
   text-decoration: underline;
 }
 
@@ -465,7 +479,6 @@ button {
 }
 
 button:hover {
-  
   box-shadow: 10px 10px 20px rgba(106, 106, 137, 0.3);
   border-radius: 10px;
 }
@@ -476,20 +489,17 @@ button:hover {
   font-weight: 600;
   margin: 5px;
   border-radius: 23px;
-  transition:0.3s;
+  transition: 0.3s;
 }
-.add:hover{
+.add:hover {
   background-color: #f9c1ed;
-  
 }
-.title{
+.title {
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .search {
   max-width: 1700px;
@@ -499,7 +509,7 @@ button:hover {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .search-box {
@@ -516,20 +526,18 @@ button:hover {
   font-size: 16px;
 }
 
-
 .search-box .search-icon {
   position: absolute;
   top: 50%;
   margin-right: 15px;
   transform: translateY(-50%);
   color: #666;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .search > a {
   text-decoration: none;
 }
-
 
 #searchInput {
   width: 100%;
@@ -574,9 +582,6 @@ button:hover {
   opacity: 0.7;
 }
 
-
-
-
 .light-background .search-icon {
   color: #000;
 }
@@ -604,7 +609,7 @@ header {
   font-weight: 500;
   padding: 5px 10px;
 }
-.title:hover{
+.title:hover {
   background: #b0d5ee;
 }
 
@@ -627,7 +632,7 @@ header {
   transition: color 500ms ease, color 500ms ease;
 }
 
-.dark-btn:hover{
+.dark-btn:hover {
   border-radius: 50%;
 }
 
@@ -771,7 +776,7 @@ footer {
   color: black;
   margin: 0 10px;
   display: inline-block;
-  padding: 8px 15px; 
+  padding: 8px 15px;
   transition: 0.3s;
   text-decoration: none;
   opacity: 0.75;
@@ -782,11 +787,11 @@ footer {
 /* Add hover effect to menu links */
 
 .menu__link:hover {
-  background-color: black; 
-  color: #e35205; 
+  background-color: black;
+  color: #e35205;
   opacity: 1;
-  transform: translateY(-3px); 
-  border-radius: 8px; 
+  transform: translateY(-3px);
+  border-radius: 8px;
 }
 
 /* About Page Styling */
@@ -795,34 +800,30 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px;
-  background-color: var(
-    --color-profile-card-bg
-  ); 
+  background-color: var(--color-profile-card-bg);
   border-radius: 10px;
   color: var(--color-text);
-  font-family: "Poppins", sans-serif; 
+  font-family: "Poppins", sans-serif;
 }
 
 .about-section {
-  background-color: var(--color-body-bg); 
+  background-color: var(--color-body-bg);
   border: 1px solid var(--color-profile-border);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
-  color: var(
-    --color-profile-border
-  ); 
+  color: var(--color-profile-border);
 }
 
 .about-content {
   font-size: 16px;
-  color: var(--color-text); 
+  color: var(--color-text);
   margin-bottom: 10px;
 }
 
@@ -837,8 +838,8 @@ footer {
   color: var(--color-text);
   transition: background-color 0.3s ease, transform 0.3s ease,
     box-shadow 0.3s ease;
-  border-radius: 4px; 
-  margin-bottom: 10px; 
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .contribution-steps li i {
@@ -848,14 +849,14 @@ footer {
 
 .contribution-steps li:hover {
   background-color: #e35205;
-  color: white; 
-  transform: scale(1.05); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
 .contribution-steps li:hover i {
-  color: white; 
+  color: white;
 }
 
 #backToTopBtn i {
@@ -877,8 +878,7 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3),
-    0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(227, 86, 5, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -890,50 +890,38 @@ footer {
   background-color: #e35205;
   color: black;
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5),
-    0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer for About Page */
 
 .about-footer {
-  background-color: var(
-    --color-profile-border
-  ); 
+  background-color: var(--color-profile-border);
   padding: 20px;
   color: var(--color-white);
   text-align: center;
 }
 
-/* Contact Section */
-/* ... (keep all existing CSS rules) ... */
-
-/* UPDATED: Improved Contact Page Styles */
 .contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 140px);
   padding: 50px 20px;
-  /* background-color: var(--color-body-bg); */
 }
 
 .contact-container {
-  display: flex;
-  max-width: 1200px;
-  /* background: var(--color-profile-card-bg); */
-  border-radius: 20px;
-  box-shadow: 0 0 20px 25px rgba(51, 63, 70, 0.227);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
-  padding:0;
-
 }
 
 .contact-info {
   flex: 1;
   padding: 50px;
-  background: linear-gradient(135deg, var(--color-profile-border), var(--color-green));
-  color: white;
+  background: linear-gradient(135deg, #ff6b5a 0%, #ffc371 45%, #4ecdc4 100%);
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -942,12 +930,15 @@ footer {
 .contact-info h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info p {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .info-item {
@@ -960,19 +951,26 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.info-item:hover {
-  transform: translateX(10px);
-}
 
 .info-item i {
-  margin-right: 15px;
-  font-size: 24px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background 0.3s ease;
 }
+
 
 .contact-form-container {
   flex: 1;
   padding: 50px;
-  background: white;
+  background: linear-gradient(180deg, #121416 0%, #1b1e20 100%);
+  color: #f2f2f2;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .contact-form-container h2 {
@@ -994,7 +992,9 @@ footer {
 .contact-form textarea {
   width: 100%;
   padding: 15px;
-  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f2f2f2;
   border-radius: 5px;
   font-size: 16px;
   transition: border-color 0.3s ease;
@@ -1002,24 +1002,24 @@ footer {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
+  outline: none;
+  border-color: #4ecdc4;
+  box-shadow: 0 0 6px rgba(78, 205, 196, 0.4);
 }
 
 .contact-form button {
-  padding: 15px 30px;
-  background-color: #ee8122;
-  color: white;
+  background: linear-gradient(90deg, #ff6b5a 0%, #4ecdc4 100%);
+  color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px rgba(78, 205, 196, 0.25);
 }
-
 .contact-form button:hover {
-  background-color:#f0642d ;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 107, 90, 0.25);
 }
-
 .error-message {
   text-align: center;
   color: #ff6347;
@@ -1028,15 +1028,61 @@ footer {
   border-radius: 5px;
   background-color: rgba(255, 99, 71, 0.1);
 }
+light-background .contact-info {
+  background: linear-gradient(135deg, #FF6B5A 0%, #FFDFA4 45%, #A7EDE7 100%);
+  color: #222;
+}
 
+.light-background .contact-info h2 {
+  color: #222;
+}
+
+.light-background .contact-info p,
+.light-background .info-item {
+  color: #333;
+}
+
+.light-background .contact-form-container {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.light-background .contact-form input,
+.light-background .contact-form textarea {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+}
+
+.light-background .contact-form input:focus,
+.light-background .contact-form textarea:focus {
+  border-color: #4ECDC4;
+  box-shadow: 0 0 6px rgba(78, 205, 196, 0.3);
+}
+
+.light-background .contact-form button {
+  background: linear-gradient(90deg, #FF6B5A 0%, #4ECDC4 100%);
+  color: #fff;
+}
+.light-background .info-item i {
+  color: #000000;
+}
+
+/* Hover in light mode */
+.light-background .info-item i:hover {
+  color: #FF6B5A;
+  background: rgba(0, 0, 0, 0.12);
+}
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .contact-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .contact-info, .contact-form-container {
-      padding: 30px;
+  .contact-info,
+  .contact-form-container {
+    padding: 30px;
   }
 }
 
@@ -1051,19 +1097,21 @@ footer {
 }
 
 .search::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 4rem);
   height: 70px;
-  background: linear-gradient(90deg, 
-    var(--color-profile-border), 
-    #ff6462, 
-    #ff87a5, 
-    #ffbf6e, 
-    #ffd200);
+  background: linear-gradient(
+    90deg,
+    var(--color-profile-border),
+    #ff6462,
+    #ff87a5,
+    #ffbf6e,
+    #ffd200
+  );
   border-radius: 100rem;
   opacity: 0;
   filter: blur(20px);
@@ -1086,8 +1134,7 @@ footer {
   color: #000;
   font-size: 17px;
   font-weight: 500;
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15),
-              0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 1;
@@ -1095,18 +1142,16 @@ footer {
 
 #searchInput:hover {
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25), 
-              0 3px 12px rgba(255, 100, 98, 0.2),
-              0 0 0 4px rgba(227, 86, 5, 0.08);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25),
+    0 3px 12px rgba(255, 100, 98, 0.2), 0 0 0 4px rgba(227, 86, 5, 0.08);
   transform: translateY(-2px);
 }
 
 #searchInput:focus {
   outline: none;
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
-              0 4px 15px rgba(255, 100, 98, 0.25),
-              0 0 0 5px rgba(227, 86, 5, 0.12);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3),
+    0 4px 15px rgba(255, 100, 98, 0.25), 0 0 0 5px rgba(227, 86, 5, 0.12);
   transform: translateY(-3px) scale(1.01);
 }
 
@@ -1122,8 +1167,8 @@ footer {
 
 /* Search Icon (Left) */
 .search::after {
-  content: '\f002';
-  font-family: 'Font Awesome 6 Free';
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
   left: calc(9% + 2.5em);
@@ -1176,22 +1221,19 @@ footer {
   background-color: #fff;
   color: #000;
   border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12),
-              0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .light-background #searchInput:hover {
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2), 
-              0 3px 12px rgba(255, 100, 98, 0.15),
-              0 0 0 4px rgba(227, 86, 5, 0.06);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2),
+    0 3px 12px rgba(255, 100, 98, 0.15), 0 0 0 4px rgba(227, 86, 5, 0.06);
 }
 
 .light-background #searchInput:focus {
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25), 
-              0 4px 15px rgba(255, 100, 98, 0.2),
-              0 0 0 5px rgba(227, 86, 5, 0.1);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25),
+    0 4px 15px rgba(255, 100, 98, 0.2), 0 0 0 5px rgba(227, 86, 5, 0.1);
 }
 
 .light-background #searchInput::placeholder {
@@ -1211,24 +1253,21 @@ body:not(.light-background) #searchInput {
   background-color: var(--color-profile-card-bg);
   color: var(--color-text);
   border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2),
-              0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 body:not(.light-background) #searchInput:hover {
   background-color: #0f1215;
   border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3), 
-              0 3px 12px rgba(255, 100, 98, 0.25),
-              0 0 0 4px rgba(227, 86, 5, 0.1);
+  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3),
+    0 3px 12px rgba(255, 100, 98, 0.25), 0 0 0 4px rgba(227, 86, 5, 0.1);
 }
 
 body:not(.light-background) #searchInput:focus {
   background-color: #0f1215;
   border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
-              0 4px 15px rgba(255, 100, 98, 0.3),
-              0 0 0 5px rgba(227, 86, 5, 0.15);
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4),
+    0 4px 15px rgba(255, 100, 98, 0.3), 0 0 0 5px rgba(227, 86, 5, 0.15);
 }
 
 body:not(.light-background) #searchInput::placeholder {
@@ -1299,15 +1338,14 @@ body:not(.light-background) .search-clear:hover {
 
 /* Pulse animation on focus */
 @keyframes searchPulse {
-  0%, 100% {
-    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3), 
-                0 4px 15px rgba(255, 100, 98, 0.25),
-                0 0 0 5px rgba(227, 86, 5, 0.12);
+  0%,
+  100% {
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3),
+      0 4px 15px rgba(255, 100, 98, 0.25), 0 0 0 5px rgba(227, 86, 5, 0.12);
   }
   50% {
-    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4), 
-                0 4px 15px rgba(255, 100, 98, 0.3),
-                0 0 0 8px rgba(227, 86, 5, 0.08);
+    box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4),
+      0 4px 15px rgba(255, 100, 98, 0.3), 0 0 0 8px rgba(227, 86, 5, 0.08);
   }
 }
 

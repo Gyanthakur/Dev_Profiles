@@ -4,29 +4,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const date = document.getElementById("dates");
   const savedTheme = localStorage.getItem("theme");
   const darkMode = document.querySelector(".dark-btn");
-  const icon = document.getElementById("icon");
+  const iconBtn = document.getElementById("icon");
+  // IMPORTANT: select the <img> inside the button
+  const iconImg = document.querySelector(".dark-btn img");
+  const darkSrc = "assets/dark.png";
+  const lightSrc = "assets/light.png";
 
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
-  date.innerHTML = currentYear;
+  if (date) date.innerHTML = currentYear;
 
   if (savedTheme === "light") {
     document.body.classList.add("light-background");
-    icon.style.filter = "invert(0%)";
-    icon.src = "/assets/light.png";
-    document.querySelector(".title").classList.add("text-color");
-    document.querySelector("footer").classList.add("text-color");
+    if (iconImg) {
+      iconImg.style.filter = "invert(0%)";
+      iconImg.src = lightSrc;
+    }
+    document.querySelector(".title")?.classList.add("text-color");
+    document.querySelector("footer")?.classList.add("text-color");
     const buttons = document.querySelectorAll(".add");
     buttons.forEach((button) => {
       button.classList.add("bg-color");
     });
-    darkMode.classList.add("icon-position", "light-background", "icon-color");
+    if (darkMode) darkMode.classList.add("icon-position", "light-background", "icon-color");
   } else {
- 
+    // default to dark if nothing saved
     document.body.classList.remove("light-background");
-    icon.style.filter = "invert(100%)";
-    icon.src = "/assets/dark.png";
-    localStorage.setItem("theme", "dark"); 
+    if (iconImg) {
+      iconImg.style.filter = "invert(100%)";
+      iconImg.src = darkSrc;
+    }
+    if (!savedTheme) localStorage.setItem("theme", "dark");
   }
 
   window.addEventListener("scroll", () => {
@@ -34,23 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollTotal = document.body.scrollHeight - window.innerHeight;
     const scrollPosition = window.scrollY;
     const scrollPercentage = (scrollPosition / scrollTotal) * 100;
-    progressBar.style.width = scrollPercentage + "%";
+    if (progressBar) progressBar.style.width = scrollPercentage + "%";
   });
 
   if (searchInput) {
     searchInput.addEventListener("input", filterProfiles);
   }
   function filterProfiles() {
-    const query = searchInput.value.toLowerCase();
+    const query = (searchInput.value || "").toLowerCase();
     profiles.forEach((profile) => {
-      const name = profile.querySelector(".name").textContent.toLowerCase();
+      const nameEl = profile.querySelector(".name");
+      const name = nameEl ? nameEl.textContent.toLowerCase() : "";
       const skills = Array.from(profile.querySelectorAll(".skills .skill")).map(
         (skill) => skill.textContent.toLowerCase()
       );
-      if (
-        name.includes(query) ||
-        skills.some((skill) => skill.includes(query))
-      ) {
+      if (name.includes(query) || skills.some((skill) => skill.includes(query))) {
         profile.style.display = "block";
       } else {
         profile.style.display = "none";
@@ -58,29 +64,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  darkMode.addEventListener("click", () => {
-    document.body.classList.toggle("light-background");
+  // Toggle theme when darkMode button exists
+  if (darkMode) {
+    darkMode.addEventListener("click", () => {
+      document.body.classList.toggle("light-background");
 
-    if (document.body.classList.contains("light-background")) {
-      icon.style.filter = "invert(0%)";
-      icon.src = "/assets/light.png";
-      localStorage.setItem("theme", "light");
-    } else {
-      icon.style.filter = "invert(100%)";
-      icon.src = "/assets/dark.png";
-      localStorage.setItem("theme", "dark");
-    }
+      if (document.body.classList.contains("light-background")) {
+        if (iconImg) {
+          iconImg.style.filter = "invert(0%)";
+          iconImg.src = lightSrc; // relative path
+        }
+        localStorage.setItem("theme", "light");
+      } else {
+        if (iconImg) {
+          iconImg.style.filter = "invert(100%)";
+          iconImg.src = darkSrc; // relative path
+        }
+        localStorage.setItem("theme", "dark");
+      }
 
-    darkMode.classList.toggle("icon-position");
-    darkMode.classList.toggle("light-background");
-    darkMode.classList.toggle("icon-color");
-    document.querySelector(".title").classList.toggle("text-color");
-    document.querySelector("footer").classList.toggle("text-color");
-    const buttons = document.querySelectorAll(".add");
-    buttons.forEach((button) => {
-      button.classList.toggle("bg-color");
+      darkMode.classList.toggle("icon-position");
+      darkMode.classList.toggle("light-background");
+      darkMode.classList.toggle("icon-color");
+      document.querySelector(".title")?.classList.toggle("text-color");
+      document.querySelector("footer")?.classList.toggle("text-color");
+      const buttons = document.querySelectorAll(".add");
+      buttons.forEach((button) => {
+        button.classList.toggle("bg-color");
+      });
     });
-  });
+  }
 });
 
 // Get the button
@@ -92,6 +105,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+  if (!backToTopBtn) return;
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     backToTopBtn.style.display = "block";
   } else {
@@ -100,25 +114,30 @@ function scrollFunction() {
 }
 
 // When the user clicks the button, scroll to the top of the document
-backToTopBtn.onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+if (backToTopBtn) {
+  backToTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+}
 
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (event) {
+// Guard contact form listener (only attach if form exists)
+const contactForm = document.querySelector(".contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting
 
     // Clear any existing error messages
     const errorMessageDiv = document.getElementById("error-message");
     const form = event.target;
-    errorMessageDiv.style.display = "none";
-    errorMessageDiv.textContent = "";
+    if (errorMessageDiv) {
+      errorMessageDiv.style.display = "none";
+      errorMessageDiv.textContent = "";
+    }
 
     // Form inputs
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const name = document.getElementById("name") ? document.getElementById("name").value.trim() : "";
+    const email = document.getElementById("email") ? document.getElementById("email").value.trim() : "";
+    const message = document.getElementById("message") ? document.getElementById("message").value.trim() : "";
 
     // Validate input fields
     if (!name || !email || !message) {
@@ -154,10 +173,12 @@ document
         showError("There was a problem submitting the form. Please try again.");
       });
   });
+}
 
 // Function to show error message
 function showError(message) {
   const errorMessageDiv = document.getElementById("error-message");
+  if (!errorMessageDiv) return;
   errorMessageDiv.textContent = message;
   errorMessageDiv.style.display = "block";
 
@@ -170,6 +191,7 @@ function showError(message) {
 // Function to show success message
 function showSuccess(message) {
   const errorMessageDiv = document.getElementById("error-message");
+  if (!errorMessageDiv) return;
   errorMessageDiv.textContent = message;
   errorMessageDiv.style.backgroundColor = "#4BB543"; // Change background to green for success
   errorMessageDiv.style.display = "block";
