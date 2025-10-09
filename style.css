@@ -1022,11 +1022,9 @@ footer {
 }
 .error-message {
   text-align: center;
-  color: #ff6347;
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(255, 99, 71, 0.1);
 }
 light-background .contact-info {
   background: linear-gradient(135deg, #FF6B5A 0%, #FFDFA4 45%, #A7EDE7 100%);

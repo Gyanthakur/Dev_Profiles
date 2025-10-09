@@ -163,7 +163,7 @@ if (contactForm) {
     })
       .then((response) => {
         if (response.ok) {
-          showSuccess("Message sent successfully!");
+          // showSuccess("Message sent successfully!");
           form.reset(); // Reset the form fields after success
         } else {
           showError("Oops! Something went wrong. Please try again later.");
