@@ -46,6 +46,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   overflow-x: hidden;
+  margin-top: 95px; /* Account for increased navbar height */
 }
 
 .logger {
@@ -58,6 +59,23 @@ body {
   width: fit-content;
   margin: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar visitor counter styles */
+.navbar-logger {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  color: white;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 15px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+}
+
+.navbar-logger #logger {
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Progress bar */
@@ -86,13 +104,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 25px;
+  padding: 20px 25px;
   width: 100%;
   background-color: #1a1a1a;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .light-background nav {
@@ -124,7 +142,7 @@ nav {
   background-color: #2a2a2a;
   padding: 8px 14px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   transition: 0.3s;
 }
 
@@ -140,7 +158,7 @@ nav {
   padding: 8px 14px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   transition: 0.3s;
 }
 
@@ -210,6 +228,18 @@ img#icon {
 
   .hamburger {
     display: flex;
+  }
+
+  /* Mobile navbar visitor counter adjustments */
+  .navbar-logger {
+    font-size: 1rem;
+    padding: 4px 8px;
+    margin-left: 5px;
+  }
+
+  /* Increase body margin for mobile */
+  body {
+    margin-top: 115px;
   }
 }
 
