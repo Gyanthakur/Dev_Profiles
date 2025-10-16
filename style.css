@@ -520,95 +520,90 @@ button:hover {
 
 }
 
-
+/*Search Section Container */
 .search {
   max-width: 1700px;
   margin: 1rem auto;
   padding: 0 9%;
-  text-align: center;
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 15px;
+  position: relative;
+  text-align: center;
 }
 
+/*Search Box Wrapper */
 .search-box {
   position: relative;
   width: 100%;
 }
 
-.search-box input {
-  width: 100%;
-  max-width: 700px;
-  padding: 10px 10px 15px 20px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-
-.search-box .search-icon {
-  position: absolute;
-  top: 50%;
-  margin-right: 15px;
-  transform: translateY(-50%);
-  color: #666;
-  pointer-events: none; 
-}
-
-.search > a {
-  text-decoration: none;
-}
-
-
+/*Input Field Styling */
+.search-box input,
 #searchInput {
   width: 100%;
-  display: block;
-  padding: 1.2em 3em 1.2em 2em;
-  border: 2px solid var(--color-profile-border);
+  max-width: 700px;
+  padding: 1.2em 3em 1.2em 2.5em;
   border-radius: 100rem;
-  background-color: #fff;
+  border: 2px solid rgba(255, 102, 0, 0.6); 
+  background: linear-gradient(90deg, #ff6a00, #ffffff); 
+  background-size: 200% 100%;
+  animation: shimmer 6s ease infinite;
   color: #000;
   font-size: 16px;
-  box-shadow: 0 4px 12px rgba(227, 86, 5, 0.2);
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
   transition: all 0.3s ease;
 }
 
+/*Hover & Focus Effects */
 #searchInput:hover {
-  border-color: var(--color-profile-border);
-  box-shadow: 0 6px 16px rgba(227, 86, 5, 0.4), 0 0 0 3px rgba(227, 86, 5, 0.1);
+  border-color: rgba(255, 102, 0, 0.8);
+  box-shadow: 0 6px 16px rgba(255, 106, 0, 0.4), 0 0 0 3px rgba(255, 106, 0, 0.1);
 }
 
 #searchInput:focus {
   outline: none;
-  border-color: var(--color-profile-border);
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.5), 0 0 0 3px rgba(227, 86, 5, 0.2);
+  transform: scale(1.02);
+  border-color: rgba(255, 102, 0, 1);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.5), 0 0 0 3px rgba(255, 106, 0, 0.2);
 }
 
+/*Placeholder Styling */
 #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
-.light-background #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-
+/*Search Icon */
 .search-icon {
   position: absolute;
-  right: 2em;
+  left: 1em;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text);
+  color: #00c6ff;
   font-size: 18px;
   pointer-events: none;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
+/*Responsive Tweaks */
+@media (max-width: 600px) {
+  #searchInput {
+    padding: 0.8em 2em;
+    font-size: 14px;
+  }
 
+  .search-icon {
+    left: 0.8em;
+    font-size: 16px;
+  }
+}
 
-
-.light-background .search-icon {
-  color: #000;
+/*Shimmer Animation*/
+@keyframes shimmer {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
 }
 
 h1 {
