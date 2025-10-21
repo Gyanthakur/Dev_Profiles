@@ -415,6 +415,18 @@ body .title {
   font-size: 14px;
   display: inline-block;
 }
+.project {
+	margin: 13px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* background-color: #444; */
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 0 5px 10px 0;
+	font-size: 14px;
+	display: inline-block;
+}
 
 .project {
   display: flex;
