@@ -11,7 +11,7 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -22,85 +22,79 @@
 </head>
 
 <body>
+
     <div class="progress-bar" id="progressBar">
         <div class="bar" id="bar"></div>
     </div>
 
-
     <header>
-  <nav>
-    <p class="title"><a href="index.html">Dev Profiles</a></p>
+        <nav>
+            <p class="title"><a href="index.html">Dev Profiles</a></p>
 
-    <!-- Hamburger icon for mobile -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="nav-links" id="navLinks">
-      <!-- <a class="nav-link" href="https://github.com/Gyanthakur/DevProfile" target="_blank">
-        <i class="fa-solid fa-user-plus"></i> Add Profile
-      </a> -->
-      	<!-- <a class="nav-link" href="index.html">
-						<i class="fa-solid fa-user"></i> Profile Section
-        </a> -->
-      <a class="nav-link" href="project.html">
-        <i class="fa-solid fa-list-check"></i> Projects
-      </a>
-      <a class="nav-link" href="about-us.html">
-        <i class="fa-solid fa-info-circle"></i> About
-      </a>
-      <a class="nav-link" href="contact-us.html">
-          <i class="fa-solid fa-address-book"></i> Contact
-        </a>
-        <a class="nav-link" href="privacy.html">
-          <i class="fa-solid fa-shield-halved"></i> Privacy
-        </a>
-
-      <button class="dark-btn" id="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-        </svg>
-      </button>
-
-     
-
-    </div>
-  </nav>
-</header>
-
- <!-- Visitor counter moved into navbar -->
-     	<div class="logger">
-			<!-- <h2>Logger</h2> -->
-			<div id="logger" class="">Visitors: 0</div>
-		</div>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
-
-
-    <div class="line">
-        <br>
-    </div>
-     <div class="search">
-          <div class="search-box">
-                     <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="searchInput" placeholder="Search by name or skill...">
+            <!-- Hamburger icon for mobile -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-      <a href="https://github.com/Gyanthakur/DevProfile" target="_blank">
-        <button class="add">Add your Profile &nbsp; <i class="fa-sharp fa-solid fa-user-plus"></i></button>
-       </a>
+            <div class="nav-links" id="navLinks">
+                <!-- <a class="nav-link" href="https://github.com/Gyanthakur/DevProfile" target="_blank">
+        <i class="fa-solid fa-user-plus"></i> Add Profile
+      </a> -->
+                <!-- <a class="nav-link" href="index.html">
+						<i class="fa-solid fa-user"></i> Profile Section
+        </a> -->
+                <a class="nav-link" href="project.html">
+                    <i class="fa-solid fa-list-check"></i> Projects
+                </a>
+                <a class="nav-link" href="about-us.html">
+                    <i class="fa-solid fa-info-circle"></i> About
+                </a>
+                <a class="nav-link" href="contact-us.html">
+                    <i class="fa-solid fa-address-book"></i> Contact
+                </a>
+                <a class="nav-link" href="privacy.html">
+                    <i class="fa-solid fa-shield-halved"></i> Privacy
+                </a>
+
+                <button class="dark-btn" id="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Visitor counter moved into navbar -->
+    <div class="logger">
+        <!-- <h2>Logger</h2> -->
+        <div id="logger" class="">Visitors: 0</div>
     </div>
 
- <div class="container">
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
+
+    <div class="line"><br></div>
+
+    <div class="search">
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search by name or skill...">
+        </div>
+
+        <a href="https://github.com/Gyanthakur/DevProfile" target="_blank">
+            <button class="add">Add your Profile &nbsp; <i class="fa-sharp fa-solid fa-user-plus"></i></button>
+        </a>
+    </div>
+
+    <div class="container">
 
         <!-- Profiles -->
-
         <div class="profile">
             <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/114869253?v=4" alt="User Image"></div>
@@ -122,59 +116,68 @@
                         class="fa-brands fa-linkedin-in"></i></a>
                 <!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
             </div>
-      
 
-        <!-- Usama Ahmed -->
-        <div class="profile">
-            <div class="lines"></div>
-            <div class="pfp"><img src="https://media.licdn.com/dms/image/v2/D4D03AQFSo8rJb9TDnA/profile-displayphoto-scale_400_400/B4DZnKgMWdHsAo-/0/1760039061530?e=1762992000&v=beta&t=3WKKRcFyosjET52RTCznmCbz6EONU_q2u7j_8GAQogU" alt="User Image"></div>
-            <h3 class="name">Usama Ahmed</h3>
-            <div class="skills">
-                <span class="skill">TypeScript</span>
-                <span class="skill">Next.js</span>
-                <span class="skill">Supabase</span>
-                <span class="skill">AWS</span>
-                <span class="skill">Stripe</span>
+            <!-- Usama Ahmed -->
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp"><img
+                        src="https://media.licdn.com/dms/image/v2/D4D03AQFSo8rJb9TDnA/profile-displayphoto-scale_400_400/B4DZnKgMWdHsAo-/0/1760039061530?e=1762992000&v=beta&t=3WKKRcFyosjET52RTCznmCbz6EONU_q2u7j_8GAQogU"
+                        alt="User Image"></div>
+                <h3 class="name">Usama Ahmed</h3>
+                <div class="skills">
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">Next.js</span>
+                    <span class="skill">Supabase</span>
+                    <span class="skill">AWS</span>
+                    <span class="skill">Stripe</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/UsamaBinKashif" target="_blank" rel="noopener" title="GitHub Profile"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/usamabinkashif/" target="_blank" rel="noopener"
+                        title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <!-- Twitter and Facebook intentionally omitted -->
+                </div>
             </div>
-            <div class="social">
-                <a href="https://github.com/UsamaBinKashif" target="_blank" rel="noopener" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/usamabinkashif/" target="_blank" rel="noopener" title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
-                <!-- Twitter and Facebook intentionally omitted -->
-            </div>
-        </div>
 
-        <div class="profile">
-            <div class="lines"></div>
-            <div class="pfp"><img src="./assets/om.jpg" alt="User Image"></div>
-            <h3 class="name">Om Sharma</h3>
-            <div class="skills">
-                <span class="skill">Flutter</span>
-                <span class="skill">Dart</span>
-                <span class="skill">ReactJS</span>
-                <span class="skill">Node.js</span>
-                <span class="skill">Express.js</span>
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp"><img src="./assets/om.jpg" alt="User Image"></div>
+                <h3 class="name">Om Sharma</h3>
+                <div class="skills">
+                    <span class="skill">Flutter</span>
+                    <span class="skill">Dart</span>
+                    <span class="skill">ReactJS</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">Express.js</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/Sharma-Ji-21" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/om-sharma-603b17320/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="social">
-                <a href="https://github.com/Sharma-Ji-21" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/om-sharma-603b17320/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp"><img src="https://avatars.githubusercontent.com/u/215493851?v=4" alt="User Image">
+                </div>
+                <h3 class="name">Debargha Sarkar</h3>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Web Development</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/My-Mation" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/debargha-sarkar-72575937a/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://portfolio-hazel-beta-83.vercel.app/" target="_blank"><i
+                            class="fa-solid fa-globe"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="profile">
-            <div class="lines"></div>
-            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/215493851?v=4" alt="User Image"></div>
-            <h3 class="name">Debargha Sarkar</h3>
-            <div class="skills">
-                <span class="skill">HTML</span>
-                <span class="skill">CSS</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">Web Development</span>
-            </div>
-            <div class="social">
-                <a href="https://github.com/My-Mation" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/debargha-sarkar-72575937a/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://portfolio-hazel-beta-83.vercel.app/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-            </div>
-        </div>
+
         </div>
 
         <div class="profile">
@@ -212,9 +215,10 @@
                 <span class="skill">Java</span>
             </div>
             <div class="social">
-                <a href="https://github.com/PIYUSH1525" target="_blank" rel="noopener" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/piyush-negi-409741209/" target="_blank" rel="noopener" title="LinkedIn Profile"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/PIYUSH1525" target="_blank" rel="noopener" title="GitHub Profile"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/piyush-negi-409741209/" target="_blank" rel="noopener"
+                    title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -224,7 +228,7 @@
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/80617036?v=4" alt="User Image">
             </div>
             <h3 class="name">Nikhileshwar J</h3>
-        
+
             <div class="skills">
                 <span class="skill">HTML</span>
                 <span class="skill">CSS</span>
@@ -234,7 +238,7 @@
                 <span class="skill">Node.js</span>
                 <span class="skill">MongoDB</span>
             </div>
-        
+
             <div class="social">
                 <a href="https://github.com/nikkvijay" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/nikhileshwar-jatale-4a85a1201/" target="_blank"><i
@@ -245,7 +249,9 @@
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
-            <div class="pfp"><img src="https://raw.githubusercontent.com/jeturgavli/Jetrock_Gif_Profiles/refs/heads/main/latest.gif" alt="User Image"></div>
+            <div class="pfp"><img
+                    src="https://raw.githubusercontent.com/jeturgavli/Jetrock_Gif_Profiles/refs/heads/main/latest.gif"
+                    alt="User Image"></div>
             <h3 class="name">Jetur Gavli</h3>
             <div class="skills">
                 <span class="skill">Python</span>
@@ -256,14 +262,17 @@
             </div>
             <div class="social">
                 <a href="https://github.com/jeturgavli" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://in.linkedin.com/in/jeturgavli" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://in.linkedin.com/in/jeturgavli" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
             </div>
-        </div>        
+        </div>
 
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
-            <div class="pfp"><img src="https://raw.githubusercontent.com/kronpatel/KERZOX_Gif_Profiles/refs/heads/main/latest.gif" alt="User Image"></div>
+            <div class="pfp"><img
+                    src="https://raw.githubusercontent.com/kronpatel/KERZOX_Gif_Profiles/refs/heads/main/latest.gif"
+                    alt="User Image"></div>
             <h3 class="name">Keron Patel</h3>
             <div class="skills">
                 <span class="skill">Python</span>
@@ -277,7 +286,7 @@
                 <a href="https://github.com/kronpatel" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://x.com/keron_1826?s=21" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
-        </div>        
+        </div>
 
         <div class="profile">
             <div class="lines"></div>
@@ -344,8 +353,8 @@
                         class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
-	    
-	<div class="profile">
+
+        <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
             <div class="pfp"><img src="/assets/default.png" alt="User Image"></div>
@@ -359,14 +368,16 @@
             </div>
             <div class="social">
                 <a href="https://github.com/shubhamjain1402" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shubham-jain-b1bb4628b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/shubham-jain-b1bb4628b/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
         </div>
-    </div>
-    <!--Shivangini Gupta-->
-            <div class="profile">
+        <!--Shivangini Gupta-->
+        <div class="profile">
             <div class="lines"></div>
             <!-- change './default.png' to your profile image url -->
-            <div class="pfp"><img src="https://i.pinimg.com/236x/8c/63/5c/8c635c07f1693764945d8126cb87906e.jpg" alt="User Image"></div>
+            <div class="pfp"><img src="https://i.pinimg.com/236x/8c/63/5c/8c635c07f1693764945d8126cb87906e.jpg"
+                    alt="User Image"></div>
             <h3 class="name">Shivangini Gupta</h3>
             <div class="skills">
                 <span class="skill">Java</span>
@@ -376,16 +387,14 @@
                 <span class="skill">Javascript</span>
             </div>
             <div class="social">
-                <a href="https://github.com/shivanginigupta573-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/shivangini-gupta-372055360/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-               
+                <a href="https://github.com/shivanginigupta573-dev" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shivangini-gupta-372055360/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
         </div>
-    </div>
 
-
-
-
-	    
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
@@ -401,12 +410,13 @@
             <div class="social">
                 <a href="https://github.com/AnimezKishan/" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <!-- <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/kishan-kumar-4ba257200/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
             </div>
         </div>
 
-	<div class="profile">
+        <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/73955457?v=4" alt="User Image"></div>
@@ -420,11 +430,12 @@
             <div class="social">
                 <a href="https://github.com/riz4d/" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <!-- <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/in/mohamedrizad" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/mohamedrizad" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
             </div>
         </div>
-	
+
         <div class="profile">
             <div class="lines"></div>
 
@@ -445,8 +456,6 @@
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
-
-
 
         <div class="profile">
             <div class="lines"></div>
@@ -509,7 +518,9 @@
 
         <div class="profile">
             <div class="lines"></div>
-            <div class="pfp"><img src="https://raw.githubusercontent.com/Jaswanth-Kumar-2007/My_Portfolio/e76e95517f26dee61a3fc6e4434860a0aa80434b/Profile%20Picture.png" alt="User Image"></div>
+            <div class="pfp"><img
+                    src="https://raw.githubusercontent.com/Jaswanth-Kumar-2007/My_Portfolio/e76e95517f26dee61a3fc6e4434860a0aa80434b/Profile%20Picture.png"
+                    alt="User Image"></div>
             <h3 class="name">Jaswanth Kumar</h3>
             <div class="skills">
                 <span class="skill">Git</span>
@@ -521,12 +532,11 @@
             <div class="social">
                 <a href="https://github.com/Jaswanth-Kumar-2007" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <!-- No X/Twitter provided -->
-                <a href="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
                 <!-- No Facebook provided -->
             </div>
         </div>
-
-        
 
         <div class="profile">
             <div class="lines"></div>
@@ -575,7 +585,7 @@
                         class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/deepak-kambala-89a703361/" target="_blank" rel="noopener"
                     title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
-                
+
             </div>
         </div>
 
@@ -613,9 +623,10 @@
                 <span class="skill">Firebase</span>
             </div>
             <div class="social">
-                <a href="https://github.com/angelagarwal2" target="_blank" rel="noopener" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/angel-agarwal-97794432a/" target="_blank" rel="noopener" title="LinkedIn Profile"><i
-                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/angelagarwal2" target="_blank" rel="noopener" title="GitHub Profile"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/angel-agarwal-97794432a/" target="_blank" rel="noopener"
+                    title="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -778,9 +789,7 @@
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
-            <div class="pfp"><img
-                    src="https://avatars.githubusercontent.com/u/143788465?v=4"
-                    alt="User Image"></div>
+            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/143788465?v=4" alt="User Image"></div>
             <h3 class="name">Krishna Yadav</h3>
             <div class="skills">
                 <span class="skill">HTML</span>
@@ -953,8 +962,9 @@
             </div>
             <div class="social">
                 <a href="https://github.com/Saniya1613" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/saniya-patil-7a7859258/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                
+                <a href="https://www.linkedin.com/in/saniya-patil-7a7859258/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+
             </div>
         </div>
 
@@ -995,7 +1005,6 @@
                         class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
-
 
         <div class="profile">
             <div class="lines"></div>
@@ -1196,7 +1205,6 @@
             </div>
         </div>
 
-
         <div class="profile">
             <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/75795377?v=4" alt="Mudassir Image"></div>
@@ -1236,6 +1244,7 @@
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
+
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
@@ -1357,7 +1366,6 @@
                 <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
-
 
         <div class="profile">
             <div class="lines"></div>
@@ -1609,23 +1617,20 @@
                 <span class="skill">CSS</span>
                 <span class="skill">JAVA</span>
                 <span class="skill">JAVASCRIPT</span>
-                
-                
             </div>
             <div class="social">
                 <a href="https://github.com/anushkabhansalii" target="_blank"><i class="fa-brands fa-github"></i></a>
-              
-                <a href="https://www.linkedin.com/in/anushka-jain-b13271307/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-               
+
+                <a href="https://www.linkedin.com/in/anushka-jain-b13271307/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
         </div>
-    </div>
-    
+
         <div class="profile">
             <div class="lines"></div>
             <!-- change './assets/default.png' to your profile image url -->
-            <div class="pfp"><img
-                    src="https://avatars.githubusercontent.com/u/98505834?v=4"
-                    alt="User Image"></div>
+            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98505834?v=4" alt="User Image"></div>
             <h3 class="name">Pritesh Rajput</h3>
             <div class="skills">
                 <span class="skill">Machine Learning</span>
@@ -1638,7 +1643,8 @@
                 <a href="https://github.com/rajputpritesh1" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/rajputpritesh1/" target="_blank"><i
                         class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/pritesh_rajput31/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/pritesh_rajput31/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
 
@@ -1696,39 +1702,41 @@
                 <span class="skill">Next JS</span>
                 <span class="skill">Javascript</span>
                 <span class="skill">Java</span>
-                <span class="skill">Machine Learning</span>                
+                <span class="skill">Machine Learning</span>
             </div>
             <div class="social">
                 <a href="https://github.com/aayu5hgit" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://x.com/_aayu5h" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/aayushtalreja/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
+                <a href="https://www.linkedin.com/in/aayushtalreja/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
 
             <div class="profile">
-            <div class="lines"></div>
-            <!-- change './assets/default.png' to your profile image url -->
-            <div class="pfp"><img src=  "https://avatars.githubusercontent.com/u/110030367?v=4"alt="User Image"></div>
-            <h3 class="name">Akinola Fawaz</h3>
-            <div class="skills">
-                <span class="skill">Javascript</span>
-                <span class="skill">Python</span>                
-                <span class="skill">ReactJS</span>
-                <span class="skill">Next JS</span>
-                <span class="skill">Node JS</span>
-                <span class="skill">Express JS</span>
-                <span class="skill">MongoDB</span>
-                <span class="skill">Hono JS</span>
+                <div class="lines"></div>
+                <!-- change './assets/default.png' to your profile image url -->
+                <div class="pfp"><img src="https://avatars.githubusercontent.com/u/110030367?v=4" alt="User Image">
+                </div>
+                <h3 class="name">Akinola Fawaz</h3>
+                <div class="skills">
+                    <span class="skill">Javascript</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">ReactJS</span>
+                    <span class="skill">Next JS</span>
+                    <span class="skill">Node JS</span>
+                    <span class="skill">Express JS</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Hono JS</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/aayu5hgit" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/_aayu5h" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aayushtalreja/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="social">
-                <a href="https://github.com/aayu5hgit" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/_aayu5h" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/aayushtalreja/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
-    </div>
-    </div>
 
-
-	        <div class="profile">
+        <div class="profile">
             <div class="lines"></div>
             <div class="pfp"><img src="https://avatars.githubusercontent.com/u/116112919?v=4" alt="User Image"></div>
             <h3 class="name">Cristina</h3>
@@ -1741,20 +1749,19 @@
             <div class="social">
                 <a href="https://github.com/CristinaEU1" target="_blank"><i class="fa-brands fa-github"></i></a>
 
+            </div>
         </div>
-            
-        
 
-    </div>
-
-    <!-- Sougata Paul -->
-    <div class="profile">
+        <!-- Sougata Paul -->
+        <div class="profile">
             <div class="lines"></div>
-            <div class="pfp"><img src=  "https://avatars.githubusercontent.com/u/177567075?s=400&u=4152563f6e9fd4df52073aa6a2f81616b2e6cdcb&v=4"alt="User Image"></div>
+            <div class="pfp"><img
+                    src="https://avatars.githubusercontent.com/u/177567075?s=400&u=4152563f6e9fd4df52073aa6a2f81616b2e6cdcb&v=4"
+                    alt="User Image"></div>
             <h3 class="name">Sougata Paul</h3>
             <div class="skills">
                 <span class="skill">Java</span>
-                <span class="skill">MySQL</span>                
+                <span class="skill">MySQL</span>
                 <span class="skill">SpringBoot</span>
                 <span class="skill">HTML</span>
                 <span class="skill">Javascript</span>
@@ -1762,14 +1769,13 @@
                 <span class="skill">MongoDB</span>
                 <span class="skill">Botpress</span>
             </div>
-        <div class="social">
+            <div class="social">
                 <a href="https://github.com/Sougata2006" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://x.com/Sougata_2006" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/sougata-paul/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/sougata-paul/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
         </div>
-    </div>
-
-
     </div>
 
     <button id="backToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i>
@@ -1798,6 +1804,7 @@
                     <ion-icon name="logo-whatsapp"></ion-icon>
                 </a></li>
         </ul>
+
         <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
             <li class="menu__item"><a class="menu__link" href="about-us.html">About</a></li>
@@ -1807,15 +1814,14 @@
             <li class="menu__item"><a class="menu__link" href="privacy.html">Privacy Policy</a></li>
             <li class="menu__item"><a class="menu__link" href="contact-us.html">Contact</a></li>
         </ul>
+
         <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+
     </footer>
-
-
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
-
 
     <script>
         // Select all div elements with class 'profile'
@@ -1826,7 +1832,6 @@
             profile.setAttribute('data-aos', 'fade-up');
 
         });
-
 
         document.addEventListener('DOMContentLoaded', function () {
             // Select the container that holds all the profiles
@@ -1858,8 +1863,8 @@
                 container.appendChild(profile);
             });
         });
-
     </script>
+
     <script>
         AOS.init({
             once: true, // Animation occurs only once and doesn't reset when scrolling up

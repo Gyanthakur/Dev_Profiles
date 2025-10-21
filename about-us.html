@@ -1,255 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-    <link
-      rel="shortcut icon"
-      href="https://oyepriyansh.pages.dev/i/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <script src="logger.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"
-    ></script>
-  </head>
 
-  <body>
-    <div class="progress-bar" id="progressBar">
-      <div class="bar" id="bar"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="shortcut icon" href="https://oyepriyansh.pages.dev/i/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <script src="logger.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
+  <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
+</head>
+
+<body>
+
+  <div class="progress-bar" id="progressBar">
+    <div class="bar" id="bar"></div>
   </div>
 
+  <header>
+    <nav>
+      <!-- Title / Logo -->
+      <p class="title"><a href="index.html">Dev Profiles</a></p>
 
+      <!-- Hamburger icon for mobile -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
- <header>
-  <nav>
-    <!-- Title / Logo -->
-    <p class="title"><a href="index.html">Dev Profiles</a></p>
-
-    <!-- Hamburger icon for mobile -->
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Nav links -->
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="index.html">
-        <i class="fa-solid fa-user"></i> Profile Section
-      </a>
-      <a class="nav-link" href="project.html">
-        <i class="fa-solid fa-list-check"></i> Projects
-      </a>
-      <!-- <a class="nav-link" href="about-us.html">
+      <!-- Nav links -->
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link" href="index.html">
+          <i class="fa-solid fa-user"></i> Profile Section
+        </a>
+        <a class="nav-link" href="project.html">
+          <i class="fa-solid fa-list-check"></i> Projects
+        </a>
+        <!-- <a class="nav-link" href="about-us.html">
         <i class="fa-solid fa-info-circle"></i> About Us
       </a> -->
-      <a class="nav-link" href="contact-us.html">
-        <i class="fa-solid fa-address-book"></i> Contact
-      </a>
-      <a class="nav-link" href="privacy.html">
-				<i class="fa-solid fa-shield-halved"></i> Privacy
-			</a>
-					
-					
-					
-       
+        <a class="nav-link" href="contact-us.html">
+          <i class="fa-solid fa-address-book"></i> Contact
+        </a>
+        <a class="nav-link" href="privacy.html">
+          <i class="fa-solid fa-shield-halved"></i> Privacy
+        </a>
 
-      <!-- Dark mode button -->
-      <button class="dark-btn" id="icon">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							fill="black"
-							viewBox="0 0 24 24"
-						>
-							<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-						</svg>
-					</button>
-    </div>
-  </nav>
-</header>
+        <!-- Dark mode button -->
+        <button class="dark-btn" id="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
 
-  // Close menu when a link is clicked
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('navLinks').classList.remove('show');
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
     });
-  });
-</script>
+  </script>
 
   </div>
 
   <div class="logger">
     <!-- <h2>Logger</h2> -->
     <div id="logger" class="">Visitors: 0</div>
-</div>
+  </div>
 
+  <div class="line"><br /></div>
 
+  <div class="container">
+    <main class="about-container">
+      <div id="about" class="about-section">
+        <h2 class="section-title">What is DevProfiles?</h2>
+        <p class="about-content">
+          <strong>DevProfiles</strong> is an open-source platform where
+          developers can showcase their skills, profiles, and projects. It's a
+          great place to contribute, learn from others, and be part of a
+          thriving developer community.
+        </p>
+      </div>
 
+      <div class="about-section">
+        <h2 class="section-title">Our Mission</h2>
+        <p class="about-content">
+          We aim to create a comprehensive collection of developer profiles
+          from around the world. The goal is to allow everyone to display
+          their skills, contribute to open-source projects, and connect with
+          like-minded professionals.
+        </p>
+      </div>
 
-    <div class="line"><br /></div>
+      <div class="about-section">
+        <h2 class="section-title">How You Can Contribute</h2>
+        <p class="about-content">
+          We encourage developers to add their profiles and projects following
+          these steps:
+        </p>
+        <ol class="contribution-steps">
+          <li><i class="fas fa-code"></i> Fork the repository.</li>
+          <li>
+            <i class="fas fa-sync"></i> Sync your branch before making changes
+            by clicking the "Sync Fork" button.
+          </li>
+          <li>
+            <i class="fas fa-file-code"></i> Add your profile or project
+            between the specified sections in the `index.html` and
+            `project.html` files, following the instructions in the README.
+          </li>
+          <li>
+            <i class="fas fa-upload"></i> Commit and push your changes to your
+            fork.
+          </li>
+          <li>
+            <i class="fa-solid fa-code-pull-request"></i> Create a Pull Request and wait
+            for it to be merged!
+          </li>
+        </ol>
+      </div>
 
-    <div class="container">
-      <main class="about-container">
-        <div id="about" class="about-section">
-          <h2 class="section-title">What is DevProfiles?</h2>
-          <p class="about-content">
-            <strong>DevProfiles</strong> is an open-source platform where
-            developers can showcase their skills, profiles, and projects. It's a
-            great place to contribute, learn from others, and be part of a
-            thriving developer community.
-          </p>
-        </div>
+      <div class="about-section">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="about-content">
+          If you have any questions or need assistance, feel free to reach out
+          to us via the
+          <a href="https://github.com/Gyanthakur/DevProfile" class="link-primary"
+            style="color: #FFA500; font-weight: bold; text-decoration: underline;">GitHub Repository
+          </a>
+        </p>
+      </div>
+    </main>
+  </div>
 
-        <div class="about-section">
-          <h2 class="section-title">Our Mission</h2>
-          <p class="about-content">
-            We aim to create a comprehensive collection of developer profiles
-            from around the world. The goal is to allow everyone to display
-            their skills, contribute to open-source projects, and connect with
-            like-minded professionals.
-          </p>
-        </div>
+  <div class="line"><br /></div>
 
-        <div class="about-section">
-          <h2 class="section-title">How You Can Contribute</h2>
-          <p class="about-content">
-            We encourage developers to add their profiles and projects following
-            these steps:
-          </p>
-          <ol class="contribution-steps">
-            <li><i class="fas fa-code"></i> Fork the repository.</li>
-            <li>
-              <i class="fas fa-sync"></i> Sync your branch before making changes
-              by clicking the "Sync Fork" button.
-            </li>
-            <li>
-              <i class="fas fa-file-code"></i> Add your profile or project
-              between the specified sections in the `index.html` and
-              `project.html` files, following the instructions in the README.
-            </li>
-            <li>
-              <i class="fas fa-upload"></i> Commit and push your changes to your
-              fork.
-            </li>
-            <li>
-              <i class="fa-solid fa-code-pull-request"></i> Create a Pull Request and wait
-              for it to be merged!
-            </li>
-          </ol>
-        </div>
-
-        <div class="about-section">
-          <h2 class="section-title">Contact Us</h2>
-          <p class="about-content">
-            If you have any questions or need assistance, feel free to reach out
-            to us via the
-            <a
-              href="https://github.com/Gyanthakur/DevProfile"
-              class="link-primary"
-              style="color: #FFA500; font-weight: bold; text-decoration: underline;"
-              >GitHub Repository
-            </a>
-          </p>
-        </div>
-      </main>
-    </div>
-
-    <div class="line"><br /></div>
-
-    <button id="backToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i>
-    </button>
+  <button id="backToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i>
+  </button>
   <script src="script.js"></script>
 
-    <footer class="footer">
-      <ul class="social-icon">
-        <li class="social-icon__item">
-          <a
-            class="social-icon__link"
-            href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0"
-          >
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href=" https://twitter.com/gps_96169">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a
-            class="social-icon__link"
-            href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
-          >
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-        <li class="social-icon__item">
-          <a
-            class="social-icon__link"
-            href=" https://www.instagram.com/gp.singh.ro.ckstar4438/"
-          >
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-        </li>
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item">
+        <a class="social-icon__link"
+          href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li class="social-icon__item">
+        <a class="social-icon__link" href=" https://twitter.com/gps_96169">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </li>
+      <li class="social-icon__item">
+        <a class="social-icon__link" href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+      <li class="social-icon__item">
+        <a class="social-icon__link" href=" https://www.instagram.com/gp.singh.ro.ckstar4438/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
 
-        <li class="social-icon__item"></i><a class="social-icon__link" href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
+      <li class="social-icon__item"></i><a class="social-icon__link"
+          href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
           <ion-icon name="logo-whatsapp"></ion-icon>
         </a></li>
-      </ul>
-      <ul class="menu">
-        <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-        
-        <li class="menu__item">
-          <a class="menu__link" href="project.html">Project Section</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="index.html">Profile Section</a>
-        </li>
-        <li class="menu__item">
-          <a
-            class="menu__link"
-            href="contact-us.html"
-            >Contact</a
-          >
-        </li>
-      </ul>
-      <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
-    </footer>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+      <li class="menu__item">
+        <a class="menu__link" href="project.html">Project Section</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="index.html">Profile Section</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="contact-us.html">Contact</a>
+      </li>
+    </ul>
+    <p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
 </html>

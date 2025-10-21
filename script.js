@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     darkMode.classList.add("icon-position", "light-background", "icon-color");
   } else {
- 
+
     document.body.classList.remove("light-background");
     icon.style.filter = "invert(100%)";
     icon.src = "/assets/dark.png";
-    localStorage.setItem("theme", "dark"); 
+    localStorage.setItem("theme", "dark");
   }
 
   window.addEventListener("scroll", () => {
