@@ -143,11 +143,83 @@ nav {
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 1.1rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .nav-links a:hover {
-  background-color: #ff69b4;
+  background-color: #0057cc;
+  border-radius: 15px;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 87, 204, 0.4);
+  border-color: var(--color-green);
+}
+
+.nav-links a:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nav-links a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 87, 204, 0.3);
+}
+
+/* ✅ Button Base Styles */
+.button, .add {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0057cc, #00a3cc);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before, .add::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s ease;
+}
+
+.button:hover, .add:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 87, 204, 0.4);
+}
+
+.button:hover::before, .add:hover::before {
+  left: 100%;
+}
+
+.button:active, .add:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 87, 204, 0.3);
 }
 
 /* ✅ Add Button */
