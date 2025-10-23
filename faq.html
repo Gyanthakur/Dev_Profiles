@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Developer Hub</title>
+    <link rel="shortcut icon" href="https://oyepriyansh.pages.dev/i/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="bar" id="bar"></div>
+    </div>
+
+    <!-- Navigation -->
+<header>
+  <nav>
+    <!-- Title / Logo -->
+    <p class="title"><a href="index.html">Dev Profiles</a></p>
+
+    <!-- Hamburger icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Nav links -->
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-user"></i> Profile Section
+      </a>
+      <a class="nav-link" href="project.html">
+        <i class="fa-solid fa-list-check"></i> Projects
+      </a>
+      <a class="nav-link" href="about-us.html">
+        <i class="fa-solid fa-info-circle"></i> About Us
+      </a>
+      <a class="nav-link" href="contact-us.html">
+        <i class="fa-solid fa-address-book"></i> Contact
+      </a>
+
+      <!-- Dark mode button -->
+      <button class="dark-btn" id="icon">
+        <img src="/assets/dark.png" alt="Dark" style="width:24px; height:24px;">
+      </button>
+    </div>
+  </nav>
+</header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h1 class="section-title">Frequently Asked Questions</h1>
+            <p class="section-subtitle">Find answers to common questions about our platform</p>
+            
+            <div class="faq-categories">
+                <div class="category active" data-category="general">General</div>
+                <div class="category" data-category="profile">Profile Management</div>
+                <div class="category" data-category="contribution">Contributing</div>
+                <div class="category" data-category="technical">Technical</div>
+            </div>
+            
+            <div class="faq-content">
+                <!-- General FAQs -->
+                <div class="faq-category-content active" id="general">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is Dev Profiles?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dev Profiles is a platform where developers can showcase their skills, projects, and social profiles. It's a centralized hub for developers to create and share their professional profiles with the community.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is Dev Profiles free to use?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, Dev Profiles is completely free to use. There are no hidden fees or premium tiers. Our goal is to provide an accessible platform for all developers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I get started?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To get started, visit our GitHub repository and follow the contribution guidelines. You'll need to create a JSON file with your profile information and submit a pull request.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I customize my profile?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can customize various aspects of your profile including your bio, skills, projects, and social links. The platform supports a wide range of customization options.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Management FAQs -->
+                <div class="faq-category-content" id="profile">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I update my profile?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To update your profile, you need to edit your JSON file in our GitHub repository and submit a new pull request. Once approved, your changes will be reflected on the site.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What information should I include in my profile?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We recommend including your name, a professional photo, a brief bio, your skills, links to your projects, and your social media profiles. This helps others get a comprehensive view of your work.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I add multiple projects to my profile?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can add multiple projects to your profile. Each project can include a name, description, technologies used, and links to live demos or repositories.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I delete my profile?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To delete your profile, you can submit a pull request to remove your JSON file from the repository. Alternatively, you can contact us directly for assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contributing FAQs -->
+                <div class="faq-category-content" id="contribution">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I contribute to Dev Profiles?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can contribute by adding your profile, improving the documentation, reporting bugs, suggesting new features, or contributing code improvements. Check our GitHub repository for detailed contribution guidelines.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do I need to be an experienced developer to contribute?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, developers of all experience levels are welcome to contribute. Even adding your profile helps grow our community. If you're new to open source, we have resources to help you get started.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What happens after I submit a pull request?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>After you submit a pull request, our team will review your changes. We might suggest improvements or ask for clarification. Once approved, your changes will be merged and deployed to the live site.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I contribute to the website's code?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We welcome contributions to our codebase. Check our GitHub repository for open issues and feature requests. Make sure to follow our coding standards and guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical FAQs -->
+                <div class="faq-category-content" id="technical">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What technologies does Dev Profiles use?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dev Profiles is built with HTML, CSS, and JavaScript. We use GitHub for version control and hosting. The site is designed to be fast, accessible, and responsive across all devices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How is my data stored and used?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your profile data is stored as JSON files in our GitHub repository. We only display the information you provide in your profile. We don't sell or share your data with third parties.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is the platform mobile-friendly?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, Dev Profiles is fully responsive and works well on all devices including smartphones, tablets, and desktops. The interface adapts to different screen sizes for optimal viewing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How often is the site updated?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The site is updated regularly as new profiles are added and improvements are made. We deploy changes frequently to ensure the platform remains up-to-date and secure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-contact">
+                <h3>Still have questions?</h3>
+                <p>If you couldn't find the answer to your question, feel free to reach out to us.</p>
+                <a href="contact-us.html" class="contact-btn">
+                    <button class="add">
+                        <i class="fa-solid fa-envelope"></i> Contact Us
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://github.com/oyepriyansh" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://twitter.com/oyepriyansh" target="_blank">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.linkedin.com/in/priyansh-choudhary/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.instagram.com/oyepriyansh/" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="contact-us.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="faq.html">FAQ</a></li>
+        </ul>
+        <p>&copy; <span id="dates"></span> Dev Profiles | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle active class on question
+                    question.parentElement.classList.toggle('active');
+                    
+                    // Toggle answer visibility
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+            
+            // FAQ category switching
+            const categories = document.querySelectorAll('.category');
+            const categoryContents = document.querySelectorAll('.faq-category-content');
+            
+            categories.forEach(category => {
+                category.addEventListener('click', () => {
+                    // Remove active class from all categories
+                    categories.forEach(cat => cat.classList.remove('active'));
+                    // Add active class to clicked category
+                    category.classList.add('active');
+                    
+                    // Hide all category contents
+                    categoryContents.forEach(content => content.classList.remove('active'));
+                    // Show selected category content
+                    const categoryId = category.getAttribute('data-category');
+                    document.getElementById(categoryId).classList.add('active');
+                });
+            });
+            
+            // Progress bar functionality
+            window.addEventListener('scroll', () => {
+                const progressBar = document.getElementById('bar');
+                const scrollTotal = document.body.scrollHeight - window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / scrollTotal) * 100;
+                progressBar.style.width = scrollPercentage + '%';
+            });
+            
+            // Back to top button functionality
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            
+            window.onscroll = function() {
+                scrollFunction();
+            };
+            
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = 'block';
+                } else {
+                    backToTopBtn.style.display = 'none';
+                }
+            }
+            
+            backToTopBtn.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            
+            // Dark mode functionality
+            const darkMode = document.querySelector('.dark-btn');
+            const icon = document.getElementById('icon');
+            const savedTheme = localStorage.getItem('theme');
+            const date = document.getElementById('dates');
+            let currentDate = new Date();
+            let currentYear = currentDate.getFullYear();
+            date.innerHTML = currentYear;
+            
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-background');
+                icon.style.filter = 'invert(0%)';
+                icon.src = '/assets/light.png';
+                document.querySelector('.title').classList.add('text-color');
+                document.querySelector('footer').classList.add('text-color');
+                const buttons = document.querySelectorAll('.add');
+                buttons.forEach((button) => {
+                    button.classList.add('bg-color');
+                });
+                darkMode.classList.add('icon-position', 'light-background', 'icon-color');
+            } else {
+                document.body.classList.remove('light-background');
+                icon.style.filter = 'invert(100%)';
+                icon.src = '/assets/dark.png';
+                localStorage.setItem('theme', 'dark');
+            }
+            
+            darkMode.addEventListener('click', () => {
+                document.body.classList.toggle('light-background');
+                
+                if (document.body.classList.contains('light-background')) {
+                    icon.style.filter = 'invert(0%)';
+                    icon.src = '/assets/light.png';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    icon.style.filter = 'invert(100%)';
+                    icon.src = '/assets/dark.png';
+                    localStorage.setItem('theme', 'dark');
+                }
+                
+                darkMode.classList.toggle('icon-position');
+                darkMode.classList.toggle('light-background');
+                darkMode.classList.toggle('icon-color');
+                document.querySelector('.title').classList.toggle('text-color');
+                document.querySelector('footer').classList.toggle('text-color');
+                const buttons = document.querySelectorAll('.add');
+                buttons.forEach((button) => {
+                    button.classList.toggle('bg-color');
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* FAQ Specific Styles */
+        .faq-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .faq-container {
+            background-color: var(--color-profile-card-bg);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--color-profile-border);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            color: var(--color-text);
+            opacity: 0.8;
+        }
+        
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .category {
+            padding: 12px 24px;
+            background-color: var(--color-body-bg);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border: 2px solid transparent;
+        }
+        
+        .category:hover {
+            background-color: var(--color-profile-border);
+            color: white;
+        }
+        
+        .category.active {
+            background-color: var(--color-profile-border);
+            color: white;
+            border-color: var(--color-profile-border);
+        }
+        
+        .faq-category-content {
+            display: none;
+        }
+        
+        .faq-category-content.active {
+            display: block;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--color-body-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(227, 82, 5, 0.1);
+        }
+        
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .faq-answer p {
+            padding: 0 20px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .faq-contact {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-contact h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--color-profile-border);
+        }
+        
+        .faq-contact p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .contact-btn {
+            text-decoration: none;
+        }
+        
+        /* Light mode adjustments */
+        .light-background .faq-container {
+            background-color: #f5f5f5;
+        }
+        
+        .light-background .section-subtitle {
+            color: #000;
+        }
+        
+        .light-background .category {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+        
+        .light-background .category.active {
+            background-color: var(--color-profile-border);
+            color: white;
+        }
+        
+        .light-background .faq-item {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .light-background .faq-question:hover {
+            background-color: rgba(227, 82, 5, 0.05);
+        }
+        
+        .light-background .faq-answer {
+            background-color: #f9f9f9;
+        }
+        
+        .light-background .faq-answer p {
+            color: #333;
+        }
+        
+        .light-background .faq-contact {
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .faq-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            
+            .faq-question h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</body>
+</html>

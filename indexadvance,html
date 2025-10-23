@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevProfiles - Showcase Your Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .profile {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+
+        .pfp {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pfp img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #667eea;
+            object-fit: cover;
+        }
+
+        .name {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .skill {
+            background: #f0f0f0;
+            color: #667eea;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: #667eea;
+            font-size: 1.5em;
+            transition: color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .social a:hover {
+            color: #764ba2;
+            transform: scale(1.2);
+        }
+
+        .add-profile-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+        }
+
+        .add-profile-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .add-profile-section p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contribute-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: transform 0.3s;
+        }
+
+        .contribute-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        .code-block code {
+            color: #333;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👩‍💻 DevProfiles 👨‍💻</h1>
+            <p>Showcase your skills and connect with the developer community</p>
+        </header>
+
+        <div class="profiles-grid">
+            <!-- Profile 1 -->
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp">
+                    <img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image">
+                </div>
+                <h3 class="name">Gyan Thakur</h3>
+                <div class="skills">
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Web Dev</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/Gyanthakur" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/Gyanthakur" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/gyanthakur" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Profile 2 -->
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp">
+                    <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="User Image">
+                </div>
+                <h3 class="name">Sarah Johnson</h3>
+                <div class="skills">
+                    <span class="skill">Python</span>
+                    <span class="skill">Django</span>
+                    <span class="skill">PostgreSQL</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">AI/ML</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Profile 3 -->
+            <div class="profile">
+                <div class="lines"></div>
+                <div class="pfp">
+                    <img src="https://avatars.githubusercontent.com/u/2?v=4" alt="User Image">
+                </div>
+                <h3 class="name">Alex Chen</h3>
+                <div class="skills">
+                    <span class="skill">TypeScript</span>
+                    <span class="skill">Vue.js</span>
+                    <span class="skill">GraphQL</span>
+                    <span class="skill">AWS</span>
+                    <span class="skill">DevOps</span>
+                </div>
+                <div class="social">
+                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- ADD YOUR PROFILE BELOW THIS COMMENT - DO NOT MODIFY ABOVE -->
+            <!--Profiles-->
+
+            <!--Profiles-->
+            <!-- ADD YOUR PROFILE ABOVE THIS COMMENT - DO NOT MODIFY BELOW -->
+
+        </div>
+
+        <!-- Contribution Section -->
+        <div class="add-profile-section">
+            <h2>🚀 Want to Add Your Profile?</h2>
+            <p>Showcase your skills and projects to the developer community. Follow the steps below to contribute your profile.</p>
+            
+            <div class="code-block">
+                <code>
+&lt;div class="profile"&gt;
+&nbsp;&nbsp;&lt;div class="lines"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="pfp"&gt;&lt;img src="YOUR-IMAGE-URL" alt="User Image"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;h3 class="name"&gt;Your Name&lt;/h3&gt;
+&nbsp;&nbsp;&lt;div class="skills"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="skill"&gt;Skill 1&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="skill"&gt;Skill 2&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="skill"&gt;Skill 3&lt;/span&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="social"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="YOUR-GITHUB-URL" target="_blank"&gt;&lt;i class="fa-brands fa-github"&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="YOUR-TWITTER-URL" target="_blank"&gt;&lt;i class="fa-brands fa-x-twitter"&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="YOUR-LINKEDIN-URL" target="_blank"&gt;&lt;i class="fa-brands fa-linkedin-in"&gt;&lt;/i&gt;&lt;/a&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+                </code>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #333;">📝 Steps to Contribute:</h3>
+            <p style="margin-top: 15px; text-align: left; display: inline-block;">
+                1. Fork the repository<br>
+                2. Clone your fork: <code style="background: #f0f0f0; padding: 2px 6px;">git clone https://github.com/YOUR-USERNAME/Dev_Profiles.git</code><br>
+                3. Add your profile code between the &lt;!--Profiles--&gt; comments<br>
+                4. Replace placeholders with your info<br>
+                5. Commit: <code style="background: #f0f0f0; padding: 2px 6px;">git commit -m "feat: add my profile"</code><br>
+                6. Push and create a Pull Request<br>
+            </p>
+
+            <button class="contribute-btn" onclick="alert('Visit GitHub to contribute: https://github.com/Gyanthakur/Dev_Profiles')">
+                ⭐ Contribute Now
+            </button>
+        </div>
+    </div>
+</body>
+</html>
