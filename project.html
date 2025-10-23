@@ -1,118 +1,1774 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="shortcut icon" href="https://oyepriyansh.pages.dev/i/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"></script>
-    <script type="text/javascript" src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"></script>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects</title>
+		<link
+			rel="shortcut icon"
+			href="https://oyepriyansh.pages.dev/i/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="style.css" />
 
-    <h1>Dev Projects</h1>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+		/>
+		<script src="logger.js"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-GTFGBS8HG8"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://oyepriyansh.pages.dev/cdnjs/analytics/devprofiles.js"
+		></script>
 
+		<script>
+			function toggleMenu() {
+				document.getElementById("navLinks").classList.toggle("show");
+			}
+		</script>
+	</head>
 
-    <button class="add"
-        onclick='window.open("https://github.com/Gyanthakur/DevProfile","_blank")'">Add your Profile &nbsp; <i class="
-        fa-sharp fa-solid fa-user-plus"></i> </button>
+	<body>
+		<div class="progress-bar" id="progressBar">
+			<div class="bar" id="bar"></div>
+		</div>
 
-    <div class="line"><br></div>
+		<header>
+			<nav>
+				<!-- Title / Logo -->
+				<p class="title"><a href="index.html">Dev Profiles</a></p>
 
-    <a href="index.html"><button class="add">Go To Profile Section &nbsp; <i class="fa-solid fa-user"></i> </button></a>
+				<!-- Hamburger icon for mobile -->
+				<div class="hamburger" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 
-        <button class="add"
-        onclick='window.open("https://github.com/Gyanthakur/DevProfile","_blank")'">Add your Profile &nbsp; <i class="
-        fa-sharp fa-solid fa-user-plus"></i> </button>
+				<!-- Nav links -->
+				<div class="nav-links" id="navLinks">
+					<a class="nav-link" href="index.html">
+						<i class="fa-solid fa-user"></i> Profile Section
+					</a>
+					<!-- <a class="nav-link" href="project.html">
+						<i class="fa-solid fa-list-check"></i> Projects
+					</a> -->
+					<a class="nav-link" href="about-us.html">
+						<i class="fa-solid fa-info-circle"></i> About Us
+					</a>
+					<a class="nav-link" href="contact-us.html">
+						<i class="fa-solid fa-address-book"></i> Contact
+					</a>
 
-        <div class="line"><br></div>
+					
 
+					<!-- Dark mode button -->
+					<button class="dark-btn" id="icon">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							fill="black"
+							viewBox="0 0 24 24"
+						>
+							<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+						</svg>
+					</button>
+				</div>
+			</nav>
+		</header>
 
-    <div class="search">
-        <input type="text" id="searchInput" placeholder="Search by name or skill...">
-    </div>
-    
-    <div class="container">
-        <!--Projects-->
+		<div class="logger">
+			<!-- <h2>Logger</h2> -->
+			<div id="logger" class="">Visitors: 0</div>
+		</div>
 
+		<div class="line"><br /></div>
 
-        <div class="profile">
-            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
-            <h3 class="name">Gyan Pratap Singh</h3>
+		<div class="search">
+			<div class="search-box">
+				<i class="fas fa-search search-icon"></i>
+				<input
+					type="text"
+					id="searchInput"
+					placeholder="Search by project name or skill..."
+				/>
+			</div>
+
+			<!-- Add your Project button -->
+			<a href="https://github.com/Gyanthakur/DevProfile" target="_blank">
+				<button class="add">
+					Add your Project &nbsp; <i class="fa-sharp fa-solid fa-user-plus"></i>
+				</button>
+			</a>
+		</div>
+
+		<div class="container">
+			<!--Projects-->
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/145559687?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Tanvi</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/TanviS001" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Drum-Kit</p>
+					</div>
+					<div>
+						<a href="https://github.com/TanviS001/Drum-Kit" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/TanviCodesEveryday/Drum-Kit"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JavaScript</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/TanviS001" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+				</div>
+
+				<div class="profile">
+					<div class="lines"></div>
+					<div class="pfp"><img src="./assets/om.jpg" /></div>
+					<h3 class="name">Om Sharma</h3>
+					<div class="project">
+						<a href="https://github.com/Sharma-Ji-21" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<a
+							href="https://github.com/Sharma-Ji-21/DocPilot-Personal"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<a href=""><i class="fa-solid fa-globe"></i></a>
+					</div>
+					<div class="projectName">
+						<span>DocPilot</span>
+					</div>
+					<div class="skills">
+						<span class="skill">Flutter</span>
+						<span class="skill">Dart</span>
+						<span class="skill">JavaScript</span>
+						<span class="skill">Node.js</span>
+					</div>
+					<div class="social">
+						<a href="https://github.com/Sharma-Ji-21" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<a
+							href="https://www.linkedin.com/in/om-sharma-603b17320/"
+							target="_blank"
+							><i class="fa-brands fa-linkedin-in"></i
+						></a>
+					</div>
+				</div>
+
+				<div class="profile">
+					<div class="lines"></div>
+					<div class="pfp">
+						<img
+							src="https://avatars.githubusercontent.com/u/215493851?v=4"
+							alt="User Image"
+						/>
+					</div>
+					<h3 class="name">Debargha Sarkar</h3>
+					<div class="project">
+						<a href="https://github.com/My-Mation" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<a href="https://github.com/My-Mation/portfolio" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<a
+							href="https://portfolio-hazel-beta-83.vercel.app/"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+					</div>
+					<div class="projectNam">
+						<span>My Portfolio</span>
+						<span>Repo Url</span>
+						<span>Deploy Link</span>
+					</div>
+					<div class="skills">
+						<span class="skill">HTML</span>
+						<span class="skill">CSS</span>
+						<span class="skill">JavaScript</span>
+						<span class="skill">Web Development</span>
+					</div>
+					<div class="social">
+						<a href="https://github.com/My-Mation" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<a
+							href="https://www.linkedin.com/in/debargha-sarkar-72575937a/"
+							target="_blank"
+							><i class="fa-brands fa-linkedin-in"></i
+						></a>
+						<a
+							href="https://portfolio-hazel-beta-83.vercel.app/"
+							target="_blank"
+							><i class="fa-solid fa-globe"></i
+						></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/98226958?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Gyan Pratap Singh</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/Gyanthakur" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Text_UTILS Editor</p>
+					</div>
+					<div>
+						<a href="https://github.com/Gyanthakur/TextUtils" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://gyanthakur.github.io/TextUtils/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">JavaScript</span>
+					<span class="skill">ReactJs</span>
+					<span class="skill">C++</span>
+					<span class="skill">Nodejs</span>
+					<span class="skill">NextJs</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Gyanthakur" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/gps_96169" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a
+						href="https://m.facebook.com/profile.php?eav=AfaqcHZxqYa9JW_KiMc12-UaK795uvnKLpf6fkHA6L4JkUTH-M30JYLTQ5nSffYiVJI&paipv=0"
+						target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img src="https://github.com/anurag-327.png" alt="User Image" />
+				</div>
+				<h3 class="name">Anurag Srivastav</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/anurag-327" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Quicker Sign</p>
+					</div>
+					<div>
+						<a href="https://github.com/anurag-327/QuickSign" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo URL</p>
+					</div>
+					<div>
+						<a href="https://quick-sign.vercel.app/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">React js</span>
+					<span class="skill">Express</span>
+					<span class="skill">Mongo DB</span>
+					<span class="skill">JWT</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/anurag-327" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/itsAnurag_sri" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://www.linkedin.com/in/anuragsr327/" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/98226958?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Gyan Pratap Singh</h3>
+				<div class="project">
+					<a href="https://github.com/Gyanthakur" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://github.com/Gyanthakur/Edemy-LMS" target="_blank"
+						><i class="fa-solid fa-money-bill-transfer"></i
+					></a>
+					<a href="https://edemy-lms-gps.vercel.app" target="_blank"
+						><i class="fa-brands fa-octopus-deploy"></i
+					></a>
+				</div>
+				<div class="projectName">
+					<span>Edemy LMS</span>
+					<!-- Do not change Repo URl and Dploy Link given under two line   -->
+					<span>Repo Url</span>
+					<span>Deploy Link</span>
+				</div>
+				<div class="skills">
+					<span class="skill">React</span>
+					<span class="skill">javascript</span>
+					<span class="skill">nodejs</span>
+					<span class="skill">expressjs</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Gyanthakur" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://x.com/gps_96169" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a
+						href="https://www.facebook.com/profile.php?id=100026766931684"
+						target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/137164745?v=4&size=64"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Atik Vohra</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/atik-7866" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">ToDoWeb</p>
+					</div>
+					<div>
+						<a href="https://github.com/atik-7866/todoweb" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://atik-7866.github.io/todoweb/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JS</span>
+					<span class="skill">React</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/atik-7866" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/73955457?v=4&size=64"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Mohamed Rizad</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/riz4d" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">EventGate</p>
+					</div>
+					<div>
+						<a href="https://github.com/riz4d/EventGate" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://event-gate.vercel.app" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Security Researcher</span>
+					<span class="skill">Python/Django Developer</span>
+					<span class="skill">React/Next.js</span>
+					<span class="skill">Linux</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/riz4d" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://raw.githubusercontent.com/Jaswanth-Kumar-2007/My_Portfolio/e76e95517f26dee61a3fc6e4434860a0aa80434b/Profile%20Picture.png"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Jaswanth Kumar</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/Jaswanth-Kumar-2007" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Product-Space AI Project</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/Jaswanth-Kumar-2007/Product-Space-AI-Project.git"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<!-- No Deploy Link provided -->
+				</div>
+				<div class="skills">
+					<span class="skill">Streamlit</span>
+					<span class="skill">chromadb</span>
+					<span class="skill">python</span>
+					<span class="skill">grok-llm</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Jaswanth-Kumar-2007" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/91364014?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Ankit Jha</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/ankitjhagithub21" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Pic Prism</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/ankitjhagithub21/PicPrism"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://pic-prism-iota.vercel.app/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">JavaScript</span>
+					<span class="skill">ReactJs</span>
+					<span class="skill">MongoDB</span>
+					<span class="skill">Nodejs</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/ankitjhagithub21" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+				</div>
+			</div>
+			<!--Shivangini Gupta-->
+			        <div class="profile">
+            <div class="lines"></div>
+            <div class="pfp"><img src="https://i.pinimg.com/236x/8c/63/5c/8c635c07f1693764945d8126cb87906e.jpg" alt="User Image"></div>
+            <h3 class="name">Shivangini Gupta</h3>
             <div class="project">
-                <a href="https://github.com/Gyanthakur" target="_blank"><i class="fa-brands fa-github"></i></a>
-
-                <a href="https://github.com/Gyanthakur/TextUtils" target="_blank"><i class="fa-solid fa-money-bill-transfer"></i></a>
-                <a href="https://gyanthakur.github.io/TextUtils/" target="_blank"><i class="fa-brands fa-octopus-deploy"></i></a>
+                <a href="https://github.com/shivanginigupta573-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/shivanginigupta573-dev?tab=repositories" target="_blank"><i class="fa-solid fa-money-bill-transfer"></i></a>
             </div>
-            <div class="projectNam">
-                <span >Text_UTILS</span>
-                <span >Repo Url</span>
-                <span >Deploy Link</span>
+            <div class="projectName">
+                <span >Amazon-Clone</span>
+                <!-- Do not change Repo URl and Dploy Link given under two line  -->
             </div>
             <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
                 <span class="skill">Javascript</span>
-                <span class="skill">ReactJs</span>
-                <span class="skill">C++</span>
-                <span class="skill">Nodejs</span>
-
-            </div>
+                 </div>
             <div class="social">
-                <a href="https://github.com/Gyanthakur" target="_blank"><i class="fa-brands fa-github"></i></a>
-
-                <a href="https://twitter.com/gps_96169" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://m.facebook.com/profile.php?eav=AfaqcHZxqYa9JW_KiMc12-UaK795uvnKLpf6fkHA6L4JkUTH-M30JYLTQ5nSffYiVJI&paipv=0" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/shivanginigupta573-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shivangini-gupta-372055360/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-            
-            <div>
-                <span class="project">Project title: </span>
-                <span class="project">Repo Url: </span>
-                <span class="project">Deploy Link: </span>
         </div>
 
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img src="https://avatars.githubusercontent.com/u/177358640?v=4" />
+				</div>
+				<h3 class="name">Angel Agarwal</h3>
+				<div class="project">
+					<a href="https://github.com/angelagarwal2" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a
+						href="https://github.com/angelagarwal2/Javascript_Beginner_Projects"
+						target="_blank"
+						><i class="fa-solid fa-money-bill-transfer"></i
+					></a>
+					<a
+						href="https://angelagarwal2.github.io/Javascript_Beginner_Projects/"
+						target="_blank"
+						><i class="fa-solid fa-globe"></i
+					></a>
+				</div>
+				<div class="projectName">
+					<span>Javascript Beginner Projects/</span>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JavaScript</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/angelagarwal2" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/angel-agarwal-97794432a/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
 
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/106344460?s=96&v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Karunakar S</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/Karna0005" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Tech Startup Landing Page</p>
+					</div>
+					<div>
+						<a href="https://github.com/Karna0005/techstartup" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://karna0005.github.io/techstartup/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JavaScript</span>
+					<span class="skill">React.js</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Karna0005" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/KarunakarViswas" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/karunakar-s-b52895202"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
 
-        
-        <div class="profile">
-            <div class="pfp"><img src="https://avatars.githubusercontent.com/u/98226958?v=4" alt="User Image"></div>
-            <h3 class="name">Gyan Pratap Singh</h3>
-            <div class="project">
-                <a href="https://github.com/Gyanthakur" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://github.com/Gyanthakur/TextUtils" target="_blank"><i class="fa-solid fa-money-bill-transfer"></i></a>
-                <a href="https://gyanthakur.github.io/TextUtils/" target="_blank"><i class="fa-brands fa-octopus-deploy"></i></a>
-            </div>
-            <div class="projectNam">
-                <span >Text_UTILS</span>
-                <span >Repo Url</span>
-                <span >Deploy Link</span>
-            </div>
-            <div class="skills">
-                <span class="skill">Javascript</span>
-                <span class="skill">ReactJs</span>
-                <span class="skill">C++</span>
-                <span class="skill">Nodejs</span>
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/133865660?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Hemang Yadav</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/Zemerik" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">ZemPosts</p>
+					</div>
+					<div>
+						<a href="https://github.com/Zemerik/ZemPosts" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://zemposts.vercel.app" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Javascript</span>
+					<span class="skill">Typescript</span>
+					<span class="skill">Astro</span>
+					<span class="skill">ReactJS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Zemerik" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://x.com/Zemerik_X" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://linkedin.com/in/zemerik" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
 
-            </div>
-            <div class="social">
-                <a href="https://github.com/Gyanthakur" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://twitter.com/gps_96169" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://m.facebook.com/profile.php?eav=AfaqcHZxqYa9JW_KiMc12-UaK795uvnKLpf6fkHA6L4JkUTH-M30JYLTQ5nSffYiVJI&paipv=0" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-        </div>
-        
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/AnkurRam2002"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Ankur Ram</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/AnkurRam2002" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Kindle Clone</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/AnkurRam2002/Kindle-Clone"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://kindle-clone.vercel.app/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Skill-1</span>
+					<span class="skill">Skill-2</span>
+					<span class="skill">Skill-3</span>
+					<span class="skill">Skill-4</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/AnkurRam2002" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://linkedin.com/in/AnkurRam2002" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
 
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/115791148?s=400&v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Prateek Sethi</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/prateekpr17" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Temp_Conv.</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/prateekpr17/Temperature_Converter"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://prateekpr17.github.io/Temperature_Converter/"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/prateekpr17" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/prateekpr17" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://linkedin.com/in/prateekpr17" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="https://facebook.com/prateekpr17" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
 
-        <!-- project  -->
-    </div>
+			<!-- keron patel -->
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://raw.githubusercontent.com/kronpatel/KERZOX_Gif_Profiles/refs/heads/main/latest.gif"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Keron Patel</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/kronpatel" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Advance-Tab-Saver</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/kronpatel/Advance-Tab-Saver/tree/main"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/kronpatel/Advance-Tab-Saver/tree/main"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Automation</span>
+					<span class="skill">Python</span>
+					<span class="skill">Problem Solving & Debugging</span>
+					<span class="skill">Bug Hunting</span>
+					<span class="skill">Javascript</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/kronpatel" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://x.com/keron_1826?s=21" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+				</div>
+			</div>
 
-       
+			<!-- jetur gavli fake hack-->
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://raw.githubusercontent.com/jeturgavli/Jetrock_Gif_Profiles/refs/heads/main/latest.gif"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Jetur Gavli</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/jeturgavli" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Fake Hack</p>
+					</div>
+					<div>
+						<a href="https://github.com/jeturgavli/fake-hack" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://jeturgavli.github.io/fake-hack" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Python</span>
+					<span class="skill">Automation</span>
+					<span class="skill">Bug Hunting</span>
+					<span class="skill">Problem Solving & Debugging</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/jeturgavli" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://in.linkedin.com/in/jeturgavli" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://raw.githubusercontent.com/jeturgavli/Jetrock_Gif_Profiles/refs/heads/main/latest.gif"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Jetur Gavli</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/jeturgavli" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Quote Image Generator for Instagram</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/jeturgavli/Quote-Image-Generator-for-Instagram"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/jeturgavli/Quote-Image-Generator-for-Instagram"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Python</span>
+					<span class="skill">Automation</span>
+					<span class="skill">Bug Hunting</span>
+					<span class="skill">Problem Solving & Debugging</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/jeturgavli" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://in.linkedin.com/in/jeturgavli" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
 
+			<!-- End jetur gavli -->
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img src="logo.jpg" alt="User Image" />
+				</div>
+				<h3 class="name">Apurva Jain</h3>
+				<div class="project">
+					<!-- SkillSprint -->
+					<div>
+						<a href="https://github.com/APURVA122" target="_blank">
+							<i class="fa-brands fa-github"></i>
+						</a>
+						<p class="projectNam">SkillSprint</p>
+					</div>
+					<div>
+						<a href="https://github.com/APURVA122/SkillSprint" target="_blank">
+							<i class="fa-solid fa-money-bill-transfer"></i>
+						</a>
+						<p class="projectNam">Repo URL</p>
+					</div>
+					<div>
+						<a href="https://apurva122.github.io/SkillSprint/" target="_blank">
+							<i class="fa-brands fa-octopus-deploy"></i>
+						</a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">JavaScript</span>
+					<span class="skill">API</span>
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/APURVA122" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/apurva-jain-9462a7330/"
+						target="_blank"
+					>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+				</div>
+			</div>
 
-</body>
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/64124782?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Vikas Anand</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/kingcoolvikas" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Resume Generator</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/kingcoolvikas/TNB-Tech-Resume-Builder"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://kingcoolvikas.github.io/TNB-Tech-Resume-Builder"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Security Researcher</span>
+					<span class="skill">Web Pentesting</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/kingcoolvikas" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/kingcoolvikas" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://linkedin.com/in/kingcoolvikas" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+				</div>
+			</div>
+
+			<!-- yaha -->
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/146920220?s=400&u=7cfc5f3daffb94dc97d85fbde0f7cff28d6e299b&v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Ketan Sharma</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/ketan270" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">My Portfolio</p>
+					</div>
+					<div>
+						<a href="https://github.com/ketan270/My-Portfolio" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://ketansharma.tech/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JAVASCRIPT</span>
+					<span class="skill">REACT</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/ketan270" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<!-- <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
+					<a
+						href="https://www.linkedin.com/in/ketan-sharma-a40432203/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/143788465?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Krishna Yadav</h3>
+				<div class="project">
+					<div>
+						<a href="https://github.com/krishna1584" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">My Portfolio</p>
+					</div>
+					<div>
+						<a href="https://github.com/krishna1584/portfolio" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="https://krishna-yadav.vercel.app/" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JAVASCRIPT</span>
+					<span class="skill">REACT</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/krishna1584" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<!-- <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
+					<a href="https://www.linkedin.com/in/krishna-yadav20/" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/116500216?s=400&u=c00d1665cea0713131779bf84add548ce4a9630a&v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Kavindu Praneeth</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/praneeth724" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">My Portfolio</p>
+					</div>
+					<div>
+						<a href="https://github.com/praneeth724/3DPortFolio" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://kavindupraneeth-portfolio-site.netlify.app/"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">3JS</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JAVASCRIPT</span>
+					<span class="skill">REACT</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/praneeth724" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<!-- <a href="[YOUR X/TWITTER URL]" target="_blank"><i class="fa-brands fa-x-twitter"></i></a> -->
+					<a
+						href="https://www.linkedin.com/in/kavindu-praneeth-48529a249/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<!-- <a href="[YOUR FACEBOOK URL]" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/147707204?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Yash-Bandal</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/Yash-Bandal" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Medicine rec</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/Yash-Bandal/Medicine-Recommendation-System"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://yash-bandal.github.io/Medicine-Recommendation-System/ML-Medicine%20Recommendation%20System/templates/FrontEnd.html"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">Ambidextrous</span>
+					<span class="skill">Web Development </span>
+					<span class="skill">DSA</span>
+					<span class="skill">DBMS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Yash-Bandal" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://leetcode.com/u/Yash_L/" target="_blank"
+						><i class="cib-leetcode"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/91364014?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Ankit Jha</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/ankitjhagithub21" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Shopping Cart</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/ankitjhagithub21/shopping-cart"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://shopping-cart-orpin-three.vercel.app/"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">C++</span>
+					<span class="skill">Javascript</span>
+					<span class="skill">React</span>
+					<span class="skill">Python</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/ankitjhagithub21" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://twitter.com/ItsAnkitjha22" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://www.linkedin.com/in/ankitjha3731/" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="https://www.facebook.com/ankitjha2018" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/100522447?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Fariha Naqvi</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/farihaNaqvi" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Amazon Scraping With Python</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/farihaNaqvi/Amazon-Scraping-With-Python-"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="[Project Deploy URL(If applicable)]" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+				<div class="skills">
+					<span class="skill">Python</span>
+					<span class="skill">Beautiful soap</span>
+					<span class="skill">AWS</span>
+					<span class="skill">Data Extraction</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/farihaNaqvi" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="[YOUR X/TWITTER URL]" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://www.linkedin.com/in/s-farihanaqvi/" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/129689787?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Sai kumar</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/sai-kumar0" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Food Court</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/sai-kumar0/Food-Court-P1"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://sai-kumar0.github.io/Food-Court-P1/"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">JavaScript</span>
+					<span class="skill">React JS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/sai-kumar0" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a
+						href="https://twitter.com/SaiKuma50434005?t=A0cRKmL9Yf_n5DlB9B9CEA&s=08"
+						target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a
+						href="www.linkedin.com/in/sai-kumar-chary-19653b246"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/119102832?v=4"
+						alt="Ashish"
+					/>
+				</div>
+				<h3 class="name">Ashish</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/ashish-bazad" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">My Portfolio</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/ashish-bazad/my-website.git"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="[Project Deploy URL(If applicable)]" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">Javascript</span>
+					<span class="skill">Django</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/ashish-bazad" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="[YOUR X/TWITTER URL]" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="[YOUR LINKEDIN URL]" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/154046510?v=4"
+						alt="Suramya"
+					/>
+				</div>
+				<h3 class="name">Suramya Ranjan</h3>
+
+				<div class="project">
+					<div>
+						<a href="https://github.com/SuramyaRanjan" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">My Portfolio</p>
+					</div>
+					<div>
+						<a
+							href="https://github.com/SuramyaRanjan/Bharat-Intern-MTapp/tree/master"
+							target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a
+							href="https://suramyaranjan.github.io/Bharat-Intern-MTapp/public/index.html"
+							target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">HTML</span>
+					<span class="skill">CSS</span>
+					<span class="skill">Javascript</span>
+					<span class="skill">MERN</span>
+					<span class="skill">Python</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/SuramyaRanjan" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="[YOUR X/TWITTER URL]" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/suramya-ranjan-19a517298/"
+						target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/148654884?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Vidhan Gupta</h3>
+
+				<div class="project">
+					<div>
+						<a href="[Your Github URL]" target="_blank"
+							><i class="fa-brands fa-github"></i
+						></a>
+						<p class="projectNam">Your Project Title</p>
+					</div>
+					<div>
+						<a href="[Your Github Repository URL]" target="_blank"
+							><i class="fa-solid fa-money-bill-transfer"></i
+						></a>
+						<p class="projectNam">Repo Url</p>
+					</div>
+					<div>
+						<a href="[Project Deploy URL(If applicable)]" target="_blank"
+							><i class="fa-brands fa-octopus-deploy"></i
+						></a>
+						<p class="projectNam">Deploy Link</p>
+					</div>
+				</div>
+
+				<div class="skills">
+					<span class="skill">Frontend</span>
+					<span class="skill">Flutter</span>
+					<span class="skill">C++</span>
+					<span class="skill">Python</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/Crusherbolt" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="[YOUR X/TWITTER URL]" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="[YOUR LINKEDIN URL]" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+
+			<div class="profile">
+				<div class="lines"></div>
+				<div class="pfp">
+					<img
+						src="https://avatars.githubusercontent.com/u/110030367?v=4"
+						alt="User Image"
+					/>
+				</div>
+				<h3 class="name">Akinola Fawaz</h3>
+				<div class="project">
+					<a href="https://github.com/phawaaaz" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://github.com/Phawaaaz/backendRevamp" target="_blank"
+						><i class="fa-solid fa-money-bill-transfer"></i
+					></a>
+					<a href="https://project-demo-cyan.vercel.app/login" target="_blank"
+						><i class="fa-brands fa-octopus-deploy"></i
+					></a>
+				</div>
+				<div class="projectNam">
+					<span>Visitor Management system</span>
+					<!-- Do not change Repo URl and Dploy Link given under two line  -->
+					<span>https://phawaazvms.onrender.com/</span>
+					<span>https://project-demo-cyan.vercel.app/login</span>
+				</div>
+				<div class="skills">
+					<span class="skill">Javascript</span>
+					<span class="skill">Python</span>
+					<span class="skill">ReactJS</span>
+					<span class="skill">Next JS</span>
+					<span class="skill">Node JS</span>
+					<span class="skill">Express JS</span>
+					<span class="skill">MongoDB</span>
+					<span class="skill">Redis</span>
+					<span class="skill">Hono JS</span>
+				</div>
+				<div class="social">
+					<a href="https://github.com/phawaaaz" target="_blank"
+						><i class="fa-brands fa-github"></i
+					></a>
+					<a href="https://x.com/No_lolade" target="_blank"
+						><i class="fa-brands fa-x-twitter"></i
+					></a>
+					<a href="https://www.linkedin.com/in/phawaz/" target="_blank"
+						><i class="fa-brands fa-linkedin-in"></i
+					></a>
+					<a href="[YOUR FACEBOOK URL]" target="_blank"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+				</div>
+			</div>
+			<!-- project  -->
+		</div>
+
+		<button id="backToTopBtn" title="Go to top">
+			<i class="fa-solid fa-arrow-up"></i>
+		</button>
+
+		<script src="script.js"></script>
+
+		<footer class="footer">
+			<ul class="social-icon">
+				<li class="social-icon__item">
+					<a
+						class="social-icon__link"
+						href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0"
+					>
+						<ion-icon name="logo-facebook"></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item">
+					<a class="social-icon__link" href=" https://twitter.com/gps_96169">
+						<i class="fa-brands fa-x-twitter"></i>
+					</a>
+				</li>
+				<li class="social-icon__item">
+					<a
+						class="social-icon__link"
+						href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
+					>
+						<ion-icon name="logo-linkedin"></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item">
+					<a
+						class="social-icon__link"
+						href=" https://www.instagram.com/gp.singh.ro.ckstar4438/"
+					>
+						<ion-icon name="logo-instagram"></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item">
+					<a
+						class="social-icon__link"
+						href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F"
+					>
+						<ion-icon name="logo-whatsapp"></ion-icon>
+					</a>
+				</li>
+			</ul>
+			<ul class="menu">
+				<li class="menu__item">
+					<a class="menu__link" href="index.html">Home</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="about-us.html">About</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="index.html">Profile Section</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="contact-us.html">Contact</a>
+				</li>
+			</ul>
+			<p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+		</footer>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script src="script.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const container = document.querySelector(".container");
+
+				const profiles = Array.from(container.querySelectorAll(".profile"));
+
+				profiles.sort((a, b) => {
+					const nameA = a.querySelector(".name").textContent.toUpperCase();
+					const nameB = b.querySelector(".name").textContent.toUpperCase();
+
+					if (nameA < nameB) {
+						return -1;
+					}
+					if (nameA > nameB) {
+						return 1;
+					}
+					return 0;
+				});
+
+				container.innerHTML = "";
+
+				profiles.forEach((profile) => {
+					container.appendChild(profile);
+				});
+			});
+		</script>
+	</body>
 </html>
