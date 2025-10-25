@@ -7,14 +7,13 @@
     margin: 0;
     background-color: #f0f0f0;
   } */
-  
-  .logger {
-    background: linear-gradient(to right, #3b82f6, #9333ea);
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+
+.logger {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

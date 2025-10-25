@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!res.ok) throw new Error("Network error");
 
       const data = await res.json();
-      
+
       if (data !== undefined) {
         loggerEl.textContent = `Visitors: ${data}`;
-        localStorage.setItem(CACHE_KEY,data);
+        localStorage.setItem(CACHE_KEY, data);
       }
     } catch (err) {
       console.error("Visitor count error:", err);
@@ -38,5 +38,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   updateCount();
 });
-
-  
