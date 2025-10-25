@@ -61,6 +61,7 @@ body {
   border-radius: 8px;
   width: fit-content;
   margin: auto;
+  margin-top: 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,7 +112,6 @@ nav {
   padding: 20px 25px;
   width: 100%;
   background-color: #1a1a1a;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -143,11 +143,12 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: #fff;
-  background-color: #2a2a2a;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
   transition: 0.3s;
+  background-color: #2a2a2a;
 }
 
 .nav-links a:hover {
@@ -271,7 +272,6 @@ body .title {
 .title a {
   text-decoration: none;
   color: red;
-
 }
 
 .container {
@@ -334,11 +334,6 @@ body .title {
   color: #FEE5FE;
 }
 
-.profile:hover .name {
-
-  text-decoration: underline;
-}
-
 .profile .lines {
   position: absolute;
   inset: 0;
@@ -395,11 +390,12 @@ body .title {
 .name {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .skills {
   margin-bottom: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -412,17 +408,19 @@ body .title {
   padding: 7px;
   letter-spacing: 0.1em;
   border-radius: 5px;
-  margin: 0 5px 10px 0;
+  margin: 0 8px 5px 0;
   font-size: 14px;
   display: inline-block;
 }
 
 .project {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 35px;
   margin: 10px 0;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .project div {
@@ -455,7 +453,7 @@ body .title {
 }
 
 .social {
-  margin-top: 13px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -614,7 +612,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
 
 .title {
@@ -627,10 +624,6 @@ header {
   height: 60px;
   font-weight: 500;
   padding: 5px 10px;
-}
-
-.title:hover {
-  background: #b0d5ee;
 }
 
 /* Dark Mode - Light mode Button */
@@ -1029,6 +1022,7 @@ footer {
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .contact-form button:hover {
