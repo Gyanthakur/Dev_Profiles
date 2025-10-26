@@ -1,219 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Contact Us</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
-		<link
-			rel="shortcut icon"
-			href="https://oyepriyansh.pages.dev/i/favicon.ico"
-			type="image/x-icon"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css"
-		/>
-		<script src="logger.js"></script>
-		<script>
-			function toggleMenu() {
-				document.getElementById("navLinks").classList.toggle("show");
-			}
-		</script>
-	</head>
 
-	<body>
-		<!-- Navigation Header -->
-		<header>
-			<nav>
-				<!-- Title / Logo -->
-				<p class="title"><a href="index.html">Dev Profiles</a></p>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contact Us</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="shortcut icon" href="https://oyepriyansh.pages.dev/i/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+	<link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" />
+	<script src="logger.js"></script>
 
-				<!-- Hamburger icon for mobile -->
-				<div class="hamburger" onclick="toggleMenu()">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+	<script>
+		function toggleMenu() {
+			document.getElementById("navLinks").classList.toggle("show");
+		}
+	</script>
+</head>
 
-				<!-- Nav links -->
-				<div class="nav-links" id="navLinks">
-					<a class="nav-link" href="index.html">
-						<i class="fa-solid fa-user"></i> Profile Section
-					</a>
-					<a class="nav-link" href="project.html">
-						<i class="fa-solid fa-list-check"></i> Projects
-					</a>
-					<a class="nav-link" href="about-us.html">
-						<i class="fa-solid fa-info-circle"></i> About Us
-					</a>
-					<!-- <a class="nav-link" href="contact-us.html">
-						<i class="fa-solid fa-address-book"></i> Contact
-					</a> -->
-					<a class="nav-link" href="privacy.html">
-						<i class="fa-solid fa-shield-halved"></i> Privacy
-					</a>
+<body>
+	<!-- Navigation Header -->
+	<header>
+		<nav>
+			<!-- Title / Logo -->
+			<p class="title"><a href="index.html">Dev Profiles</a></p>
 
-					<button class="dark-btn" id="icon">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							fill="black"
-							viewBox="0 0 24 24"
-						>
-							<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-						</svg>
-					</button>
-				</div>
-			</nav>
-		</header>
-
-		<div class="logger">
-			<!-- <h2>Logger</h2> -->
-			<div id="logger" class="">Visitors: 0</div>
-		</div>
-		<!-- Main Contact Form Section -->
-		<div class="contact-section container">
-			<div class="contact-container container">
-				<div class="contact-info">
-					<h2>Get In Touch</h2>
-					<p>We'd love to hear from you. Here's how you can reach us...</p>
-					<a href="tel:+918957818597" class="info-item">
-						<i class="fas fa-phone"></i>
-						<span>+91 895 781 8597</span>
-					</a>
-					<a href="mailto:gps.96169@gmail.com" class="info-item">
-						<i class="fas fa-envelope"></i>
-						<span>gps.96169@gmail.com</span>
-					</a>
-					<a
-						href="https://www.google.com/maps/place/Fatehpur,+Uttar+Pradesh,+India"
-						class="info-item"
-						target="_blank"
-					>
-						<i class="fas fa-map-marker-alt"></i>
-						<span>Fatehpur, Uttar Pradesh, India</span>
-					</a>
-				</div>
-
-				<div class="contact-form-container">
-					<h2>Send us a message</h2>
-					<form
-						class="contact-form"
-						action="https://formspree.io/f/mdkonvre"
-						method="POST"
-					>
-						<div class="input-group">
-							<input
-								type="text"
-								id="name"
-								name="name"
-								placeholder="Your Name"
-								required
-							/>
-						</div>
-						<div class="input-group">
-							<input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="Your Email"
-								required
-							/>
-						</div>
-						<div class="input-group">
-							<textarea
-								name="message"
-								id="message"
-								placeholder="Your Message"
-								required
-							></textarea>
-						</div>
-						<div class="input-group">
-							<button type="submit">Send Message</button>
-						</div>
-					</form>
-				</div>
+			<!-- Hamburger icon for mobile -->
+			<div class="hamburger" onclick="toggleMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 
-			<!-- Error Message -->
-			<div id="error-message" class="error-message"></div>
+			<!-- Nav links -->
+			<div class="nav-links" id="navLinks">
+				<a class="nav-link" href="index.html">
+					<i class="fa-solid fa-user"></i> Profile Section
+				</a>
+				<a class="nav-link" href="project.html">
+					<i class="fa-solid fa-list-check"></i> Projects
+				</a>
+				<a class="nav-link" href="about-us.html">
+					<i class="fa-solid fa-info-circle"></i> About Us
+				</a>
+				<a class="nav-link" href="privacy.html">
+					<i class="fa-solid fa-shield-halved"></i> Privacy
+				</a>
+
+				<button class="dark-btn" id="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+						<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+					</svg>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<div class="logger">
+		<!-- <h2>Logger</h2> -->
+		<div id="logger" class="">Visitors: 0</div>
+	</div>
+	<!-- Main Contact Form Section -->
+	<div class="contact-section container">
+		<div class="contact-container container">
+			<div class="contact-info">
+				<h2>Get In Touch</h2>
+				<p>We'd love to hear from you. Here's how you can reach us...</p>
+				<a href="tel:+918957818597" class="info-item">
+					<i class="fas fa-phone"></i>
+					<span>+91 895 781 8597</span>
+				</a>
+				<a href="mailto:gps.96169@gmail.com" class="info-item">
+					<i class="fas fa-envelope"></i>
+					<span>gps.96169@gmail.com</span>
+				</a>
+				<a href="https://www.google.com/maps/place/Fatehpur,+Uttar+Pradesh,+India" class="info-item"
+					target="_blank">
+					<i class="fas fa-map-marker-alt"></i>
+					<span>Fatehpur, Uttar Pradesh, India</span>
+				</a>
+			</div>
+
+			<div class="contact-form-container">
+				<h2>Send us a message</h2>
+				<form class="contact-form" action="https://formspree.io/f/mdkonvre" method="POST">
+					<div class="input-group">
+						<input type="text" id="name" name="name" placeholder="Your Name" required />
+					</div>
+					<div class="input-group">
+						<input type="email" id="email" name="email" placeholder="Your Email" required />
+					</div>
+					<div class="input-group">
+						<textarea name="message" id="message" placeholder="Your Message" required></textarea>
+					</div>
+					<div class="input-group">
+						<button type="submit">Send Message</button>
+					</div>
+				</form>
+			</div>
 		</div>
 
-		<!-- Social Media Links and Footer -->
-		<footer class="footer">
-			<ul class="social-icon">
-				<li class="social-icon__item">
-					<a
-						class="social-icon__link"
-						href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0"
-					>
-						<i class="fa-brands fa-facebook"></i>
-					</a>
-				</li>
-				<li class="social-icon__item">
-					<a class="social-icon__link" href="https://twitter.com/gps_96169">
-						<i class="fa-brands fa-x-twitter"></i>
-					</a>
-				</li>
-				<li class="social-icon__item">
-					<a
-						class="social-icon__link"
-						href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/"
-					>
-						<i class="fa-brands fa-linkedin"></i>
-					</a>
-				</li>
-				<li class="social-icon__item">
-					<a
-						class="social-icon__link"
-						href="https://www.instagram.com/gp.singh.ro.ckstar4438/"
-					>
-						<i class="fa-brands fa-instagram"></i>
-					</a>
-				</li>
-				<li class="social-icon__item">
-					<a
-						class="social-icon__link"
-						href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F"
-					>
-						<i class="fa-brands fa-whatsapp"></i>
-					</a>
-				</li>
-			</ul>
-			<ul class="menu">
-				<li class="menu__item">
-					<a class="menu__link" href="index.html">Home</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="about-us.html">About</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="project.html">Project Section</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="index.html">Profile Section</a>
-				</li>
-			</ul>
-			<p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
-		</footer>
-		<!-- Back to Top Button -->
-		<button id="backToTopBtn" title="Go to top">
-			<i class="fa-solid fa-arrow-up"></i>
-		</button>
+		<!-- Error Message -->
+		<div id="error-message" class="error-message"></div>
+	</div>
 
-		<script src="script.js"></script>
-	</body>
+	<!-- Social Media Links and Footer -->
+	<footer class="footer">
+		<ul class="social-icon">
+			<li class="social-icon__item">
+				<a class="social-icon__link"
+					href="https://m.facebook.com/profile.php?eav=AfaQiAnLMKoJt9fhAP0mpclv59dhzAMBnCy-rfJi2qawDv01IOkuI4RSxLQFG4508J0&paipv=0">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+			</li>
+			<li class="social-icon__item">
+				<a class="social-icon__link" href="https://twitter.com/gps_96169">
+					<i class="fa-brands fa-x-twitter"></i>
+				</a>
+			</li>
+			<li class="social-icon__item">
+				<a class="social-icon__link" href="https://www.linkedin.com/in/gyan-pratap-singh-275785236/">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+			</li>
+			<li class="social-icon__item">
+				<a class="social-icon__link" href="https://www.instagram.com/gp.singh.ro.ckstar4438/">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+			</li>
+			<li class="social-icon__item">
+				<a class="social-icon__link"
+					href="https://wa.me/918957818597?text=Hey%20%F0%9F%91%8B%2C%20how%20can%20I%20help%20you%3F">
+					<i class="fa-brands fa-whatsapp"></i>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="menu">
+			<li class="menu__item">
+				<a class="menu__link" href="index.html">Home</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="about-us.html">About</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="project.html">Project Section</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="index.html">Profile Section</a>
+			</li>
+		</ul>
+
+		<p>Dev Profiles &copy; <span id="dates"></span> | All Rights Reserved</p>
+	</footer>
+
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" title="Go to top">
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
+
+	<script src="script.js"></script>
+
+</body>
+
 </html>
