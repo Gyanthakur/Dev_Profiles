@@ -93,7 +93,7 @@ For answers to common questions about this code of conduct, see the FAQ at [http
 For questions about this Code of Conduct or to report violations, please contact:
 
 - **Project Maintainer**: [Gyanthakur](https://github.com/Gyanthakur)
-- **Email**: [Add maintainer email if available]
+- **Email**: gps.96169@gmail.com
 - **Issues**: [Create an issue](https://github.com/Gyanthakur/Dev_Profiles/issues) with the "code of conduct" label
 
 ## Acknowledgment
@@ -102,4 +102,4 @@ We appreciate all contributors who help make Dev_Profiles a welcoming and inclus
 
 ---
 
-*This Code of Conduct was last updated on [Current Date].*
+*This Code of Conduct was last updated on 27/10/2025.*
