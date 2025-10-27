@@ -9,6 +9,10 @@ This documentation contains a set of guidelines to help you during the contribut
 We are happy to welcome all the contributions from anyone willing to improve/add new scripts to this project.
 Thank you for helping out and remember, **no contribution is too small.**
 
+## **Code of Conduct** 🤝
+
+Please note that this project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms. We are committed to providing a welcoming and inclusive environment for all contributors.
+
 
 - Drop a Star ⭐ in this repo
 - Follow Account
