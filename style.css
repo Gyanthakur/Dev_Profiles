@@ -532,6 +532,8 @@ button:hover {
 .search-box {
   position: relative;
   width: 100%;
+  max-width: 700px;
+  z-index: 1;
 }
 
 .search-box input {
@@ -588,19 +590,38 @@ button:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.light-background #searchInput:focus ~ .search-icon,
+.light-background .search-box:hover .search-icon {
+  color: #ff6462;
+}
+
 .search-icon {
   position: absolute;
-  right: 2em;
+  left: 1.5em;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--color-text);
-  font-size: 18px;
+  color: var(--color-profile-border);
+  font-size: 20px;
   pointer-events: none;
+  z-index: 2;
+  transition: all 0.4s ease;
   opacity: 0.7;
 }
 
+#searchInput:focus ~ .search-icon,
+.search-box:hover .search-icon {
+  color: #ff6462;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.search > a {
+  text-decoration: none;
+  z-index: 1;
+}
+
 .light-background .search-icon {
-  color: #000;
+  color: var(--color-profile-border);
 }
 
 h1 {
@@ -681,8 +702,12 @@ header {
 }
 
 .light-background #searchInput {
-  background-color: #f5f5f5;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ff87a5) border-box;
   color: #000;
+  box-shadow: 0 5px 20px rgba(227, 86, 5, 0.15),
+              0 3px 10px rgba(0, 0, 0, 0.1),
+              inset 0 1px 3px rgba(255, 255, 255, 1);
 }
 
 .light-background .about-container {
@@ -1058,6 +1083,9 @@ footer {
   padding: 0 9%;
   text-align: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .search::before {
@@ -1067,7 +1095,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 4rem);
-  height: 70px;
+  height: 80px;
   background: linear-gradient(90deg,
       var(--color-profile-border),
       #ff6462,
@@ -1076,59 +1104,67 @@ footer {
       #ffd200);
   border-radius: 100rem;
   opacity: 0;
-  filter: blur(20px);
-  transition: opacity 0.4s ease;
+  filter: blur(25px);
+  transition: opacity 0.5s ease;
   pointer-events: none;
   z-index: 0;
 }
 
 .search:hover::before {
-  opacity: 0.3;
+  opacity: 0.25;
 }
+
 
 #searchInput {
   width: 100%;
   display: block;
-  padding: 1.3em 3.5em 1.3em 3.5em;
-  border: 2px solid var(--color-profile-border);
+  padding: 1.4em 3.5em 1.4em 3.5em;
+  border: 3px solid transparent;
   border-radius: 100rem;
-  background-color: #fff;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ff87a5) border-box;
   color: #000;
   font-size: 17px;
   font-weight: 500;
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.15),
-    0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(227, 86, 5, 0.12),
+              0 3px 10px rgba(0, 0, 0, 0.08),
+              inset 0 1px 3px rgba(255, 255, 255, 0.8);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  z-index: 1;
+  letter-spacing: 0.3px;
 }
 
 #searchInput:hover {
-  border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.25),
-    0 3px 12px rgba(255, 100, 98, 0.2),
-    0 0 0 4px rgba(227, 86, 5, 0.08);
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, #ff6462, #ff87a5, #ffbf6e) border-box;
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.2),
+              0 4px 15px rgba(255, 100, 98, 0.15),
+              0 0 0 4px rgba(227, 86, 5, 0.06),
+              inset 0 1px 3px rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
 }
 
 #searchInput:focus {
   outline: none;
-  border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.3),
-    0 4px 15px rgba(255, 100, 98, 0.25),
-    0 0 0 5px rgba(227, 86, 5, 0.12);
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ffbf6e) border-box;
+  box-shadow: 0 10px 35px rgba(227, 86, 5, 0.25),
+              0 5px 20px rgba(255, 100, 98, 0.2),
+              0 0 0 5px rgba(227, 86, 5, 0.1),
+              inset 0 2px 4px rgba(255, 255, 255, 1);
   transform: translateY(-3px) scale(1.01);
 }
 
 #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.4);
   font-weight: 400;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 #searchInput:focus::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.25);
 }
+
 
 /* Search Icon (Left) */
 .search::after {
@@ -1183,29 +1219,32 @@ footer {
 
 /* Light Mode Adjustments */
 .light-background #searchInput {
-  background-color: #fff;
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ff87a5) border-box;
   color: #000;
-  border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.12),
-    0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(227, 86, 5, 0.15),
+              0 3px 10px rgba(0, 0, 0, 0.1),
+              inset 0 1px 3px rgba(255, 255, 255, 1);
 }
 
 .light-background #searchInput:hover {
-  border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.2),
-    0 3px 12px rgba(255, 100, 98, 0.15),
-    0 0 0 4px rgba(227, 86, 5, 0.06);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, #ff6462, #ff87a5, #ffbf6e) border-box;
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25),
+              0 4px 15px rgba(255, 100, 98, 0.2),
+              0 0 0 4px rgba(227, 86, 5, 0.08);
 }
 
 .light-background #searchInput:focus {
-  border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.25),
-    0 4px 15px rgba(255, 100, 98, 0.2),
-    0 0 0 5px rgba(227, 86, 5, 0.1);
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ffbf6e) border-box;
+  box-shadow: 0 10px 35px rgba(227, 86, 5, 0.3),
+              0 5px 20px rgba(255, 100, 98, 0.25),
+              0 0 0 5px rgba(227, 86, 5, 0.12);
 }
 
 .light-background #searchInput::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 .light-background .search::after {
@@ -1218,36 +1257,49 @@ footer {
 
 /* Dark Mode Styles */
 body:not(.light-background) #searchInput {
-  background-color: var(--color-profile-card-bg);
+  background: linear-gradient(var(--color-profile-card-bg), var(--color-profile-card-bg)) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ff87a5) border-box;
   color: var(--color-text);
-  border-color: var(--color-profile-border);
-  box-shadow: 0 4px 15px rgba(227, 86, 5, 0.2),
-    0 2px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 20px rgba(227, 86, 5, 0.25),
+              0 3px 10px rgba(0, 0, 0, 0.5),
+              inset 0 1px 3px rgba(255, 255, 255, 0.05);
 }
 
 body:not(.light-background) #searchInput:hover {
-  background-color: #0f1215;
-  border-color: #ff6462;
-  box-shadow: 0 6px 20px rgba(227, 86, 5, 0.3),
-    0 3px 12px rgba(255, 100, 98, 0.25),
-    0 0 0 4px rgba(227, 86, 5, 0.1);
+  background: linear-gradient(#0f1215, #0f1215) padding-box,
+              linear-gradient(135deg, #ff6462, #ff87a5, #ffbf6e) border-box;
+  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.35),
+              0 4px 15px rgba(255, 100, 98, 0.3),
+              0 0 0 4px rgba(227, 86, 5, 0.15),
+              inset 0 1px 3px rgba(255, 255, 255, 0.08);
 }
 
 body:not(.light-background) #searchInput:focus {
-  background-color: #0f1215;
-  border-color: var(--color-profile-border);
-  box-shadow: 0 8px 25px rgba(227, 86, 5, 0.4),
-    0 4px 15px rgba(255, 100, 98, 0.3),
-    0 0 0 5px rgba(227, 86, 5, 0.15);
+  background: linear-gradient(#0f1215, #0f1215) padding-box,
+              linear-gradient(135deg, var(--color-profile-border), #ff6462, #ffbf6e) border-box;
+  box-shadow: 0 10px 35px rgba(227, 86, 5, 0.45),
+              0 5px 20px rgba(255, 100, 98, 0.35),
+              0 0 0 5px rgba(227, 86, 5, 0.2),
+              inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 body:not(.light-background) #searchInput::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 body:not(.light-background) #searchInput:focus::placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
+
+body:not(.light-background) .search-icon {
+  color: var(--color-green);
+}
+
+body:not(.light-background) #searchInput:focus ~ .search-icon,
+body:not(.light-background) .search-box:hover .search-icon {
+  color: #ff6462;
+}
+
 
 body:not(.light-background) .search::after {
   color: var(--color-green);
@@ -1271,11 +1323,26 @@ body:not(.light-background) .search-clear:hover {
 @media (max-width: 768px) {
   .search {
     padding: 0 5%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-box {
+    max-width: 100%;
   }
 
   #searchInput {
-    padding: 1.1em 3em 1.1em 3em;
+    padding: 1.2em 3em 1.2em 3em;
     font-size: 16px;
+  }
+
+  .search-icon {
+    left: 1.2em;
+    font-size: 18px;
+  }
+
+  .search::before {
+    display: none;
   }
 
   .search::after {
@@ -1289,11 +1356,15 @@ body:not(.light-background) .search-clear:hover {
 }
 
 @media (max-width: 480px) {
-  #searchInput {
-    padding: 1em 2.5em 1em 2.5em;
+ #searchInput {
+    padding: 1.1em 2.8em 1.1em 2.8em;
     font-size: 15px;
   }
 
+  .search-icon {
+    left: 1em;
+    font-size: 16px;
+  }
   .search::after {
     left: calc(5% + 0.8em);
     font-size: 15px;
