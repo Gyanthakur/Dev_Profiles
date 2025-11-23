@@ -1,5 +1,5 @@
 # DevProfiles
-A place to list and showcase your developer skills and profile
+DevProfiles is a modern platform where developers can highlight their skills, experience, and portfolio — all in one easy-to-share profile.
 
 
 ## Contribute.
